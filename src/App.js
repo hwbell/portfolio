@@ -3,41 +3,60 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 // components
-import { Nav, NavLink } from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
 
 // routing
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import Router from 'react-router-dom/BrowserRouter';
+import { AnimatedSwitch } from 'react-router-transition';
+import Route from 'react-router-dom/Route';
+import Switch from 'react-router-dom/Switch';
 
 // components
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 
-import Navigator from './components/Navigator';
+// import Navigator from './components/Navigator';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="main">
-
-          <Route path="/" exact component={HomePage} />
-          <Route path="/about/" component={AboutPage} />
+          <AnimatedSwitch
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            className="switch-wrapper">
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about/" component={AboutPage} />
+          </AnimatedSwitch>
+          {/* <AnimatedSwitch
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            className="switch-wrapper"
+          >
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about/" component={AboutPage} />
+          </AnimatedSwitch> */}
 
           <hr className=""></hr>
 
           <Nav style={styles.nav}>
-            <NavLink style={styles.navlink} href="#">
-              <Link to="/">Home</Link>
-            </NavLink>
-            <NavLink style={styles.navlink} href="#">
-              <Link to="/about/">About</Link>
-            </NavLink>
-            <NavLink style={styles.navlink} href="#">
-              <Link to="/">Contact</Link>
-            </NavLink>
-            <NavLink style={styles.navlink} href="#">
-              <Link to="/">Portfolio</Link>
-            </NavLink>
+            <NavItem href="#">
+              <Link to="/" style={styles.navlink}>Home</Link>
+            </NavItem>
+            <NavItem href="#">
+              <Link to="/about/" style={styles.navlink}>About</Link>
+            </NavItem>
+            <NavItem href="#">
+              <Link to="/" style={styles.navlink}>Contact</Link>
+            </NavItem>
+            <NavItem href="#">
+              <Link to="/" style={styles.navlink}>Portfolio</Link>
+            </NavItem>
           </Nav>
 
         </div>
@@ -54,6 +73,6 @@ const styles = {
     margin: 0,
   },
   navlink: {
-    margin: 5,
+    margin: 25,
   },
 }

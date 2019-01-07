@@ -10,46 +10,41 @@ class HomePage extends Component {
     this.state = {
       //
     };
-    this.hover = this.hover.bind(this);
-  }
-
-  hover() {
-    //
   }
 
   render() {
     return (
 
-        <div className="Center container">
+      <div className="Center container">
 
-          <p className="" style={styles.name}>
-            Hi, I'm Harry
+        <p className="" style={styles.name}>
+          Hi, I'm Harry
         </p>
 
-          <div className="row">
+        <div className="row">
 
-            <div className="col" style={styles.middleDisplayCol}>
-              <p>scientist</p>
-              <img
-                src={require('../public/icons/dna.png')}
-                style={styles.icon}
-                alt="flask"></img>
-            </div>
-
-            <div className="col" style={styles.middleDisplayCol}>
-              <FaRandom color="#E0F2F1" />
-            </div>
-
-            <div className="col" style={styles.middleDisplayCol}>
-              <p>developer</p>
-              <img
-                src={require('../public/icons/computer.png')}
-                style={styles.icon}
-                alt="flask"></img>
-            </div>
-
+          <div className="col" style={styles.middleDisplayCol}>
+            <p>scientist</p>
+            <img
+              src={require('../public/icons/dna.png')}
+              style={styles.icon}
+              alt="dna"></img>
           </div>
+
+          <div className="col" style={styles.middleDisplayCol}>
+            <FaRandom color="#E0F2F1" />
+          </div>
+
+          <div className="col" style={styles.middleDisplayCol}>
+            <p>developer</p>
+            <img
+              src={require('../public/icons/computer.png')}
+              style={styles.icon}
+              alt="computer"></img>
+          </div>
+
         </div>
+      </div>
     );
   }
 }
