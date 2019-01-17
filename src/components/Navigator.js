@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import { Nav, NavLink } from 'reactstrap';
 
+// routing
+import { NavLink } from "react-router-dom";
+
+// components
+import { Nav } from 'reactstrap';
+
+// styling
 import 'bootstrap/dist/css/bootstrap.css';
 import '../App.css';
 
 class Navigator extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row fixed-bottom" style={styles.main}>
         <div className="col-8">
           <Nav style={styles.nav}>
-            <NavLink style={styles.navlink} href="#">Home</NavLink>
-            <NavLink style={styles.navlink} href="#">About</NavLink>
-            <NavLink style={styles.navlink} href="#">Portfolio</NavLink>
-            <NavLink style={styles.navlink} href="#">Contact</NavLink>
+            <NavLink style={styles.navlink} to="/">Home</NavLink>
+            <NavLink style={styles.navlink} to="/about/">About</NavLink>
+            <NavLink style={styles.navlink} to="/portfolio/">Portfolio</NavLink>
+            <NavLink style={styles.navlink} to="/">Contact</NavLink>
           </Nav>
         </div>
       </div>
@@ -24,12 +30,14 @@ class Navigator extends Component {
 export default Navigator;
 
 const styles = {
+  main: {
+    backgroundColor: '#282c34'
+  },
   nav: {
     fontSize: 22,
-    margin: 5,
   },
   navlink: {
-    margin: 5,
+    margin: 15,
   },
   icon: {
     width: 100,

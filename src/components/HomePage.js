@@ -26,7 +26,7 @@ class HomePage extends Component {
           <div className="col" style={styles.middleDisplayCol}>
             <p>scientist</p>
             <img
-              src={require('../public/icons/dna.png')}
+              src={require('../assets/icons/dna.png')}
               style={styles.icon}
               alt="dna"></img>
           </div>
@@ -38,7 +38,7 @@ class HomePage extends Component {
           <div className="col" style={styles.middleDisplayCol}>
             <p>developer</p>
             <img
-              src={require('../public/icons/computer.png')}
+              src={require('../assets/icons/computer.png')}
               style={styles.icon}
               alt="computer"></img>
           </div>
