@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '../App.css';
-import { FaRandom } from 'react-icons/fa';
+import './HomePage.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRandom } from '@fortawesome/free-solid-svg-icons';
+import { faDna } from '@fortawesome/free-solid-svg-icons';
+import { faLaptop } from '@fortawesome/free-solid-svg-icons';
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -25,22 +30,19 @@ class HomePage extends Component {
 
           <div className="col" style={styles.middleDisplayCol}>
             <p>scientist</p>
-            <img
-              src={require('../assets/icons/dna.png')}
-              style={styles.icon}
-              alt="dna"></img>
+            <i className="fa fa-dna fa-gradient-left" style={styles.image}></i>
           </div>
 
           <div className="col" style={styles.middleDisplayCol}>
-            <FaRandom color="#E0F2F1" />
+            <FontAwesomeIcon
+              icon={faRandom}
+              style={styles.icon}
+            />
           </div>
 
           <div className="col" style={styles.middleDisplayCol}>
             <p>developer</p>
-            <img
-              src={require('../assets/icons/computer.png')}
-              style={styles.icon}
-              alt="computer"></img>
+            <i className="fa fa-laptop fa-gradient-right" style={styles.image}></i>
           </div>
 
         </div>
@@ -52,26 +54,19 @@ class HomePage extends Component {
 export default HomePage;
 
 const styles = {
-  image: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '100%',
-    height: '100%',
-  },
   name: {
     fontSize: 28,
     margin: 40,
   },
-  icon: {
-    width: 100,
-    height: 100
+  image: {
+    fontSize: 60,
   },
-
-  circleArrow: {
-    color: '#48C9B0',
-    width: 68,
-    height: 68,
+  icon: {
+    fontWeight: 'bolder',
+    color: '#1E88E5',
+    marginTop: 20,
+    width: 20,
+    height: 20
   },
   middleDisplayCol: {
     fontSize: 22,

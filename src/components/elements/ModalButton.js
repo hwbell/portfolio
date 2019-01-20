@@ -23,6 +23,7 @@ class ModalButton extends React.Component {
     return (
       <div style={styles.main}>
         <Button color="primary" 
+          style={styles.button}
           onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal className={this.props.className}
           style={styles.modal}
@@ -47,6 +48,9 @@ class ModalButton extends React.Component {
 
 const styles = {
   main: {
+  },
+  button: {
+    margin: 12,
   },
   modal: {
     width: '100%'

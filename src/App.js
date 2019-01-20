@@ -14,6 +14,7 @@ import Route from 'react-router-dom/Route';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import PortfolioPage from './components/PortfolioPage';
+import ContactPage from './components/ContactPage';
 
 import Navigator from './components/Navigator';
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route path="/about/" component={AboutPage} />
             <Route path="/portfolio/" component={PortfolioPage} />
+            <Route path="/contact/" component={ContactPage} />
           </AnimatedSwitch>
 
           {/* <hr className=""></hr> */}

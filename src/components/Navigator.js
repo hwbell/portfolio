@@ -19,7 +19,7 @@ class Navigator extends Component {
             <NavLink style={styles.navlink} to="/">Home</NavLink>
             <NavLink style={styles.navlink} to="/about/">About</NavLink>
             <NavLink style={styles.navlink} to="/portfolio/">Portfolio</NavLink>
-            <NavLink style={styles.navlink} to="/">Contact</NavLink>
+            <NavLink style={styles.navlink} to="/contact/">Contact</NavLink>
           </Nav>
         </div>
       </div>
@@ -31,7 +31,7 @@ export default Navigator;
 
 const styles = {
   main: {
-    backgroundColor: '#282c34'
+    backgroundColor: 'whitesmoke'
   },
   nav: {
     fontSize: 22,

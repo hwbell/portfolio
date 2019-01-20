@@ -1,0 +1,23 @@
+/* for the fontAwesome icon's gradient appearance */
+.fa-gradient-left {
+	background: -webkit-gradient(linear, left top, right bottom, from(#673AB7), to(#4DD0E1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+}
+.fa-gradient-right {
+	background: -webkit-gradient(linear, right top, left bottom, from(#673AB7), to(#4DD0E1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+}
+
+.send-button {
+  background-color: whitesmoke;
+  border: none;
+}
+.send-button:hover {
+  background-color: #ECEFF1;
+}

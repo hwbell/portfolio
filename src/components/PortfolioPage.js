@@ -32,11 +32,12 @@ class PortfolioPage extends Component {
         <p className="" style={styles.paragraph}>
           Take a look at some projects I have created
         </p>
+        
         <div className="row" style={styles.cardholder}>
 
-          <div className=""><CodePenCard /></div>
-          <div className=""><CodePenCard /></div>
-          <div className=""><CodePenCard /></div>
+          <div className="col-12 col-lg-6"><CodePenCard /></div>
+          <div className="col-12 col-lg-6"><CodePenCard /></div>
+          <div className="col-12 col-lg-6"><CodePenCard /></div>
 
         </div>
         
@@ -48,13 +49,6 @@ class PortfolioPage extends Component {
 export default PortfolioPage;
 
 const styles = {
-  image: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    width: '100%',
-    height: '100%',
-  },
   name: {
     fontSize: 28,
     margin: 40,
@@ -64,6 +58,7 @@ const styles = {
     width: '60%,'
   },
   cardholder: {
+    width: '80%',
     marginBottom: 80,
   },
 }
