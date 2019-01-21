@@ -8,7 +8,7 @@ import { Nav } from 'reactstrap';
 
 // styling
 import 'bootstrap/dist/css/bootstrap.css';
-import '../App.css';
+import '../../App.css';
 
 class Navigator extends Component {
   render() {

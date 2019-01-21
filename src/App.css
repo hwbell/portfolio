@@ -57,6 +57,6 @@ p {
 
 /* for the portfolio page */
 .project-preview {
-  min-width: 350px;
-  max-width: 450px;
+  margin: 0 auto;
+  min-width: 300;
 }

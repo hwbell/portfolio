@@ -11,12 +11,12 @@ import { AnimatedSwitch } from 'react-router-transition';
 import Route from 'react-router-dom/Route';
 
 // components
-import HomePage from './components/HomePage';
-import AboutPage from './components/AboutPage';
-import PortfolioPage from './components/PortfolioPage';
-import ContactPage from './components/ContactPage';
+import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
+import PortfolioPage from './components/pages/PortfolioPage';
+import ContactPage from './components/pages/ContactPage';
 
-import Navigator from './components/Navigator';
+import Navigator from './components/elements/Navigator';
 
 class App extends Component {
   render() {
@@ -48,7 +48,7 @@ export default App;
 
 const styles = {
   main: {
-    // overflow: 'hidden',
+
   },
   nav: {
     margin: 40,

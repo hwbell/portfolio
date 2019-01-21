@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 //styling
 import 'bootstrap/dist/css/bootstrap.css';
-import '../App.css';
+import '../../App.css';
 
 // elements
 import { FaRandom } from 'react-icons/fa';
-import CodePenCard from './elements/CodePenCard';
+import CodePenCard from '../elements/CodePenCard';
 
 class PortfolioPage extends Component {
   constructor(props) {
@@ -33,12 +33,12 @@ class PortfolioPage extends Component {
           Take a look at some projects I have created
         </p>
         
-        <div className="row" style={styles.cardholder}>
+        <div className="row" style={styles.cardscontainer}>
 
-          <div className="col-12 col-lg-6"><CodePenCard /></div>
-          <div className="col-12 col-lg-6"><CodePenCard /></div>
-          <div className="col-12 col-lg-6"><CodePenCard /></div>
-
+          <div style={styles.cardholder} className="col-12 col-lg-6 project-preview"><CodePenCard /></div>
+          <div style={styles.cardholder} className="col-12 col-lg-6 project-preview"><CodePenCard /></div>
+          <div style={styles.cardholder} className="col-12 col-lg-6 project-preview"><CodePenCard /></div>
+          <div style={styles.cardholder} className="col-12 col-lg-6 project-preview"><CodePenCard /></div>
         </div>
         
       </div>
@@ -57,8 +57,11 @@ const styles = {
     fontSize: 18,
     width: '60%,'
   },
-  cardholder: {
+  cardscontainer: {
     width: '80%',
     marginBottom: 80,
   },
+  cardholder: {
+    maxWidth: 400,
+  }
 }

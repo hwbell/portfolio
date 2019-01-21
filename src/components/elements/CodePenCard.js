@@ -1,36 +1,76 @@
 import React from 'react';
 
 // elements
-import { Card, CardImg, CardText, Container, Row, Col } from 'reactstrap';
+import { Card, CardImg, CardText, CardImgOverlay, CardTitle } from 'reactstrap';
 import ModalButton from './ModalButton';
 
 import backgroundImage from '../../assets/images/chess-app.jpg';
 
-const Example = (props) => {
-  return (
-    
-      <Card>
-        <CardImg src={backgroundImage} alt="Card image cap" />
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onHover = this.onHover.bind(this);
+    this.onExit = this.onExit.bind(this);
+    this.state = {
+      overlay: false
+    };
+  }
 
-        <CardText style={styles.cardtext}>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+  componentDidMount() {
+    //console.log("mounted");
+  }
 
-        <ModalButton buttonLabel='run app' />
-      </Card>
+  onHover () {
+    this.setState({
+      overlay: true
+    })
+  }
 
-  );
-};
+  onExit () {
+    this.setState({
+      overlay: false
+    })
+  }
+
+  render() {
+    return (
+      <div style={styles.main}>
+        <Card inverse 
+          onMouseOver={this.onHover}
+          onMouseLeave={this.onExit}>
+          <CardImg 
+            style={styles.image} 
+            src={require('../../assets/images/chess-app.jpg')} 
+            alt="Card image cap" />
+          {this.state.overlay ?
+            <CardImgOverlay style={styles.overlay}>
+              <CardTitle>Card Title</CardTitle>
+              <CardText style={styles.cardtext}>A simple app that ... </CardText>
+              {/* <CardText style={styles.cardtext}>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </CardText> */}
+            </CardImgOverlay> : null}
+        </Card>
+      </div>
+    );
+  }
+}
 
 const styles = {
   main: {
-    margin: 10,
+    minHeight: 280,
+    minWidth: 280,
+    marginBottom: 20,
   },
-  card: {
-    borderColor: 'whitesmoke',
-    backgroundColor: 'whitesmoke',
+  image: {
+    height: '100%',
+  },
+  overlay: {
+    background: 'rgba(0,0,0,0.65)',
   },
   cardtext: {
     margin: '0 20px',
-    color: '#282c34',
+    color: 'whitesmoke',
     fontSize: 20
   },
 }

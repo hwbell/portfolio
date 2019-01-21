@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import EmailForm from './elements/EmailForm';
+import EmailForm from '../elements/EmailForm';
 
 class ContactPage extends Component {
   constructor(props) {
