@@ -20,13 +20,13 @@ class Example extends React.Component {
     //console.log("mounted");
   }
 
-  onHover () {
+  onHover() {
     this.setState({
       overlay: true
     })
   }
 
-  onExit () {
+  onExit() {
     this.setState({
       overlay: false
     })
@@ -35,20 +35,18 @@ class Example extends React.Component {
   render() {
     return (
       <div style={styles.main}>
-        <Card inverse 
+        <Card inverse
           onMouseOver={this.onHover}
           onMouseLeave={this.onExit}>
-          <CardImg 
-            style={styles.image} 
-            src={require('../../assets/images/chess-app.jpg')} 
+          <CardImg
+            style={styles.image}
+            src={require('../../assets/images/chess-app.jpg')}
             alt="Card image cap" />
           {this.state.overlay ?
             <CardImgOverlay style={styles.overlay}>
               <CardTitle>Card Title</CardTitle>
               <CardText style={styles.cardtext}>A simple app that ... </CardText>
-              {/* <CardText style={styles.cardtext}>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText> */}
+              <ModalButton buttonLabel="see the code"/>
             </CardImgOverlay> : null}
         </Card>
       </div>
