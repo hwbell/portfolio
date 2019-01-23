@@ -8,6 +8,19 @@ import { faRandom } from '@fortawesome/free-solid-svg-icons';
 import { faDna } from '@fortawesome/free-solid-svg-icons';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 
+import posed, { PoseGroup } from 'react-pose';
+
+// this will apply a stagger to whatever animation is specified for the child
+// components
+const Container = posed.div({
+  enter: { staggerChildren: 50 },
+  exit: { staggerChildren: 50, staggerDirection: -1 }
+});
+
+const P = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 50, opacity: 0 }
+});
 
 class HomePage extends Component {
   constructor(props) {
@@ -20,33 +33,35 @@ class HomePage extends Component {
   render() {
     return (
 
-      <div className="Center container">
+      <Container className="Center container" style={styles.container}>
 
-        <p className="" style={styles.name}>
+        <P className="" style={styles.name}>
           Hi, I'm Harry
-        </p>
+        </P>
 
-        <div className="row">
+        <div className="row" style={styles.contentholder}>
 
-          <div className="col" style={styles.middleDisplayCol}>
-            <p>scientist</p>
+          <div className="col">
+            <P style={styles.icontext}>biologist</P>
             <i className="fa fa-dna fa-gradient-left" style={styles.image}></i>
           </div>
 
-          <div className="col" style={styles.middleDisplayCol}>
-            <FontAwesomeIcon
-              icon={faRandom}
-              style={styles.icon}
-            />
+          <div className="col" >
+            <i class="fas fa-random" style={styles.icon}></i>
           </div>
 
-          <div className="col" style={styles.middleDisplayCol}>
-            <p>developer</p>
+          <div className="col" >
+            <P style={styles.icontext}>developer</P>
             <i className="fa fa-laptop fa-gradient-right" style={styles.image}></i>
           </div>
 
         </div>
-      </div>
+
+        <div className="row" style={styles.description}>
+          <P>I love creating and developing full stack web & mobile apps.</P>
+        </div>
+
+      </Container>
     );
   }
 }
@@ -54,9 +69,15 @@ class HomePage extends Component {
 export default HomePage;
 
 const styles = {
+  container: {
+    minWidth: 400,
+  },
   name: {
     fontSize: 28,
     margin: 40,
+  },
+  contentholder: {
+    marginBottom: 20,
   },
   image: {
     fontSize: 60,
@@ -68,8 +89,12 @@ const styles = {
     width: 20,
     height: 20
   },
-  middleDisplayCol: {
-    fontSize: 22,
+  icontext: {
+    fontSize: 22
+  },
+  description: {
+ 
+    fontSize: 20,
     margin: 10,
   },
 }

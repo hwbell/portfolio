@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
-import { FaRandom } from 'react-icons/fa';
+
+import posed, { PoseGroup } from 'react-pose';
+
+const Container = posed.div({
+  enter: { staggerChildren: 50 },
+  exit: { staggerChildren: 50, staggerDirection: -1 }
+});
+
+const P = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 50, opacity: 0 }
+});
 
 class HomePage extends Component {
   constructor(props) {
@@ -19,17 +30,17 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="Center container">
+      <Container className="Center container">
 
-        <p className="" style={styles.name}>
+        <P className="" style={styles.name}>
           About Page
-        </p>
+        </P>
 
-        <p className="" style={styles.paragraph}>
+        <P className="" style={styles.paragraph}>
           Here is some text that tells an interesting story ...
-        </p>
+        </P>
 
-      </div>
+      </Container>
     );
   }
 }

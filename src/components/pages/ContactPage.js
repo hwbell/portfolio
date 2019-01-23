@@ -4,6 +4,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import EmailForm from '../elements/EmailForm';
 
+import posed, { PoseGroup } from 'react-pose';
+
+const Container = posed.div({
+  enter: { staggerChildren: 50 },
+  exit: { staggerChildren: 50, staggerDirection: -1 }
+});
+
+const P = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 50, opacity: 0 }
+});
+
 class ContactPage extends Component {
   constructor(props) {
     super(props);
@@ -19,11 +31,11 @@ class ContactPage extends Component {
 
   render() {
     return (
-      <div className="Center container">
+      <Container className="Center container">
 
         <EmailForm />
 
-      </div>
+      </Container>
     );
   }
 }

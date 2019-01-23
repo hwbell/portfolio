@@ -1,6 +1,18 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, Spinner } from 'reactstrap';
+import posed, { PoseGroup } from 'react-pose';
+
 const fetch = require('node-fetch');
+
+const Container = posed.div({
+  enter: { staggerChildren: 50 },
+  exit: { staggerChildren: 50, staggerDirection: -1 }
+});
+
+const P = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 0, opacity: 0 }
+});
 
 class EmailForm extends React.Component {
 
@@ -73,9 +85,9 @@ class EmailForm extends React.Component {
     
     return (
       <div style={styles.form}>
-        <p className="" style={styles.name}>
+        <P className="" style={styles.name}>
           Get in touch with me to discuss anything at all
-        </p>
+        </P>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Input type="text" name="name" id="contactname" placeholder="name" 

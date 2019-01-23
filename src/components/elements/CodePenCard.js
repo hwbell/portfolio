@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, CardImg, CardText, CardImgOverlay, CardTitle } from 'reactstrap';
 import ModalButton from './ModalButton';
 
-import backgroundImage from '../../assets/images/chess-app.jpg';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Example extends React.Component {
   constructor(props) {
@@ -42,12 +42,21 @@ class Example extends React.Component {
             style={styles.image}
             src={require('../../assets/images/chess-app.jpg')}
             alt="Card image cap" />
-          {this.state.overlay ?
-            <CardImgOverlay style={styles.overlay}>
-              <CardTitle>Card Title</CardTitle>
-              <CardText style={styles.cardtext}>A simple app that ... </CardText>
-              <ModalButton buttonLabel="see the code"/>
-            </CardImgOverlay> : null}
+
+          <ReactCSSTransitionGroup
+            transitionName="example"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
+            {this.state.overlay ?
+              <CardImgOverlay style={styles.overlay}>
+                <CardTitle>Card Title</CardTitle>
+                <CardText style={styles.cardtext}>A simple app that ... </CardText>
+                <ModalButton buttonLabel="run app!" />
+              </CardImgOverlay>
+
+              : null}
+          </ReactCSSTransitionGroup>
+          
         </Card>
       </div>
     );

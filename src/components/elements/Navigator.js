@@ -14,7 +14,7 @@ class Navigator extends Component {
   render() {
     return (
       <div className="row fixed-bottom" style={styles.main}>
-        <div className="col-8">
+        <div className="col-12">
           <Nav style={styles.nav}>
             <NavLink style={styles.navlink} to="/">Home</NavLink>
             <NavLink style={styles.navlink} to="/about/">About</NavLink>
@@ -31,7 +31,8 @@ export default Navigator;
 
 const styles = {
   main: {
-    backgroundColor: 'whitesmoke'
+    backgroundColor: 'whitesmoke',
+    margin: '20px 20px 0px 20px'  
   },
   nav: {
     fontSize: 22,

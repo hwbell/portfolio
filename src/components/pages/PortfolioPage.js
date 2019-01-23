@@ -8,6 +8,18 @@ import '../../App.css';
 import { FaRandom } from 'react-icons/fa';
 import CodePenCard from '../elements/CodePenCard';
 
+import posed from 'react-pose';
+
+const Container = posed.div({
+  enter: {staggerChildren: 50 },
+  exit: { staggerChildren: 50, staggerDirection: -1 }
+});
+
+const P = posed.p({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 50, opacity: 0 }
+});
+
 class PortfolioPage extends Component {
   constructor(props) {
     super(props);
@@ -23,15 +35,15 @@ class PortfolioPage extends Component {
 
   render() {
     return (
-      <div className="Center container">
+      <Container className="Center container">
 
-        <p className="" style={styles.name}>
+        <P className="" style={styles.name}>
           Portfolio
-        </p>
+        </P>
 
-        <p className="" style={styles.paragraph}>
+        <P className="" style={styles.paragraph}>
           Take a look at some projects I have created
-        </p>
+        </P>
         
         <div className="row" style={styles.cardscontainer}>
 
@@ -41,7 +53,7 @@ class PortfolioPage extends Component {
           <div style={styles.cardholder} className="col-12 col-lg-6 project-preview"><CodePenCard /></div>
         </div>
         
-      </div>
+      </Container>
     );
   }
 }
