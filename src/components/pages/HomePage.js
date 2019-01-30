@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './HomePage.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import posed, { PoseGroup } from 'react-pose';
 
@@ -29,21 +30,23 @@ class HomePage extends Component {
   }
 
   onHoverDna() {
-    console.log('youre hovering...')
+    console.log('firing on hover')
     this.setState({
-      backgroundImage: require('../../assets/images/bio-bg.jpg')
+      bioBackground: true
     })
   }
 
   onHoverLaptop() {
     this.setState({
-      backgroundImage: require('../../assets/images/developer-bg.jpg')
+      devBackground: true
     })
   }
 
-  onExitHover () {
+  onExitHover() {
+    console.log('firing on exit')
     this.setState({
-      backgroundImage: ''
+      bioBackground: false,
+      devBackground: false
     })
   }
 
@@ -55,6 +58,16 @@ class HomePage extends Component {
     return (
 
       <Container className="Center container" style={containerStyle}>
+        {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+          {this.state.bioBackground && <div className="biologist-bg"></div>}
+
+          {this.state.devBackground && <div className="developer-bg"></div>}
+
+        </ReactCSSTransitionGroup>
 
         <P className="" style={styles.name}>
           Hi, I'm Harry

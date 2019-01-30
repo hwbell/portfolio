@@ -12,6 +12,7 @@ p {
 
 .container {
   width: 80%;
+  transition: opacity 1s ease-in-out;
   /* border: 1px solid whitesmoke; */
 }
 
@@ -79,4 +80,26 @@ p {
 .example-leave.example-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+/* For the background switch on the home page */
+.biologist-bg {
+  color: black;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0; right:0; bottom: 0;
+  background: url(./assets/images/bio-bg.jpg) no-repeat center;
+}
+
+.developer-bg {
+  color: black;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0; right:0; bottom: 0;
+  background: url(./assets/images/developer-bg.jpg) no-repeat center;
+  
 }
