@@ -11,11 +11,6 @@ const Container = posed.div({
   exit: { staggerChildren: 50, staggerDirection: -1 }
 });
 
-const P = posed.p({
-  enter: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 }
-});
-
 class ContactPage extends Component {
   constructor(props) {
     super(props);

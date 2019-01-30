@@ -17,7 +17,7 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 }
+  exit: { x: 10, opacity: 0 }
 });
 
 class PortfolioPage extends Component {

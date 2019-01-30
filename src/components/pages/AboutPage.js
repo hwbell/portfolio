@@ -12,7 +12,7 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 }
+  exit: { x: 10, opacity: 0 }
 });
 
 class HomePage extends Component {
@@ -33,11 +33,17 @@ class HomePage extends Component {
       <Container className="Center container">
 
         <P className="" style={styles.name}>
-          About Page
+          Nice to meet you!
         </P>
 
         <P className="" style={styles.paragraph}>
-          Here is some text that tells an interesting story ...
+          Since graduating from college, I have been a research biologist in the 
+          fields of molecular & cell biology, neuroscience, immunology and stem
+          cell biology. I've always enjoyed being an investigator of sorts and solving 
+          problems in creative ways. After learing how to program and develop web 
+          applications, my interests have shifted completely to the world of web 
+          development. I truly love the never-ending puzzle of how to create the best
+          user experience with the highest functionality. 
         </P>
 
       </Container>
@@ -61,7 +67,7 @@ const styles = {
   },
   paragraph: {
     fontSize: 18,
-    width: '60%,'
+    width: '70%'
   },
   icon: {
     width: 100,

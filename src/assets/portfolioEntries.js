@@ -19,19 +19,19 @@ const Apps = [
     link: 'https://stark-waters-61663.herokuapp.com/',
     picture: require('../assets/images/tetris-app.jpg'),
     description: 'A full stack Tetris app. Made with react and nodejs',
-    tools: ['react', 'nodejs', '']
+    tools: ['html', 'css', 'javascript', 'react', 'react-router', 'nodejs', 'heroku', ]
   },
   {
     name: 'Rogue Dungeon Crawler',
     link: '',
     picture: '',
-    description: 'A little dungeon crawler game I made for a Free Code Camp assignment',
+    description: 'A little dungeon crawler game I made for a Free Code Camp assignment.',
   },
   {
     name: "Conway's Game of Life",
-    link: '',
-    picture: '',
-    description: '',
+    link: 'https://conways-game-of-life-hb.herokuapp.com/',
+    picture: require('../assets/images/game-of-life-app.jpg'),
+    description: 'A rite of passage for any developer & a classic in mathematics.',
   },
   {
     name: 'Othello',
@@ -44,4 +44,10 @@ const Apps = [
 
 const codePens = {
 
+}
+
+export {
+  Apps,
+  mobileApps,
+  codePens
 }
