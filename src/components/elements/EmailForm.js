@@ -37,13 +37,15 @@ class EmailForm extends React.Component {
     self.setState({
       emailSent: false,
       sendingEmail: true,
-      icon: 'fa-spinner fa spin'
+      icon: 'fa-spinner fa-spin'
     });
 
-    fetch('http://localhost:8080/email', {
-      method: 'post',
+    fetch('https://portfolio-server-hb.herokuapp.com/email', {
+      method: 'POST',
       body: JSON.stringify(self.state.messageBody),
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        "Content-type": "application/json"
+      }
     })
       .then(res => res.json())
       .then((json) => {
@@ -110,7 +112,7 @@ class EmailForm extends React.Component {
             type="submit" 
             style={styles.button}
             className="send-button">
-            <i className={`fa ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
+            <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
           </Button>
         </Form>
       </div>

@@ -15,16 +15,17 @@ const mobileApps = [
 
 const Apps = [
   {
-    name: 'Tetris',
-    link: '',
-    picture: '',
-    description: '',
+    title: 'Tetris',
+    link: 'https://stark-waters-61663.herokuapp.com/',
+    picture: require('../assets/images/tetris-app.jpg'),
+    description: 'A full stack Tetris app. Made with react and nodejs',
+    tools: ['react', 'nodejs', '']
   },
   {
     name: 'Rogue Dungeon Crawler',
     link: '',
     picture: '',
-    description: '',
+    description: 'A little dungeon crawler game I made for a Free Code Camp assignment',
   },
   {
     name: "Conway's Game of Life",

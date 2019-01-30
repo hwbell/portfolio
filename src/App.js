@@ -32,7 +32,8 @@ class App extends Component {
       <Router>
         <div>
           <Route render={({ location }) => (
-
+            // pose is kind of awesome! and super easy for a simple 
+            // implementation like this
             <PoseGroup>
 
               <RoutesContainer key={location.pathname}>
@@ -43,8 +44,6 @@ class App extends Component {
                   <Route path="/portfolio/" component={PortfolioPage} />
                   <Route path="/contact/" component={ContactPage} />
                 </Switch>
-
-
 
               </RoutesContainer>
 
