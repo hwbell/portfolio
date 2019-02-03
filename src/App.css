@@ -2,6 +2,7 @@
 
 body {
   background-color: whitesmoke;
+  color: black;
   font-family: Quicksand;
   overflow-x: hidden;
 }
@@ -11,7 +12,7 @@ p {
 }
 
 .container {
-  width: 80%;
+  /* width: 80%; */
   transition: opacity 1s ease-in-out;
   /* border: 1px solid whitesmoke; */
 }
@@ -25,7 +26,6 @@ p {
 
 .Center {
   font-size: calc(16px + 2vmin);
-  color: black;
   min-height: 88vh;
 }
 
@@ -65,7 +65,7 @@ p {
 
 /* for the ReactCSSTransitionGroup animations */
 .example-enter {
-  opacity: 0.01;
+  opacity: 0.7;
 }
 
 .example-enter.example-enter-active {
@@ -74,7 +74,7 @@ p {
 }
 
 .example-leave {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .example-leave.example-leave-active {
@@ -89,8 +89,9 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0; right:0; bottom: 0;
-  background: url(./assets/images/bio-bg.jpg) no-repeat center;
+  left: 0; top: 0;
+  background: url(./assets/images/Snap-619\ \(copy\).jpg) no-repeat;
+  background-size: cover;
 }
 
 .developer-bg {
@@ -99,7 +100,7 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0; right:0; bottom: 0;
-  background: url(./assets/images/developer-bg.jpg) no-repeat center;
-  
+  left: 0; top: 0;
+  background: url(./assets/images/developer-bg.jpg) no-repeat;
+  background-size: cover;
 }

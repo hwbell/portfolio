@@ -36,6 +36,7 @@ class Example extends React.Component {
     return (
       <div style={styles.main}>
         <Card inverse
+          style={{border: 'none'}}
           onMouseOver={this.onHover}
           onMouseLeave={this.onExit}>
           <CardImg

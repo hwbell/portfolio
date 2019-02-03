@@ -31,7 +31,6 @@ export default Navigator;
 
 const styles = {
   main: {
-    backgroundColor: 'whitesmoke',
     margin: '20px 20px 0px 20px'  
   },
   nav: {
@@ -39,6 +38,8 @@ const styles = {
   },
   navlink: {
     margin: 15,
+    fontWeight: 600
+    // color: 'whitesmoke',
   },
   icon: {
     width: 100,
