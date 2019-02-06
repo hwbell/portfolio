@@ -104,3 +104,14 @@ p {
   background: url(./assets/images/developer-bg.jpg) no-repeat;
   background-size: cover;
 }
+
+/* for the image on the about page */
+.profile-pic {
+  opacity: 0.9;
+  width: 60%;
+  border-radius: 100px;
+  margin: 40px 0 0 0;
+  -moz-box-shadow: 5px 5px 5px rgba(255,255,255,.5);
+  -webkit-box-shadow: 5px 5px 5px rgba(255,255,255,.5);
+  box-shadow: 5px 5px 5px rgba(255,255,255,.5);
+}

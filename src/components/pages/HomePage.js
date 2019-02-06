@@ -33,7 +33,7 @@ const dnaHoverState = {
   devBackground: false,
   textColor: 'whitesmoke',
   contentBackground: 'rgba(0,0,0,0.25)',
-  boxShadow: '1px 1px 1px 15px rgba(0,0,0,0.25)'
+  boxShadow: '5px 5px 5px 15px rgba(0,0,0,0.25)'
 }
 
 const laptopHoverState = {
@@ -41,7 +41,7 @@ const laptopHoverState = {
   devBackground: true,
   textColor: 'whitesmoke',
   contentBackground: 'rgba(0,0,0,0.5)',
-  boxShadow: '1px 1px 1px 15px rgba(0,0,0,0.5)'
+  boxShadow: '5px 5px 5px 15px rgba(0,0,0,0.5)'
 }
 
 class HomePage extends Component {

@@ -77,8 +77,6 @@ class EmailForm extends React.Component {
 
     this.setState({
       messageBody: newMessageBody
-    }, () => {
-      console.log(newMessageBody)
     });
 
   }

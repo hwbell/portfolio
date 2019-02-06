@@ -6,7 +6,7 @@ import ModalButton from './ModalButton';
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class Example extends React.Component {
+class CodePenCard extends React.Component {
   constructor(props) {
     super(props);
     this.onHover = this.onHover.bind(this);
@@ -83,4 +83,4 @@ const styles = {
   },
 }
 
-export default Example;
+export default CodePenCard;

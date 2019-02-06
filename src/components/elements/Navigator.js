@@ -22,6 +22,7 @@ class Navigator extends Component {
             <NavLink style={styles.navlink} to="/contact/">Contact</NavLink>
           </Nav>
         </div>
+
       </div>
     );
   }
@@ -31,15 +32,15 @@ export default Navigator;
 
 const styles = {
   main: {
-    margin: '20px 20px 0px 20px'  
+    margin: '20px 20px 0px 20px',  
   },
   nav: {
     fontSize: 22,
   },
   navlink: {
     margin: 15,
-    fontWeight: 600
-    // color: 'whitesmoke',
+    fontWeight: 600,
+    textDecoration: 'none'
   },
   icon: {
     width: 100,
