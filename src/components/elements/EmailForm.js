@@ -40,7 +40,7 @@ class EmailForm extends React.Component {
       icon: 'fa-spinner fa-spin'
     });
 
-    fetch('https://portfolio-server-hb.herokuapp.com/email', {
+    fetch('https://harold-bell-portfolio-server.herokuapp.com/email', {
       method: 'POST',
       body: JSON.stringify(self.state.messageBody),
       headers: {
