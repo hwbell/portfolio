@@ -139,11 +139,12 @@ export default HomePage;
 
 const styles = {
   iconRow: {
-    width: '80%',
+    width: '70%',
+    minWidth: 300,
     margin: '40px auto'
   },
   image: {
-    fontSize: 60,
+    fontSize: 50,
   },
   name: {
     fontSize: 25,
@@ -154,7 +155,7 @@ const styles = {
   },
   icon: {
     fontWeight: 'bolder',
-    color: '#039BE5',//#5C6BC0
+    color: '#01a6d8',//#5C6BC0
     marginTop: 35,
     width: 20,
     height: 20

@@ -42,17 +42,5 @@ const styles = {
     fontWeight: 600,
     textDecoration: 'none'
   },
-  icon: {
-    width: 100,
-    height: 100
-  },
-  circleArrow: {
-    color: '#48C9B0',
-    width: 68,
-    height: 68,
-  },
-  middleDisplayCol: {
-    fontSize: 22,
-    margin: 10,
-  },
+ 
 }
