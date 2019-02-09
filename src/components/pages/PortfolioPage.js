@@ -28,7 +28,7 @@ const P = posed.p({
   exit: { x: 10, opacity: 0 }
 });
 
-const image = require('../../assets/images/chess-app.jpg');
+const cardHolderClass = "col-12 col-sm-6 col-lg-4 px-0";
 
 
 class PortfolioPage extends Component {
@@ -37,11 +37,26 @@ class PortfolioPage extends Component {
     this.state = {
       //
     };
-    this.hover = this.hover.bind(this);
+    this.displayApps = this.displayApps.bind(this);
   }
 
-  hover() {
-    //
+  // use this function to display each category of app when selected. types are the
+  // imported vars from portfolioEntries.js
+
+  displayApps(appType) {
+
+    return (
+      appType.map((app, i) => {
+        return (
+          <div key={i} style={styles.cardholder}
+            className={cardHolderClass}>
+            <CodePenCard
+              {...app}
+            />
+          </div>
+        )
+      })
+    )
   }
 
   render() {
@@ -60,16 +75,8 @@ class PortfolioPage extends Component {
         <div className="row" style={styles.cardscontainer}>
 
           {/* map through apps and make a card for each, with the props from portfolioEntries.js */}
-          {webApps.map((app, i) => {
-            return (
-              <div key={i} style={styles.cardholder}
-                className={cardHolderClass}>
-                <CodePenCard 
-                  {...app}
-                />
-              </div>
-            )
-          })}
+          {this.displayApps(webApps)}
+          {this.displayApps(codePens)}
         </div>
 
       </Container>
@@ -86,13 +93,14 @@ const styles = {
   },
   paragraph: {
     fontSize: 18,
-    width: '60%,'
+    // width: '60%,'
   },
   cardscontainer: {
     width: '100%',
-    marginBottom: 80,
+    marginBottom: '10vh',
   },
   cardholder: {
+    maxWidth: 350
     // margin: 'auto'
     // maxWidth: 300,
   }

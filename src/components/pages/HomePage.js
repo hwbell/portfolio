@@ -70,6 +70,7 @@ class HomePage extends Component {
   render() {
     let containerStyle = {
       width: '40%',
+      minHeight: '68vh',
       margin: 'auto auto',
       minWidth: 400,
       color: this.state.textColor,

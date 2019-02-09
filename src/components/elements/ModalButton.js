@@ -36,8 +36,8 @@ class ModalButton extends React.Component {
           <ModalHeader toggle={this.toggle}>{this.props.name}</ModalHeader>
 
           {/* the body must me an actual html element, not just an image */}
-          <ModalBody> {this.props.pen ?
-            this.props.pen :
+          <ModalBody> {this.props.modalBG ?
+            this.props.modalBG :
             <img style={styles.image} src={this.props.image}></img>}
             <p>{this.props.modalDescription}</p>
           </ModalBody>

@@ -57,6 +57,7 @@ class CodePenCard extends React.Component {
                   image={this.props.image}
                   modalDescription={this.props.modalDescription}
                   name={this.props.name}
+                  modalBG={this.props.modalBG}
                 />
               </CardImgOverlay>
 

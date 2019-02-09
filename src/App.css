@@ -26,7 +26,7 @@ p {
 
 .Center {
   font-size: calc(16px + 2vmin);
-  min-height: 58vh;
+  
   /* border: 1px solid grey; */
 }
 

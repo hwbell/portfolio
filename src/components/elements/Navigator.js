@@ -9,6 +9,7 @@ import { Nav } from 'reactstrap';
 // styling
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
+import MediaQuery from 'react-responsive';
 
 class Navigator extends Component {
   render() {
@@ -38,7 +39,8 @@ const styles = {
     fontSize: 22,
   },
   navlink: {
-    margin: 15,
+    margin: '2.2vw',
+    marginBottom: 15,
     fontWeight: 600,
     textDecoration: 'none'
   },
