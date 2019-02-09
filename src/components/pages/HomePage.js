@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './HomePage.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import posed, { PoseGroup } from 'react-pose';

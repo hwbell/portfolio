@@ -20,25 +20,35 @@ class ModalButton extends React.Component {
   }
 
   render() {
+    // console.log(`card image: ${this.props.image}`)
     return (
       <div style={styles.main}>
-        <Button color="primary" 
+        <Button color="primary"
           style={styles.button}
           onClick={this.toggle}>{this.props.buttonLabel}</Button>
+
+        {/* button will toggle making this modal visible */}
         <Modal className={this.props.className}
           style={styles.modal}
-          isOpen={this.state.modal} 
+          isOpen={this.state.modal}
           toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody>
-          <iframe style={styles.iframe} scrolling="no" title="Chess Game" src="//codepen.io/hbellatcodepen/embed/preview/GxqmaJ/?height=749&theme-id=0&default-tab=resultundefined" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/hbellatcodepen/pen/GxqmaJ/'>Chess Game</a> by Harold Bell
-  (<a href='https://codepen.io/hbellatcodepen'>@hbellatcodepen</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+
+          <ModalHeader toggle={this.toggle}>{this.props.name}</ModalHeader>
+
+          {/* the body must me an actual html element, not just an image */}
+          <ModalBody> {this.props.pen ?
+            this.props.pen :
+            <img style={styles.image} src={this.props.image}></img>}
+            <p>{this.props.modalDescription}</p>
           </ModalBody>
+
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+
+            <a target="#blank" 
+              href={this.props.link} 
+              style={styles.link}
+              className="btn btn-md btn-primary">run app!</a>
+            <Button color="secondary" onClick={this.toggle}>back</Button>
           </ModalFooter>
         </Modal>
       </div>
@@ -55,10 +65,12 @@ const styles = {
   modal: {
     width: '100%'
   },
-  iframe: {
+  image: {
     width: '100%',
-    height: 500,
   },
-
+  link: {
+    color: 'whitesmoke',
+  }
 }
+
 export default ModalButton;

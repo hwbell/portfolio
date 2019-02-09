@@ -26,7 +26,8 @@ p {
 
 .Center {
   font-size: calc(16px + 2vmin);
-  min-height: 88vh;
+  min-height: 58vh;
+  /* border: 1px solid grey; */
 }
 
 /* .switch-wrapper {
@@ -55,12 +56,6 @@ p {
 } */
 .send-button:hover {
   background-color: black;
-}
-
-/* for the portfolio page */
-.project-preview {
-  margin: 0 auto;
-  min-width: 300;
 }
 
 /* for the ReactCSSTransitionGroup animations */

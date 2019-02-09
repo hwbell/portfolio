@@ -41,7 +41,7 @@ class CodePenCard extends React.Component {
           onMouseLeave={this.onExit}>
           <CardImg
             style={styles.image}
-            src={require('../../assets/images/chess-app.jpg')}
+            src={this.props.image}
             alt="Card image cap" />
 
           <ReactCSSTransitionGroup
@@ -50,9 +50,14 @@ class CodePenCard extends React.Component {
             transitionLeaveTimeout={300}>
             {this.state.overlay ?
               <CardImgOverlay style={styles.overlay}>
-                <CardTitle>Card Title</CardTitle>
-                <CardText style={styles.cardtext}>A simple app that ... </CardText>
-                <ModalButton buttonLabel="run app!" />
+                <CardTitle>{this.props.title}</CardTitle>
+                <CardText style={styles.cardtext}>{this.props.description}</CardText>
+                <ModalButton buttonLabel="see more" 
+                  link={this.props.link}
+                  image={this.props.image}
+                  modalDescription={this.props.modalDescription}
+                  name={this.props.name}
+                />
               </CardImgOverlay>
 
               : null}
@@ -66,9 +71,9 @@ class CodePenCard extends React.Component {
 
 const styles = {
   main: {
-    minHeight: 280,
-    minWidth: 280,
-    marginBottom: 20,
+    // minHeight: 280,
+    // minWidth: 280,
+    // marginBottom: 20,
   },
   image: {
     height: '100%',
