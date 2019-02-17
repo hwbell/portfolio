@@ -84,7 +84,7 @@ class EmailForm extends React.Component {
   render() {
     
     return (
-      <div style={styles.form}>
+      <Container style={styles.form}>
         <P className="" style={styles.name}>
           Get in touch with me to discuss anything at all
         </P>
@@ -113,7 +113,7 @@ class EmailForm extends React.Component {
             <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
           </Button>
         </Form>
-      </div>
+      </Container>
     );
   }
 }

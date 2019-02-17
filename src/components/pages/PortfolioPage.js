@@ -60,7 +60,7 @@ class PortfolioPage extends Component {
   }
 
   render() {
-    let cardHolderClass = "col-12 col-sm-6 col-lg-4 px-0";
+
     return (
       <Container className="Center container">
 
@@ -72,7 +72,7 @@ class PortfolioPage extends Component {
           Take a look at some projects I have created
         </P>
 
-        <div className="row" style={styles.cardscontainer}>
+        <div className="row" style={styles.cardsContainer}>
 
           {/* map through apps and make a card for each, with the props from portfolioEntries.js */}
           {this.displayApps(webApps)}
@@ -87,6 +87,11 @@ class PortfolioPage extends Component {
 export default PortfolioPage;
 
 const styles = {
+  cardsContainer: {
+    // width: '70%',
+    margin: '10vh',
+    marginBottom: '10vh',
+  },
   name: {
     fontSize: 28,
     margin: 40,
@@ -95,12 +100,8 @@ const styles = {
     fontSize: 18,
     // width: '60%,'
   },
-  cardscontainer: {
-    width: '100%',
-    marginBottom: '10vh',
-  },
   cardholder: {
-    maxWidth: 350
+    // minWidth: 180
     // margin: 'auto'
     // maxWidth: 300,
   }

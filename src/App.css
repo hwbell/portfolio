@@ -60,12 +60,12 @@ p {
 
 /* for the ReactCSSTransitionGroup animations */
 .example-enter {
-  opacity: 0.7;
+  opacity: 0.1;
 }
 
 .example-enter.example-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
 .example-leave {

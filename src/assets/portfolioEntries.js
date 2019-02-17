@@ -1,5 +1,8 @@
 import React from 'react';
 
+// information objects for apps shown on portfolio page. information is for the modal displays
+
+// separate by type
 const mobileApps = [
   {
     name: 'Colorado Daily Info',
@@ -42,6 +45,24 @@ const webApps = [
   },
 ]
 
+// codepens have embedded pen html taken from the site's embed tool
+
+// define just the embedded pens first
+const reversiEmbedded = (
+  <iframe height="600" style={{width: '100%'}} scrolling="no" title="Simple Reversi Game" src="//codepen.io/hbellatcodepen/embed/XVrZLB/?height=913&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/hbellatcodepen/pen/XVrZLB/'>Simple Reversi Game</a> by Harold Bell
+  (<a href='https://codepen.io/hbellatcodepen'>@hbellatcodepen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+);
+
+const chessEmbedded = (
+  <iframe height="600" style={{width: '100%'}} scrolling="no" title="Chess Game" src="//codepen.io/hbellatcodepen/embed/GxqmaJ/?height=734&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/hbellatcodepen/pen/GxqmaJ/'>Chess Game</a> by Harold Bell
+  (<a href='https://codepen.io/hbellatcodepen'>@hbellatcodepen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+);
+
+// then the actual objects
 const codePens = [
   {
     name: 'Reversi',
@@ -51,10 +72,7 @@ const codePens = [
     modalDescription: 'Building this simple game was good practice for eventually making more complex apps.',
     modalBG: (
       <div>
-        <iframe height="600" style={{width: '100%'}} scrolling="no" title="Simple Reversi Game" src="//codepen.io/hbellatcodepen/embed/XVrZLB/?height=913&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/hbellatcodepen/pen/XVrZLB/'>Simple Reversi Game</a> by Harold Bell
-  (<a href='https://codepen.io/hbellatcodepen'>@hbellatcodepen</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+        {reversiEmbedded}
       </div>
     ),
     tools: '',
@@ -67,10 +85,7 @@ const codePens = [
     modalDescription: 'A bit more complex than reversi. Programming all the rules for piece movement, check, etc. was a lot of fun.',
     modalBG: (
       <div>
-        <iframe height="600" style={{width: '100%'}} scrolling="no" title="Chess Game" src="//codepen.io/hbellatcodepen/embed/GxqmaJ/?height=734&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/hbellatcodepen/pen/GxqmaJ/'>Chess Game</a> by Harold Bell
-  (<a href='https://codepen.io/hbellatcodepen'>@hbellatcodepen</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+        {chessEmbedded}
       </div>
     ),
     tools: '',

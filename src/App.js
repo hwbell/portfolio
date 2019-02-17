@@ -27,6 +27,24 @@ const RoutesContainer = posed.div({
 });
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 'home'
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick (page) {
+    this.setState({
+      page: page
+    }, () => {
+      console.log(this.state.page)
+    })
+  }
+
   render() {
     return (
       <Router>
@@ -50,7 +68,10 @@ class App extends Component {
             </PoseGroup>
 
           )} />
-          <Navigator/>
+          <Navigator
+            bgColor={this.state.page !== 'home' ? 'rgba(255,255,255, 0.25)': 'none'}
+            handleClick={() => this.handleClick}
+          />
         </div>
       </Router>
     );
