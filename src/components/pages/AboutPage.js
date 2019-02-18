@@ -52,14 +52,14 @@ class HomePage extends Component {
 
   render() {
 
-    const languageSkills = languages.map((language) =>
-      <li>{language}</li>
+    const languageSkills = languages.map((language, i) =>
+      <li key={i}>{language}</li>
     );
-    const toolsSkills = tools.map((tool) =>
-      <li>{tool}</li>
+    const toolsSkills = tools.map((tool, i) =>
+      <li key={i}>{tool}</li>
     );
-    const frameworksSkills = frameworks.map((framework) =>
-      <li>{framework}</li>
+    const frameworksSkills = frameworks.map((framework, i) =>
+      <li key={i}>{framework}</li>
     );
 
     return (
@@ -73,9 +73,27 @@ class HomePage extends Component {
             <P className="" style={styles.greeting}>
               Nice to meet you!
             </P>
-            <P>
-              Functionality
-            </P>
+
+            {/* the animation icons */}
+
+            <div id="iconContainer">
+              <div class="animatedIcon">
+                <i className="fa fa-dna grow" style={styles.icon}></i>
+              </div>
+              <div class="animatedIcon">
+                <i className="fa fa-dna grow" style={styles.icon}></i>
+              </div>
+              <div class="animatedIcon">
+                <i className="fa fa-dna grow" style={styles.icon}></i>
+              </div>
+              <div class="animatedIcon">
+                <i className="fa fa-dna grow" style={styles.icon}></i>
+              </div>
+              <div class="animatedIcon">
+                <i className="fa fa-dna grow" style={styles.icon}></i>
+              </div>
+            </div>
+
           </Div>
 
         </Div>
@@ -173,6 +191,9 @@ const styles = {
     minWidth: 200,
     // height: 300,
     // width: 300
+  },
+  icon: {
+    fontSize: 40
   },
   list: {
     display: 'flex',

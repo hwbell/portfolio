@@ -60,6 +60,7 @@ class HomePage extends Component {
   onHoverDna() {
     console.log('firing on hover')
     this.setState(dnaHoverState);
+    
   }
 
   onHoverLaptop () {
@@ -114,7 +115,7 @@ class HomePage extends Component {
               {/* onMouseLeave={this.onExitHover} */}
 
               <P style={styles.icontext}>biologist</P>
-              <i className="fa fa-dna fa-gradient-left" style={styles.image}></i>
+              <i className="fa fa-dna fa-gradient-left grow" style={styles.image}></i>
             </div>
 
             <div className="col" >
@@ -126,7 +127,7 @@ class HomePage extends Component {
               {/* onMouseLeave={this.onExitHover} */}
 
               <P style={styles.icontext}>developer</P>
-              <i className="fa fa-laptop fa-gradient-right" style={styles.image}></i>
+              <i className="fa fa-laptop fa-gradient-right grow" style={styles.image}></i>
             </div>
 
           </Div>

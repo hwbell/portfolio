@@ -34,15 +34,6 @@ class App extends Component {
       page: 'home'
     };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick (page) {
-    this.setState({
-      page: page
-    }, () => {
-      console.log(this.state.page)
-    })
   }
 
   render() {
@@ -69,8 +60,6 @@ class App extends Component {
 
           )} />
           <Navigator
-            bgColor={this.state.page !== 'home' ? 'rgba(255,255,255, 0.25)': 'none'}
-            handleClick={() => this.handleClick}
           />
         </div>
       </Router>

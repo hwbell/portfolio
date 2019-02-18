@@ -4,33 +4,33 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 
-// all the apps on free dynos to ping and wake up
-const apps = [
-  'https://conways-game-of-life-hb.herokuapp.com/',
-  'https://stark-waters-61663.herokuapp.com/',
-  'https://react-recipe-box.herokuapp.com/',
-  'https://hwbell-portfolio-server.herokuapp.com/',
-  'https://lit-ridge-56288.herokuapp.com/',
-  'https://agile-plateau-65674.herokuapp.com/',
-  'https://lit-falls-35438.herokuapp.com/'
+// // all the apps on free dynos to ping and wake up
+// const apps = [
+//   'https://conways-game-of-life-hb.herokuapp.com/',
+//   'https://stark-waters-61663.herokuapp.com/',
+//   'https://react-recipe-box.herokuapp.com/',
+//   'https://hwbell-portfolio-server.herokuapp.com/',
+//   'https://lit-ridge-56288.herokuapp.com/',
+//   'https://agile-plateau-65674.herokuapp.com/',
+//   'https://lit-falls-35438.herokuapp.com/'
 
 
-]
+// ]
 
-// wake 'em up! should take like 7-10 sec, and will do so 
-// async so should be up and ready by the time it is clicked on
-apps.forEach((app) => {
-  fetch(app)
-    .then((res) => {
-      console.log(`${app} pinged! `)
-      console.log(res)
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-})
+// // wake 'em up! should take like 7-10 sec, and will do so 
+// // async so should be up and ready by the time it is clicked on
+// apps.forEach((app) => {
+//   fetch(app)
+//     .then((res) => {
+//       console.log(`${app} pinged! `)
+//       console.log(res)
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// })
 
 
 

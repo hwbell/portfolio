@@ -94,12 +94,11 @@ export default PortfolioPage;
 const styles = {
   cardsContainer: {
     // width: '70%',
-    margin: '10vh',
-    marginBottom: '10vh',
+    margin: '5vh 8vh 10vh 8vh',
   },
   name: {
     fontSize: 28,
-    margin: 40,
+    margin: 30,
   },
   paragraph: {
     fontSize: 18,
