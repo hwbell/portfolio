@@ -10,6 +10,7 @@ import { Nav } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
 import MediaQuery from 'react-responsive';
+import { rgba } from 'style-value-types';
 
 class Navigator extends Component {
   constructor(props) {
@@ -18,30 +19,27 @@ class Navigator extends Component {
 
   render() {
 
-    const mainStyle = {
-      margin: '20px 20px 0px 20px',
-      background: this.props.bgColor,
-    }
+    
     return (
-      <div className="row fixed-bottom" style={mainStyle}>
+      <div className="row fixed-bottom" style={styles.main}>
         <div className="col-12">
           <Nav style={styles.nav}>
-            <NavLink style={styles.navlink} 
+            <NavLink className="grow" style={styles.navlink} 
               to="/">
               {/* // onClick={this.props.handleClick('home')}> */}
               Home
             </NavLink>
-            <NavLink style={styles.navlink}
+            <NavLink className="grow" style={styles.navlink}
               to="/about/">
               {/* // onClick={this.props.handleClick('about')}> */}
               About
             </NavLink>
-            <NavLink style={styles.navlink}
+            <NavLink className="grow" style={styles.navlink}
               to="/portfolio/">
               {/* // onClick={this.props.handleClick('portfolio')}> */}
               Portfolio
             </NavLink>
-            <NavLink style={styles.navlink}
+            <NavLink className="grow" style={styles.navlink}
               to="/contact/">
               {/* // onClick={this.props.handleClick('contact')}> */}
               Contact
@@ -57,6 +55,10 @@ class Navigator extends Component {
 export default Navigator;
 
 const styles = {
+  main: {
+    margin: '20px 20px 0px 20px',
+    background: 'rgba(255,255,255,0.2)',
+  },
   nav: {
     fontSize: 22,
   },

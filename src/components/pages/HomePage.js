@@ -15,7 +15,12 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: -100, opacity: 0 }
+});
+
+const Div = posed.div({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: -100, opacity: 0 }
 });
 
 const initialState = {
@@ -102,7 +107,7 @@ class HomePage extends Component {
 
           <P className="text-center" style={styles.name}>Hi, I'm Harry</P>
 
-          <div className="row" style={styles.iconRow}>
+          <Div className="row" style={styles.iconRow}>
 
             <div className="col"
               onMouseOver={this.onHoverDna}>
@@ -124,7 +129,7 @@ class HomePage extends Component {
               <i className="fa fa-laptop fa-gradient-right" style={styles.image}></i>
             </div>
 
-          </div>
+          </Div>
 
           <div className="row" style={styles.description}>
             <P>I love creating and developing full stack web & mobile apps.</P>

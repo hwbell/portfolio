@@ -85,9 +85,7 @@ class EmailForm extends React.Component {
     
     return (
       <Container style={styles.form}>
-        <P className="" style={styles.name}>
-          Get in touch with me to discuss anything at all
-        </P>
+    
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Input type="text" name="name" id="contactname" placeholder="name" 
@@ -121,12 +119,10 @@ class EmailForm extends React.Component {
 export default EmailForm;
 
 const styles = {
-  name: {
-    fontSize: 28,
-    margin: 40,
-  },
+  
   form: {
-    width: '80%'
+    width: '80%',
+    margin: 30
   },
   image: {
     fontSize: 45,

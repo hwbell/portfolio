@@ -26,13 +26,18 @@ p {
 
 .Center {
   font-size: calc(16px + 2vmin);
-  
-  /* border: 1px solid grey; */
+  }
+
+
+/* for the Nav Bar hovering */
+.grow {
+  transition:all 0.3s ease;
 }
-
-/* .switch-wrapper {
-
-} */
+.grow:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 /* for fontAwesome icon's gradient appearance */
 .fa-gradient-left {

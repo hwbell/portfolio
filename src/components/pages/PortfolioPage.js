@@ -28,6 +28,11 @@ const P = posed.p({
   exit: { x: 10, opacity: 0 }
 });
 
+const Div = posed.div({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 10, opacity: 0 }
+});
+
 const cardHolderClass = "col-12 col-sm-6 col-lg-4 px-0";
 
 
@@ -48,12 +53,12 @@ class PortfolioPage extends Component {
     return (
       appType.map((app, i) => {
         return (
-          <div key={i} style={styles.cardholder}
+          <Div key={i} style={styles.cardholder}
             className={cardHolderClass}>
             <CodePenCard
               {...app}
             />
-          </div>
+          </Div>
         )
       })
     )
