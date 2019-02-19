@@ -4,6 +4,9 @@ import React from 'react';
 import { Card, CardImg, CardText, CardImgOverlay, CardTitle } from 'reactstrap';
 import ModalButton from './ModalButton';
 
+// styling
+import 'bootstrap/dist/css/bootstrap.css';
+import '../../App.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class CodePenCard extends React.Component {
@@ -50,9 +53,9 @@ class CodePenCard extends React.Component {
             transitionLeaveTimeout={300}>
             {this.state.overlay ?
               <CardImgOverlay style={styles.overlay}>
-                <CardTitle>{this.props.title}</CardTitle>
+                <CardTitle style={styles.cardTitle}>{this.props.name}</CardTitle>
                 <CardText style={styles.cardtext}>{this.props.description}</CardText>
-                <ModalButton buttonLabel="see more" 
+                <ModalButton className="" buttonLabel="see more" 
                   link={this.props.link}
                   image={this.props.image}
                   modalDescription={this.props.modalDescription}
@@ -80,12 +83,16 @@ const styles = {
     height: '100%',
   },
   overlay: {
+    width: '100%',
     background: 'rgba(0,0,0,0.65)',
   },
+  cardTitle: {
+    fontSize: 24
+  },
   cardtext: {
-    margin: '0 20px',
+    margin: 0,
     color: 'whitesmoke',
-    fontSize: 20
+    fontSize: 16
   },
 }
 

@@ -188,8 +188,8 @@ p {
 
 .flip-vertical-left {
   transition:all 0.5s ease;
-	-webkit-animation: flip-vertical-left 6s linear;
-	        animation: flip-vertical-left 6s linear;
+	-webkit-animation: flip-vertical-left 3s linear;
+	        animation: flip-vertical-left 3s linear;
 }
 .flip-vertical-left:hover {
   -webkit-transform: scale(1.2);

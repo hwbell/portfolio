@@ -72,12 +72,14 @@ class Navigator extends Component {
 export default Navigator;
 
 const styles = {
-  
+  mainStyle: {
+    width: '100%'
+  },
   nav: {
     fontSize: 22,
   },
   navlink: {
-    margin: '2.2vw',
+    margin: '2vw',
     marginBottom: 5,
     fontWeight: 600,
     textDecoration: 'none'

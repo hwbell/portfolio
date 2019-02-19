@@ -33,13 +33,18 @@ class ModalButton extends React.Component {
           isOpen={this.state.modal}
           toggle={this.toggle}>
 
-          <ModalHeader toggle={this.toggle}>{this.props.name}</ModalHeader>
+          <ModalHeader toggle={this.toggle}>
+            <p style={styles.title}>{this.props.name}</p>
+          </ModalHeader>
 
           {/* the body must me an actual html element, not just an image */}
-          <ModalBody> {this.props.modalBG ?
+          {/* if there is a modalBG */}
+          <ModalBody> 
+          {/* {
+            this.props.modalBG ?
             this.props.modalBG :
-            <img style={styles.image} src={this.props.image}></img>}
-            <p>{this.props.modalDescription}</p>
+            <img style={styles.image} src={this.props.image}></img>} */}
+            <p style={styles.modalDescription}>{this.props.modalDescription}</p>
           </ModalBody>
 
           <ModalFooter>
@@ -59,11 +64,18 @@ class ModalButton extends React.Component {
 const styles = {
   main: {
   },
+  title: {
+    fontSize: 26
+  },
   button: {
     margin: 12,
   },
   modal: {
     width: '100%'
+  },
+  modalDescription: {
+    margin: 15,
+    fontSize: 18,
   },
   image: {
     width: '100%',

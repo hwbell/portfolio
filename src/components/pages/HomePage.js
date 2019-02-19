@@ -77,7 +77,7 @@ class HomePage extends Component {
     let containerStyle = {
       width: '40%',
       minHeight: '68vh',
-      margin: 'auto auto',
+      margin: '30vh auto',
       minWidth: 400,
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
@@ -90,7 +90,7 @@ class HomePage extends Component {
     }
     return (
 
-      <Container className="Center" style={containerStyle}>
+      <Container className="container" style={containerStyle}>
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
         <ReactCSSTransitionGroup
           transitionName="example"
@@ -110,7 +110,7 @@ class HomePage extends Component {
 
           <Div className="row" style={styles.iconRow}>
 
-            <div className="col"
+            <div className="col" style={styles.iconHolder}
               onMouseOver={this.onHoverDna}>
               {/* onMouseLeave={this.onExitHover} */}
 
@@ -118,11 +118,11 @@ class HomePage extends Component {
               <i className="fa fa-dna fa-gradient-left grow" style={styles.image}></i>
             </div>
 
-            <div className="col" >
+            <div className="col" style={styles.iconHolder}>
               <i className="fas fa-random" style={styles.icon}></i>
             </div>
 
-            <div className="col"
+            <div className="col" style={styles.iconHolder}
               onMouseOver={this.onHoverLaptop}>
               {/* onMouseLeave={this.onExitHover} */}
 
@@ -145,30 +145,31 @@ export default HomePage;
 
 const styles = {
   iconRow: {
-    width: '70%',
-    minWidth: 300,
-    margin: '40px auto'
+    width: 250,
+    margin: 'auto auto',
   },
   image: {
-    fontSize: 50,
+    fontSize: 45,
   },
   name: {
     fontSize: 25,
     marginTop: 20
   },
+  iconHolder: {
+    width: 40,
+    margin: 'auto auto'
+  },
   icontext: {
-    fontSize: 22,
+    fontSize: 20,
   },
   icon: {
     fontWeight: 'bolder',
     color: '#01a6d8',//#5C6BC0
     marginTop: 35,
-    width: 20,
-    height: 20
+    fontSize: 24
   },
 
   description: {
-
     fontSize: 20,
     margin: 10,
   },

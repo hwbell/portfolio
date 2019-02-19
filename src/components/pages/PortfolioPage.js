@@ -33,6 +33,7 @@ const Div = posed.div({
   exit: { x: 10, opacity: 0 }
 });
 
+
 const cardHolderClass = "col-12 col-sm-6 col-lg-4 px-0";
 
 
@@ -69,19 +70,28 @@ class PortfolioPage extends Component {
     return (
       <Container className="Center container">
 
-        <P className="" style={styles.name}>
-          Portfolio
-        </P>
+          <P className="row" style={styles.title}>
+            Portfolio
+          </P>
 
-        <P className="" style={styles.paragraph}>
-          Take a look at some projects I have created
-        </P>
+          <P className="row" style={styles.paragraph}>
+            Take a look at some projects I have created.
+          </P>
 
+        <P className="" style={styles.subtitle}>
+          Web
+        </P>
         <div className="row" style={styles.cardsContainer}>
-
           {/* map through apps and make a card for each, with the props from portfolioEntries.js */}
           {this.displayApps(webApps)}
           {this.displayApps(codePens)}
+        </div>
+
+        <P className="" style={styles.subtitle}>
+          Mobile
+        </P>
+        <div className="row" style={styles.cardsContainer}>
+          {this.displayApps(mobileApps)}
         </div>
 
       </Container>
@@ -94,14 +104,21 @@ export default PortfolioPage;
 const styles = {
   cardsContainer: {
     // width: '70%',
-    margin: '5vh 8vh 10vh 8vh',
+    margin: '2vh 8vh 10vh 8vh',
   },
-  name: {
+  title: {
     fontSize: 28,
-    margin: 30,
+    marginTop: 15,
+    fontWeight: 'bold'
+  },
+  subtitle: {
+    textAlign: 'left',
+    fontSize: 24,
+    fontWeight: 'bold'
   },
   paragraph: {
-    fontSize: 18,
+    fontSize: 20,
+    marginBottom: 40
     // width: '60%,'
   },
   cardholder: {

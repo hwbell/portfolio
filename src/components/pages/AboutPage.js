@@ -71,7 +71,7 @@ const Div = posed.div({
 // for the list display - each is a list, with the var name as the title
 const languages = ['HTML5', 'CSS', 'javascript', 'python', 'MATLAB'];
 const tools = ['npm', 'github', 'heroku', 'aws S3', 'postman', 'VS Code', 'Linux OS'];
-const frameworks = ['Reactjs', 'React Native', 'Node.js', 'Express.js', 'MongoDB'];
+const frameworks = ['React.js', 'React Native', 'Node.js', 'Express.js', 'MongoDB'];
 
 class HomePage extends Component {
   constructor(props) {
@@ -106,11 +106,11 @@ class HomePage extends Component {
 
       <Container className="container" style={styles.main}>
 
-        {/* <Img src={ProfilePic} className="" style={styles.image} /> */}
-
-        <P className="text-center" style={styles.greeting}>
+        <P className="text-center" style={styles.title}>
           Nice to meet you!
         </P>
+
+        <Img src={ProfilePic} className="row" style={styles.image} />
 
         <Div style={styles.textContainer}>
           <P className="" style={styles.paragraph}>
@@ -188,13 +188,11 @@ const styles = {
   main: {
     marginBottom: 80,
   },
-  pictureContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    marginTop: 30
+  title: {
+    fontSize: 28,
+    margin: 25
   },
+  
   textContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -213,21 +211,15 @@ const styles = {
     fontSize: 22,
     fontWeight: 'bold'
   },
-  greeting: {
-    fontSize: 28,
-    marginTop: 15
-  },
   paragraph: {
     marginTop: 20,
     fontSize: 18,
     width: '100%'
   },
   image: {
-    width: '30%',
-    margin: 20,
-    minWidth: 200,
-    // height: 300,
-    // width: 300
+    borderRadius: 100,
+    width: 200,
+    margin: 'auto auto'
   },
   iconContainer: {
     /* background-color: #CC6666; */
