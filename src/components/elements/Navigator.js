@@ -27,7 +27,7 @@ class Navigator extends Component {
     console.log(page)
 
     if (page !== 'home') {
-      this.setState({ bgColor: 'rgba(255,255,255, 0.6)' });
+      this.setState({ bgColor: 'rgba(245,245,245, 0.7)' });
     } else {
       this.setState({ bgColor: 'none' });
     }
@@ -36,6 +36,7 @@ class Navigator extends Component {
   render() {
 
     const mainStyle = {
+      width: '100%',
       margin: '20px 20px 0px 10px',
       background: this.state.bgColor
     }
@@ -77,7 +78,7 @@ const styles = {
   },
   navlink: {
     margin: '2.2vw',
-    marginBottom: 15,
+    marginBottom: 5,
     fontWeight: 600,
     textDecoration: 'none'
   },

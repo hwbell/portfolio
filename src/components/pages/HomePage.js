@@ -103,7 +103,7 @@ class HomePage extends Component {
         </ReactCSSTransitionGroup>
 
 
-        <div className="container" style={contentholderStyle}
+        <div className="home-page-content container" style={contentholderStyle}
           onMouseLeave={this.onExitHover}>
 
           <P className="text-center" style={styles.name}>Hi, I'm Harry</P>

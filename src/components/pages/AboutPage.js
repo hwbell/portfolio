@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import $ from 'jquery';
 // styling
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
@@ -11,6 +11,42 @@ import ProfilePic from '../../assets/images/profile-pic.jpg';
 // reactstrap Media
 import { Media } from 'reactstrap';
 
+const runIconAnimation = () => {
+  // for the animation of the icons
+  // get all the divs holding the icons
+  var circles = document.querySelectorAll(".animatedIcon");
+  circles.forEach((circle) => {
+    $(this).css('animation-fill-mode', 'forwards')
+  })
+  for (var i = 0; i < 5; i++) {
+    var circle = circles[i];
+
+    circle.keyframes = [{
+      opacity: 0,
+      transform: "translate3d(" + 10 * i + "px, 0px, 0px)"
+    }, {
+      opacity: 1,
+      transform: "translate3d(" + 20 * i + "px, 5px, 0px)"
+    }, {
+      opacity: 0.5,
+      transform: "translate3d(" + 10 * i + "px, 10px, 0px)"
+    }, {
+      opacity: 1,
+      transform: "translate3d(" + 0 * i + "px, 0px, 0px)"
+    }];
+
+
+    circle.animProps = {
+      duration: 2000 + 500 * i,
+      easing: "ease-out",
+      iterations: 1,
+      animationFillMode: 'forwards'
+    }
+
+    var animationPlayer = circle.animate(circle.keyframes, circle.animProps);
+  }
+
+}
 // components
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -34,8 +70,8 @@ const Div = posed.div({
 
 // for the list display - each is a list, with the var name as the title
 const languages = ['HTML5', 'CSS', 'javascript', 'python', 'MATLAB'];
-const tools = ['npm', 'github', 'heroku', 'AWS S3', 'postman', 'VS Code', 'Linux OS'];
-const frameworks = ['Reactjs', 'Node.js', 'Express.js', 'MongoDB'];
+const tools = ['npm', 'github', 'heroku', 'aws S3', 'postman', 'VS Code', 'Linux OS'];
+const frameworks = ['Reactjs', 'React Native', 'Node.js', 'Express.js', 'MongoDB'];
 
 class HomePage extends Component {
   constructor(props) {
@@ -46,6 +82,10 @@ class HomePage extends Component {
     this.hover = this.hover.bind(this);
   }
 
+  componentDidMount() {
+    runIconAnimation();
+  }
+
   hover() {
     //
   }
@@ -53,50 +93,24 @@ class HomePage extends Component {
   render() {
 
     const languageSkills = languages.map((language, i) =>
-      <li key={i}>{language}</li>
+      <li className="grow-text" key={i}>{language}</li>
     );
     const toolsSkills = tools.map((tool, i) =>
-      <li key={i}>{tool}</li>
+      <li className="grow-text" key={i}>{tool}</li>
     );
     const frameworksSkills = frameworks.map((framework, i) =>
-      <li key={i}>{framework}</li>
+      <li className="grow-text" key={i}>{framework}</li>
     );
 
     return (
 
       <Container className="container" style={styles.main}>
 
-        <Div style={styles.pictureContainer}>
-          <Img src={ProfilePic} className="" style={styles.image} />
+        {/* <Img src={ProfilePic} className="" style={styles.image} /> */}
 
-          <Div>
-            <P className="" style={styles.greeting}>
-              Nice to meet you!
-            </P>
-
-            {/* the animation icons */}
-
-            <div id="iconContainer">
-              <div class="animatedIcon">
-                <i className="fa fa-dna grow" style={styles.icon}></i>
-              </div>
-              <div class="animatedIcon">
-                <i className="fa fa-dna grow" style={styles.icon}></i>
-              </div>
-              <div class="animatedIcon">
-                <i className="fa fa-dna grow" style={styles.icon}></i>
-              </div>
-              <div class="animatedIcon">
-                <i className="fa fa-dna grow" style={styles.icon}></i>
-              </div>
-              <div class="animatedIcon">
-                <i className="fa fa-dna grow" style={styles.icon}></i>
-              </div>
-            </div>
-
-          </Div>
-
-        </Div>
+        <P className="text-center" style={styles.greeting}>
+          Nice to meet you!
+        </P>
 
         <Div style={styles.textContainer}>
           <P className="" style={styles.paragraph}>
@@ -107,9 +121,29 @@ class HomePage extends Component {
             completely to the world of web development. I truly love the never-ending puzzle of
             creating the best user experience with the highest functionality.
           </P>
+
+          {/* the animation icons */}
+
+          <div style={styles.iconContainer}>
+            <div className="animatedIcon" style={styles.animatedIcon}>
+              <i className="fas fa-flask flip-vertical-left" style={styles.icon}></i>
+            </div>
+            <div className="animatedIcon" style={styles.animatedIcon}>
+              <i className="fas fa-microscope flip-vertical-left" style={styles.icon}></i>
+            </div>
+            <div className="animatedIcon" style={styles.animatedIcon}>
+              <i className="fa fa-atom flip-vertical-left" style={styles.icon}></i>
+            </div>
+            <div className="animatedIcon" style={styles.animatedIcon}>
+              <i className="fa fa-dna flip-vertical-left" style={styles.icon}></i>
+            </div>
+            <div className="animatedIcon" style={styles.animatedIcon}>
+              <i className="fas fa-chart-bar flip-vertical-left" style={styles.icon}></i>
+            </div>
+          </div>
+
           <P style={styles.paragraph}>
-            I was first introduced to the world of programming through cellular imaging experiments
-            and image analysis. I learned the technical computing software MATLAB as the need arose,
+            I was first introduced to the world of programming through cellular imaging analysis. I learned the technical computing software MATLAB as the need arose,
             and immediately became interested in other kinds of programming. After exploring options
             for a potential career change, web development seemed the most exciting and creative, and
             I think that's why I stayed with it. After learning as much as I could for the past couple
@@ -125,17 +159,17 @@ class HomePage extends Component {
           <Div className="row" >
 
             <Div className="col-8 col-sm-4" style={styles.list}>
-              <P>Languages</P>
+              <P style={styles.skillTitle}>Languages</P>
               <ul>{languageSkills}</ul>
             </Div>
 
             <Div className="col-8 col-sm-4" style={styles.list}>
-              <P>Frameworks</P>
+              <P style={styles.skillTitle}>Frameworks</P>
               <ul>{frameworksSkills}</ul>
             </Div>
 
             <Div className="col-8 col-sm-4" style={styles.list}>
-              <P>Tools</P>
+              <P style={styles.skillTitle}>Tools</P>
               <ul>{toolsSkills}</ul>
             </Div>
 
@@ -175,8 +209,11 @@ const styles = {
     alignItems: 'flex-start',
     margin: 30
   },
+  skillTitle: {
+    fontSize: 22,
+    fontWeight: 'bold'
+  },
   greeting: {
-    textAlign: 'center',
     fontSize: 28,
     marginTop: 15
   },
@@ -191,6 +228,16 @@ const styles = {
     minWidth: 200,
     // height: 300,
     // width: 300
+  },
+  iconContainer: {
+    /* background-color: #CC6666; */
+    display: 'flex',
+    flexDirection: 'row',
+    width: 250,
+    margin: 'auto auto'
+  },
+  animatedIcon: {
+    margin: 8
   },
   icon: {
     fontSize: 40
