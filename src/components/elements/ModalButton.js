@@ -82,7 +82,8 @@ const styles = {
     margin: 12,
   },
   modal: {
-    width: '100%'
+    width: '80%',
+    margin: 'auto auto'
   },
   modalDescription: {
     margin: 15,

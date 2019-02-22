@@ -77,7 +77,7 @@ class HomePage extends Component {
     let containerStyle = {
       width: '40%',
       // minHeight: '68vh',
-      paddingTop: '30vh',
+      paddingTop: '20vh',
       paddingBottom: 80,
       minWidth: 350,
       color: this.state.textColor,
@@ -171,7 +171,7 @@ const styles = {
   },
 
   description: {
-    fontSize: 20,
+    fontSize: 18,
     margin: 10,
   },
 }

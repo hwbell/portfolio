@@ -8,45 +8,6 @@ import posed, { PoseGroup } from 'react-pose';
 // image
 import ProfilePic from '../../assets/images/profile-pic.jpg';
 
-// reactstrap Media
-import { Media } from 'reactstrap';
-
-const runIconAnimation = () => {
-  // for the animation of the icons
-  // get all the divs holding the icons
-  var circles = document.querySelectorAll(".animatedIcon");
-  circles.forEach((circle) => {
-    // $(this).css('animation-fill-mode', 'forwards')
-  })
-  for (var i = 0; i < 5; i++) {
-    var circle = circles[i];
-
-    circle.keyframes = [{
-      opacity: 0,
-      transform: "translate3d(" + 10 * i + "px, 0px, 0px)"
-    }, {
-      opacity: 1,
-      transform: "translate3d(" + 20 * i + "px, 5px, 0px)"
-    }, {
-      opacity: 0.5,
-      transform: "translate3d(" + 10 * i + "px, 10px, 0px)"
-    }, {
-      opacity: 1,
-      transform: "translate3d(" + 0 * i + "px, 0px, 0px)"
-    }];
-
-
-    circle.animProps = {
-      duration: 2000 + 500 * i,
-      easing: "ease-out",
-      iterations: 1,
-      // animationFillMode: 'forwards'
-    }
-
-    var animationPlayer = circle.animate(circle.keyframes, circle.animProps);
-  }
-
-}
 // components
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -83,7 +44,7 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    runIconAnimation();
+    // runIconAnimation();
   }
 
   hover() {
@@ -122,19 +83,19 @@ class HomePage extends Component {
           {/* the animation icons */}
 
           <div style={styles.iconContainer}>
-            <div className="animatedIcon" style={styles.animatedIcon}>
+            <div className="" style={styles.animatedIcon}>
               <i className="fas fa-flask pour flip-on-start" style={styles.icon}></i>
             </div>
-            <div className="animatedIcon" style={styles.animatedIcon}>
+            <div className="" style={styles.animatedIcon}>
               <i className="fas fa-microscope flip-on-start grow-blue" style={styles.icon}></i>
             </div>
-            <div className="animatedIcon" style={styles.animatedIcon}>
+            <div className="" style={styles.animatedIcon}>
               <i className="fa fa-atom flip-on-start rotate" style={styles.icon}></i>
             </div>
-            <div className="animatedIcon" style={styles.animatedIcon}>
+            <div className="" style={styles.animatedIcon}>
               <i className="fa fa-dna flip-on-start flip-vertical-left" style={styles.icon}></i>
             </div>
-            <div className="animatedIcon" style={styles.animatedIcon}>
+            <div className="" style={styles.animatedIcon}>
               <i className="fas fa-chart-bar flip-on-start rotate-quarter" style={styles.icon}></i>
             </div>
           </div>

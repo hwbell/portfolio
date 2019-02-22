@@ -70,7 +70,7 @@ class PortfolioPage extends Component {
     return (
       <Container className="Center container">
 
-          <P className="row" style={styles.title}>
+          <P className="text-center" style={styles.title}>
             Portfolio
           </P>
 
@@ -107,6 +107,7 @@ const styles = {
     margin: '2vh 8vh 10vh 8vh',
   },
   title: {
+    width: '80%',
     fontSize: 28,
     marginTop: 15,
     fontWeight: 'bold'

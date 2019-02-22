@@ -169,9 +169,8 @@ p {
 /* icons on the about page */
 .flip-on-start, .flip-top {
   transition: all 0.8s ease;
-	-webkit-animation: flip-vertical-left 3s linear;
-	        animation: flip-vertical-left 3s linear;
 }
+
 .flip-vertical-left:hover {
   -webkit-transform: rotateY(-360deg);
   -ms-transform: rotateY(-360deg);

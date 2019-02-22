@@ -6,8 +6,8 @@ import React from 'react';
 const mobileApps = [
   {
     name: 'Colorado Daily Info',
-    link: '',
-    image: require('../assets/images/colorado-daily-info.jpg'),
+    link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
+    image: require('../assets/images/colorado-daily-info.png'),
     description: 'A useful mobile app for any enthusiastic skier living in Denver.',
     modalDescription: `I made this app to gather some basic information on recent snowfall, 
       weather in the city and in the mountains, and traffic on the way to the mountains (a major 
