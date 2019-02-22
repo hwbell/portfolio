@@ -37,8 +37,8 @@ class Navigator extends Component {
 
     const mainStyle = {
       width: '100%',
-      minWidth: 250,
-      margin: '20px 0px 0px 0px',
+      // maxWidth: 300,
+      margin: '10px 0px 0px 0px',
       background: this.state.bgColor
     }
 
@@ -76,10 +76,10 @@ export default Navigator;
 
 const styles = {
   nav: {
-    fontSize: 'calc(10px + 0.5vw)',
+    fontSize: 'calc(16px + 0.5vw)',
   },
   navlink: {
-    margin: '2vw',
+    margin: 8,
     marginBottom: 5,
     fontWeight: 600,
     textDecoration: 'none'
