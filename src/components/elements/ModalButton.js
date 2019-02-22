@@ -38,13 +38,24 @@ class ModalButton extends React.Component {
           </ModalHeader>
 
           {/* the body must me an actual html element, not just an image */}
-          {/* if there is a modalBG */}
+          {/* if there is a modalBG it will run the codepen rather than just an image*/}
           <ModalBody> 
           {/* {
             this.props.modalBG ?
             this.props.modalBG :
             <img style={styles.image} src={this.props.image}></img>} */}
             <p style={styles.modalDescription}>{this.props.modalDescription}</p>
+          </ModalBody>
+            <p style={styles.modalTools}>tools employed:</p>
+            
+            <div className="row" style={styles.toolsHolder}>
+              {this.props.tools.map((tool) => {
+                return <p className="col-4 shift-text">{tool}</p>
+              })}
+            </div>
+
+          <ModalBody>
+
           </ModalBody>
 
           <ModalFooter>
@@ -76,6 +87,15 @@ const styles = {
   modalDescription: {
     margin: 15,
     fontSize: 18,
+  },
+  modalTools: {
+    fontWeight: 700,
+    margin: 20
+  },
+  toolsHolder: {
+    width: '70%',
+    margin: 20,
+    marginTop: 0
   },
   image: {
     width: '100%',

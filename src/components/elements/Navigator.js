@@ -27,7 +27,7 @@ class Navigator extends Component {
     console.log(page)
 
     if (page !== 'home') {
-      this.setState({ bgColor: 'rgba(245,245,245, 0.7)' });
+      this.setState({ bgColor: 'rgba(245,245,245, 0.85)' });
     } else {
       this.setState({ bgColor: 'none' });
     }
@@ -40,6 +40,7 @@ class Navigator extends Component {
       margin: '20px 20px 0px 10px',
       background: this.state.bgColor
     }
+
 
     return (
       <div className="row fixed-bottom" style={mainStyle}>
@@ -64,6 +65,7 @@ class Navigator extends Component {
           </Nav>
         </div>
 
+
       </div>
     );
   }
@@ -76,7 +78,7 @@ const styles = {
     width: '100%'
   },
   nav: {
-    fontSize: 22,
+    fontSize: 'calc(16px + 1vw)',
   },
   navlink: {
     margin: '2vw',

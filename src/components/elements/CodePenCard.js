@@ -55,10 +55,11 @@ class CodePenCard extends React.Component {
               <CardImgOverlay style={styles.overlay}>
                 <CardTitle style={styles.cardTitle}>{this.props.name}</CardTitle>
                 <CardText style={styles.cardtext}>{this.props.description}</CardText>
-                <ModalButton className="" buttonLabel="see more" 
+                <ModalButton className="" buttonLabel="read more" 
                   link={this.props.link}
                   image={this.props.image}
                   modalDescription={this.props.modalDescription}
+                  tools={this.props.tools}
                   name={this.props.name}
                   modalBG={this.props.modalBG}
                 />

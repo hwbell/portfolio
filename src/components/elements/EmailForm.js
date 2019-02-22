@@ -25,7 +25,8 @@ class EmailForm extends React.Component {
     this.state = {
       messageBody: {},
       sendingEmail: false,
-      icon: 'fa-envelope'
+      icon: 'fa-envelope',
+      buttonClass: 'send-button'
     }
     
   }
@@ -37,6 +38,7 @@ class EmailForm extends React.Component {
     self.setState({
       emailSent: false,
       sendingEmail: true,
+      buttonClass: 'sent-button', 
       icon: 'fa-spinner fa-spin'
     });
 
@@ -54,7 +56,8 @@ class EmailForm extends React.Component {
           self.setState({
             emailSent: true,
             sendingEmail: false,
-            icon: 'fa-check'
+            icon: 'fa-check',
+            buttonClass: 'send-button', 
           }, () => {
             setTimeout( () => {
               self.setState({
@@ -107,7 +110,7 @@ class EmailForm extends React.Component {
           <Button outline color="secondary" 
             type="submit" 
             style={styles.button}
-            className="send-button">
+            className={this.state.buttonClass}>
             <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
           </Button>
         </Form>
@@ -122,7 +125,7 @@ const styles = {
   
   form: {
     width: '80%',
-    margin: 30
+    // margin: 30
   },
   image: {
     fontSize: 45,

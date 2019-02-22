@@ -16,6 +16,7 @@ import PortfolioPage from './components/pages/PortfolioPage';
 import ContactPage from './components/pages/ContactPage';
 
 import Navigator from './components/elements/Navigator';
+import { calc } from 'popmotion';
 
 const RoutesContainer = posed.div({
   enter: {
@@ -70,13 +71,6 @@ class App extends Component {
 export default App;
 
 const styles = {
-  main: {
-
-  },
-  nav: {
-    margin: 40,
-  },
-  navlink: {
-    fontSize: 22,
-  },
+  
+  
 }

@@ -76,9 +76,10 @@ class HomePage extends Component {
   render() {
     let containerStyle = {
       width: '40%',
-      minHeight: '68vh',
-      margin: '30vh auto',
-      minWidth: 400,
+      // minHeight: '68vh',
+      paddingTop: '30vh',
+      paddingBottom: 80,
+      minWidth: 350,
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
     }
@@ -119,7 +120,7 @@ class HomePage extends Component {
             </div>
 
             <div className="col" style={styles.iconHolder}>
-              <i className="fas fa-random" style={styles.icon}></i>
+              <i className="fas fa-random flip-top" style={styles.icon}></i>
             </div>
 
             <div className="col" style={styles.iconHolder}
