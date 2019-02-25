@@ -101,6 +101,7 @@ const styles = {
   title: {
     width: '80%',
     fontSize: 28,
+    
   },
   textContainer: {
     width: '80%',

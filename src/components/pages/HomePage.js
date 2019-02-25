@@ -75,11 +75,10 @@ class HomePage extends Component {
 
   render() {
     let containerStyle = {
-      width: '40%',
+      width: '300px',
       // minHeight: '68vh',
       paddingTop: '20vh',
       paddingBottom: 80,
-      minWidth: 350,
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
     }
@@ -134,7 +133,7 @@ class HomePage extends Component {
           </Div>
 
           <div className="row" style={styles.description}>
-            <P>I love creating and developing full stack web & mobile apps.</P>
+            <P>I love developing full stack web & mobile apps.</P>
           </div>
         </div>
       </Container>
@@ -146,11 +145,11 @@ export default HomePage;
 
 const styles = {
   iconRow: {
-    width: 250,
+    
     margin: 'auto auto',
   },
   image: {
-    fontSize: 45,
+    fontSize: 35,
   },
   name: {
     fontSize: 25,
@@ -158,20 +157,20 @@ const styles = {
   },
   iconHolder: {
     width: 40,
-    margin: 'auto auto'
+    margin: 'auto 0px'
   },
   icontext: {
-    fontSize: 20,
+    fontSize: 16,
   },
   icon: {
     fontWeight: 'bolder',
     color: '#01a6d8',//#5C6BC0
     marginTop: 35,
-    fontSize: 24
+    fontSize: 20
   },
 
   description: {
-    fontSize: 18,
+    fontSize: 16,
     margin: 10,
   },
 }
