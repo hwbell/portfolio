@@ -74,9 +74,8 @@ class HomePage extends Component {
 
   render() {
     let containerStyle = {
-      width: '50%',
-      maxWidth: '350px',
-      minWidth: '220px',
+      // maxWidth: '350px',
+      // minWidth: '220px',
       // minHeight: '68vh',
       paddingTop: '20vh',
       paddingBottom: 80,
@@ -145,15 +144,16 @@ const styles = {
     margin: 20,
   },
   iconRow: {
+    width: '40%',
     margin: 'auto auto',
   },
   name: {
     fontSize: 25,
-    margin: '5vh 0vh'
+    margin: '4vh 0vh'
   },
   iconHolder: {
-    width: 40,
-    margin: 'auto auto'
+    width: '30%',
+    // margin: 'auto auto'
   },
   icontext: {
     fontSize: 18,
@@ -168,7 +168,9 @@ const styles = {
     fontSize: 45,
   },
   description: {
+    width: '50%',
+    margin: 'auto auto',
     fontSize: 16,
-    marginTop: 25,
+    marginTop: '4vh',
   },
 }
