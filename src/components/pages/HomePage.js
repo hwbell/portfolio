@@ -105,7 +105,7 @@ class HomePage extends Component {
 
           <Div className="text-center row" style={styles.iconRow}>
 
-            <div className="col" style={styles.iconHolder}
+            <div className="col padding-0" style={styles.iconHolder}
               onMouseOver={this.onHoverDna}>
               {/* onMouseLeave={this.onExitHover} */}
 
@@ -113,11 +113,11 @@ class HomePage extends Component {
               <i className="fa fa-dna fa-gradient-left grow" style={styles.largeIcon}></i>
             </div>
 
-            <div className="col" style={styles.iconHolder}>
+            <div className="col padding-0" style={styles.iconHolder}>
               <i className="fas fa-random flip-top" style={styles.icon}></i>
             </div>
 
-            <div className="col" style={styles.iconHolder}
+            <div className="col padding-0" style={styles.iconHolder}
               onMouseOver={this.onHoverLaptop}>
               {/* onMouseLeave={this.onExitHover} */}
 
@@ -144,7 +144,8 @@ const styles = {
     margin: 20,
   },
   iconRow: {
-    width: '40%',
+    width: '50%',
+    // minWidth: 350,
     margin: 'auto auto',
   },
   name: {
@@ -152,7 +153,7 @@ const styles = {
     margin: '4vh 0vh'
   },
   iconHolder: {
-    width: '30%',
+    // width: '30%',
     // margin: 'auto auto'
   },
   icontext: {
@@ -161,11 +162,12 @@ const styles = {
   icon: {
     fontWeight: 'bolder',
     color: '#01a6d8',//#5C6BC0
-    marginTop: 35,
+    marginTop: '35px',
     fontSize: 20
   },
   largeIcon: {
     fontSize: 45,
+    margin: '5px 0px 5px 0px',
   },
   description: {
     width: '50%',

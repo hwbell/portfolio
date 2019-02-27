@@ -16,6 +16,12 @@ p {
   z-index: 1;
 }
 
+/* for no padding between bootstrap cols */
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+
 .container {
   /* width: 80%; */
   transition: opacity 1s ease-in-out;
