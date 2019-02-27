@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import posed, { PoseGroup } from 'react-pose';
-import { truncate } from 'fs';
 
 // this will apply a stagger to whatever animation is specified for the child
 // components
@@ -60,10 +59,10 @@ class HomePage extends Component {
   onHoverDna() {
     console.log('firing on hover')
     this.setState(dnaHoverState);
-    
+
   }
 
-  onHoverLaptop () {
+  onHoverLaptop() {
     console.log('firing on hover')
     this.setState(laptopHoverState);
   }
@@ -75,22 +74,19 @@ class HomePage extends Component {
 
   render() {
     let containerStyle = {
-      width: '300px',
+      width: '50%',
+      maxWidth: '350px',
+      minWidth: '220px',
       // minHeight: '68vh',
       paddingTop: '20vh',
       paddingBottom: 80,
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
     }
-    let contentholderStyle = {
-      marginBottom: 20,
-      background: this.state.contentBackground,
-      borderRadius: 50,
-      boxShadow: this.state.boxShadow
-    }
+    
     return (
 
-      <Container className="container" style={containerStyle}>
+      <Container className="container home-page-content" style={containerStyle}>
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
         <ReactCSSTransitionGroup
           transitionName="example"
@@ -103,19 +99,19 @@ class HomePage extends Component {
         </ReactCSSTransitionGroup>
 
 
-        <div className="home-page-content container" style={contentholderStyle}
+        <div className="" style={styles.contentholder}
           onMouseLeave={this.onExitHover}>
 
           <P className="text-center" style={styles.name}>Hi, I'm Harry</P>
 
-          <Div className="row" style={styles.iconRow}>
+          <Div className="text-center row" style={styles.iconRow}>
 
             <div className="col" style={styles.iconHolder}
               onMouseOver={this.onHoverDna}>
               {/* onMouseLeave={this.onExitHover} */}
 
-              <P style={styles.icontext}>biologist</P>
-              <i className="fa fa-dna fa-gradient-left grow" style={styles.image}></i>
+              <P className="" style={styles.icontext}>biologist</P>
+              <i className="fa fa-dna fa-gradient-left grow" style={styles.largeIcon}></i>
             </div>
 
             <div className="col" style={styles.iconHolder}>
@@ -126,15 +122,16 @@ class HomePage extends Component {
               onMouseOver={this.onHoverLaptop}>
               {/* onMouseLeave={this.onExitHover} */}
 
-              <P style={styles.icontext}>developer</P>
-              <i className="fa fa-laptop fa-gradient-right grow" style={styles.image}></i>
+              <P className="" style={styles.icontext}>developer</P>
+              <i className="fa fa-laptop fa-gradient-right grow" style={styles.largeIcon}></i>
             </div>
 
           </Div>
 
-          <div className="row" style={styles.description}>
-            <P>I love developing full stack web & mobile apps.</P>
-          </div>
+
+        </div>
+        <div className="row" style={styles.description}>
+          <P>I love developing full stack web & mobile apps.</P>
         </div>
       </Container>
     );
@@ -144,23 +141,22 @@ class HomePage extends Component {
 export default HomePage;
 
 const styles = {
-  iconRow: {
-    
-    margin: 'auto auto',
+  contentholder: {
+    margin: 20,
   },
-  image: {
-    fontSize: 35,
+  iconRow: {
+    margin: 'auto auto',
   },
   name: {
     fontSize: 25,
-    marginTop: 20
+    margin: '5vh 0vh'
   },
   iconHolder: {
     width: 40,
-    margin: 'auto 0px'
+    margin: 'auto auto'
   },
   icontext: {
-    fontSize: 16,
+    fontSize: 18,
   },
   icon: {
     fontWeight: 'bolder',
@@ -168,9 +164,11 @@ const styles = {
     marginTop: 35,
     fontSize: 20
   },
-
+  largeIcon: {
+    fontSize: 45,
+  },
   description: {
     fontSize: 16,
-    margin: 10,
+    marginTop: 25,
   },
 }
