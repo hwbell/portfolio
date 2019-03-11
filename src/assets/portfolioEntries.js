@@ -8,7 +8,7 @@ const mobileApps = [
     name: 'Colorado Daily Info',
     link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
     image: require('../assets/images/colorado-daily-info.png'),
-    description: 'A useful mobile app for any enthusiastic skier living in Denver.',
+    description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, an traffic to the mountains.',
     modalDescription: `I made this app to gather some basic information on recent snowfall, 
       weather in the city and in the mountains, and traffic on the way to the mountains (a major 
       issue for us Denverites). I used darksky.net's API for the weather info. For snow and traffic 
@@ -35,11 +35,33 @@ const mobileApps = [
 
 const webApps = [
   {
+    name: 'News Now',
+    link: 'https://news-now-hb.herokuapp.com/',
+    image: require('../assets/images/news-now.jpg'),
+    description: 'This news collector app was built on top of the free news api at newsapi.org',
+    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+      from thousands of sources from across the world. The api is great for this reason - you get news from
+      sources you wouldn't normally come across in the US.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+  },
+  {
+    name: 'StoxFox',
+    link: 'https://stox-fox.herokuapp.com',
+    image: require('../assets/images/stox-fox.jpg'),
+    description: 'Get real-time stock market and currency exchange info',
+    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
+      for worlwide markets and currencies. Data can be visualized in the long or short term to see the 
+      performance of an equity over time.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+  },
+  {
     name: 'Tetris',
     link: 'https://stark-waters-61663.herokuapp.com/',
     image: require('../assets/images/tetris-app.jpg'),
     description: 'A full stack Tetris app built with react and nodejs.',
-    modalDescription: `I made this tetris game with create-react-app and a nodejs backend 
+    modalDescription: `I built this tetris game with create-react-app and a nodejs backend 
       for high scores. For the game itself I used raw HTML canvas without any third-party
       libraries.`,
     modalBG: '',
@@ -97,7 +119,7 @@ const codePens = [
     name: 'Reversi',
     link: 'https://codepen.io/hbellatcodepen/pen/XVrZLB',
     image: require('../assets/images/reversi-app.jpg'),
-    description: 'Play a game of reversi.',
+    description: 'Play a game of reversi, known to many as Othello',
     modalDescription: `Building this game was good practice for eventually making
       more complex apps. The rules for capture are very simple compared to Go or Chess.`,
     modalApp: (
@@ -111,7 +133,7 @@ const codePens = [
     name: 'Go',
     link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
     image: require('../assets/images/baduk-app.jpg'),
-    description: 'Play a game of Go, the oldest strategy game there is.',
+    description: 'Play a game of Go, the oldest strategy game there is, and currently a frontier of A.I.',
     modalDescription: `I am obsessed with this game. It has been a passion of mine 
       for quite some time. There are many useful apps for Go in existence, but I 
       thought I would try and just build a board with complete logic for legal 

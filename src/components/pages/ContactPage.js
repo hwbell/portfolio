@@ -38,7 +38,12 @@ class ContactPage extends Component {
   render() {
     return (
       <Container className="container" style={styles.main}>
+        
         <P className="" style={styles.title}>
+          Contact me
+        </P>
+        <hr/>
+        <P className="" style={styles.subTitle}>
           Get in touch with me to discuss anything at all
         </P>
         <Div style={styles.textContainer}>
@@ -91,7 +96,7 @@ export default ContactPage;
 
 const styles = {
   main: {
-    paddingTop: 50,
+    // paddingTop: 50,
     paddingBottom: 80,
     display: 'flex',
     flexDirection: 'column',
@@ -99,6 +104,12 @@ const styles = {
     alignItems: 'center'
   },
   title: {
+    // width: '80%',
+    fontSize: 30,
+    marginTop: 35,
+    fontWeight: 'bold'
+  },
+  subTitle: {
     width: '80%',
     fontSize: 28,
     

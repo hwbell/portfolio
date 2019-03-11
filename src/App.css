@@ -11,6 +11,15 @@ body {
           animation: color-change-bg linear 5s;
 }
 
+hr {
+  border: 0;
+  margin: 0 0 8px 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color: rgb(221, 221, 221);
+  height: 1px;
+}
 
 p {
   z-index: 1;
@@ -109,9 +118,9 @@ p {
 
 /* for the Nav Bar hovering */
 .grow:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   color: rgb(159, 26, 248);
 }
 
@@ -120,7 +129,7 @@ p {
   -webkit-transform: translateX(15px) scale(1.1);
   -ms-transform: translateX(15px) scale(1.1);
   transform: translateX(15px) scale(1.1);
-  color: rgb(248, 26, 248);
+  color: rgb(204, 26, 248);
   /* margin-left: 30px; */
 }
 /* for the individual skills hovering */
@@ -156,7 +165,7 @@ p {
   color: rgb(145, 146, 146);
 }
 .blink-orange:hover {
-  color: rgb(248, 174, 77);
+  color: rgb(235, 135, 69);
 }
 .blink-green:hover {
   color: rgb(62, 206, 74);
@@ -170,11 +179,12 @@ p {
 .blink:active {
   /* color: white; */
   -webkit-transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 /* icons on the about page */
 .flip-on-start, .flip-top {
-  transition: all 0.8s ease;
+  transition: all 0.5s ease;
 }
 
 .flip-vertical-left:hover {
@@ -196,9 +206,9 @@ p {
   color: rgb(26, 141, 248);
 }
 .pour:hover {
-	-webkit-transform: rotate(30deg); 
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
+	-webkit-transform: rotate(60deg); 
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
   color: rgb(26, 141, 248);
 }
 
@@ -210,27 +220,81 @@ p {
 }
 
 .rotate-quarter:hover {
-	-webkit-transform: rotate(90deg); 
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+	-webkit-transform: rotate(90deg) rotateY(-180deg); 
+  -ms-transform: rotate(90deg) rotateY(-180deg);
+  transform: rotate(90deg) rotateY(-180deg);
   color: rgb(26, 141, 248);
 }
 
+/* about page title */
+.about-title {
+  -webkit-transform: rotate(360deg); 
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 
+/* the shimmer effect on the about page */
+.shimmer {
+  display: inline-block;
+  /* color: black; */
+  
+  background: rgb(28, 5, 54) -webkit-gradient(linear, 50% 0, 0 0, from(#977af5), color-stop(0.5, #733fb6), to(#6422bb));
+  
+  background-position: -4rem top; /*50px*/
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: shimmer;
+  -webkit-animation-name: shimmer;
+  animation-duration: 6s;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-background-size: 4rem 100%; /*50px*/
+  background-size: 4rem 100%; /*50px*/
+  
+}
 
+@-webkit-keyframes shimmer {
+  0% {
+      background-position: -4rem top; /*50px*/
+  }
+
+  70% {
+      background-position: 12.5rem top; /*200px*/
+  }
+
+  100% {
+      background-position: 12.5rem top; /*200px*/
+  }
+}
+@keyframes shimmer {
+  0% {
+      background-position: -4rem top; /*50px*/
+  }
+
+  70% {
+      background-position: 12.5rem top; /*200px*/
+  }
+
+  100% {
+      background-position: 12.5rem top; /*200px*/
+  }
+}
 
 
 
 /* for fontAwesome icon's gradient appearance on the home page */
 .fa-gradient-left {
-	background: -webkit-gradient(linear, left top, right bottom, from(#673AB7), to(#4DD0E1));
+	background: -webkit-gradient(linear, left top, right bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 90px;
 }
 .fa-gradient-right {
-	background: -webkit-gradient(linear, right top, left bottom, from(#673AB7), to(#4DD0E1));
+	background: -webkit-gradient(linear, right top, left bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

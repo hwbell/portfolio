@@ -45,7 +45,9 @@ class Navigator extends Component {
 
     return (
       <div className="row fixed-bottom" style={mainStyle}>
+        <hr/>
         <div className="col-12">
+          
           <Nav style={styles.nav}>
             <NavLink className="grow" style={styles.navlink} 
               to="/">

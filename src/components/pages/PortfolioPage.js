@@ -34,7 +34,7 @@ const Div = posed.div({
 });
 
 
-const cardHolderClass = "col-12 col-sm-6 col-lg-4 px-0";
+const cardHolderClass = "col-12 col-md-6 col-lg-4 px-0";
 
 
 class PortfolioPage extends Component {
@@ -68,33 +68,55 @@ class PortfolioPage extends Component {
   render() {
 
     return (
-      <Container className="Center container">
-
-          <P className="text-center" style={styles.title}>
-            Portfolio
+      <Container className="container">
+        <Div className="row">
+          <P className="col" style={styles.title}>
+            My portfolio
           </P>
+        </Div>
+        <hr />
 
-          <P className="row" style={styles.paragraph}>
-            Take a look at some projects I have created.
-          </P>
+        <P className="text-center" style={styles.subTitle}>
+          Take a look at some projects I have created.
+        </P>
 
-        <P className="" style={styles.subtitle}>
+        <Div className="row" style={styles.topIconHolder}>
+          <Div className="col">
+            <P className="row" style={styles.skillTitle}>Learn</P>
+            <i className="row shimmer fab fa-leanpub flip-on-start" style={styles.topIcon}></i>
+          </Div>
+          <Div className="col">
+            <P className="row" style={styles.skillTitle}>Code</P>
+            <i className="row shimmer fas fa-code flip-on-start" style={styles.topIcon}></i>
+          </Div>
+          <Div className="col">
+            <P className="row" style={styles.skillTitle}>Create</P>
+            <i className="row shimmer fas fa-chalkboard-teacher flip-on-start" style={styles.topIcon}></i>
+          </Div>
+
+        </Div>
+
+        <hr/>
+        <P className="" style={styles.appTitle}>
           Web
         </P>
+
         <div className="row" style={styles.cardsContainer}>
           {/* map through apps and make a card for each, with the props from portfolioEntries.js */}
           {this.displayApps(webApps)}
           {this.displayApps(codePens)}
         </div>
 
-        <P className="" style={styles.subtitle}>
+        <hr />
+        <P className="" style={styles.appTitle}>
           Mobile
         </P>
+
         <div className="row" style={styles.cardsContainer}>
           {this.displayApps(mobileApps)}
         </div>
 
-      </Container>
+      </Container >
     );
   }
 }
@@ -104,23 +126,36 @@ export default PortfolioPage;
 const styles = {
   cardsContainer: {
     // width: '70%',
-    margin: '2vh 8vh 10vh 8vh',
+    margin: '2vh 4vh 10vh 4vh',
   },
   title: {
-    width: '80%',
+    // width: '80%',
+    fontSize: 30,
+    marginTop: 35,
+    fontWeight: 'bold'
+  },
+  subTitle: {
+    fontSize: 24,
+    margin: 25
+  },
+  skillTitle: {
+    fontSize: 18,
+    paddingLeft: 10,
+    fontWeight: 'bold'
+  },
+  topIconHolder: {
+    margin: '3vh 0vw'
+  },
+  topIcon: {
+    fontSize: 40,
+    marginLeft: '0px'
+  },
+  appTitle: {
+    // width: '80%',
+    margin: 30,
     fontSize: 28,
     marginTop: 15,
     fontWeight: 'bold'
-  },
-  subtitle: {
-    textAlign: 'left',
-    fontSize: 24,
-    fontWeight: 'bold'
-  },
-  paragraph: {
-    fontSize: 20,
-    marginBottom: 40
-    // width: '60%,'
   },
   cardholder: {
     // minWidth: 180

@@ -77,7 +77,7 @@ class CodePenCard extends React.Component {
 const styles = {
   main: {
     // minHeight: 280,
-    // minWidth: 280,
+    // minWidth: 300,
     // marginBottom: 20,
   },
   image: {
@@ -85,7 +85,7 @@ const styles = {
   },
   overlay: {
     width: '100%',
-    background: 'rgba(0,0,0,0.65)',
+    background: 'rgba(0,0,0,0.75)',
   },
   cardTitle: {
     fontSize: 24
@@ -93,6 +93,7 @@ const styles = {
   cardtext: {
     margin: 0,
     color: 'whitesmoke',
+    fontWeight: '550',
     fontSize: 16
   },
 }

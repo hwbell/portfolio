@@ -11,10 +11,12 @@ const apps = [
   'https://conways-game-of-life-hb.herokuapp.com/',
   'https://stark-waters-61663.herokuapp.com/',
   'https://react-recipe-box.herokuapp.com/',
-  'https://hwbell-portfolio-server.herokuapp.com/',
+  'https://harold-bell-portfolio-server.herokuapp.com/',
   'https://lit-ridge-56288.herokuapp.com/',
   'https://agile-plateau-65674.herokuapp.com/',
-  'https://lit-falls-35438.herokuapp.com/'
+  'https://lit-falls-35438.herokuapp.com/',
+  'https://stox-fox.herokuapp.com/',
+  'https://news-now-hb.herokuapp.com/'
 
 
 ]

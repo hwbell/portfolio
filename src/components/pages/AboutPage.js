@@ -68,11 +68,17 @@ class HomePage extends Component {
       <Container className="container" style={styles.main}>
 
         <P className="text-center" style={styles.title}>
-          Nice to meet you!
+          About Me
         </P>
+        <hr />
+        
 
         <Img src={ProfilePic} className="row" style={styles.image} />
-
+        
+        {/* <P className="text-center" style={styles.subTitle}>
+          Nice to meet you!
+        </P> */}
+        
         <Div style={styles.textContainer}>
           <P className="" style={styles.paragraph}>
             For the past 8 years I have been a research biologist in the
@@ -101,14 +107,14 @@ class HomePage extends Component {
           </div>
 
           <P style={styles.paragraph}>
-      
-            I was first introduced to the world of programming through cellular imaging analysis. 
+
+            I was first introduced to the world of programming through cellular imaging analysis.
             I learned the technical computing software MATLAB as the need arose,
             and immediately became interested in other areas of computer programming. Upon exploring options
             for a potential career change, web development looked to be the most exciting and creative, and
-            I think that's why I stayed with it. Since learning how to program and develop web applications, 
-            my interests have shifted completely to the world of web development. I truly love the never-ending puzzle 
-            of creating the best user experience with the highest functionality. At this point, its hard to 
+            I think that's why I stayed with it. Since learning how to program and develop web applications,
+            my interests have shifted completely to the world of web development. I truly love the never-ending puzzle
+            of creating the best user experience with the highest functionality. At this point, its hard to
             imagine <i>not</i> developing on a daily basis, and I've decided to transition to development full-time.
 
           </P>
@@ -148,6 +154,14 @@ class HomePage extends Component {
             or framework isn't tedious, it is exciting!
           </P>
 
+          <P className="row" style={styles.paragraph}>
+            <a target="_blank" 
+              href="https://www.lambdatest.com/blog/top-javascript-frameworks-for-2019/"
+              style={{marginLeft: '10px'}}>
+              Top front-end frameworks in 2019
+            </a>
+          </P>
+
         </Div>
 
       </Container>
@@ -159,14 +173,21 @@ export default HomePage;
 
 const styles = {
   main: {
-    paddingTop: '',
+    paddingTop: '0',
     paddingBottom: 80,
   },
   title: {
-    fontSize: 28,
-    paddingTop: 25
+    // width: '80%',
+    fontSize: 30,
+    marginTop: 35,
+    fontWeight: 'bold'
   },
-  
+  subTitle: {
+    fontSize: 28,
+    margin: 25
+    // fontWeight: ''
+  },
+
   textContainer: {
     display: 'flex',
     flexDirection: 'column',
@@ -187,21 +208,21 @@ const styles = {
     fontWeight: 'bold'
   },
   paragraph: {
-    paddingTop: 10,
+    // paddingTop: 10,
     fontSize: 18,
     width: '100%'
   },
   image: {
-    borderRadius: 100,
-    width: 200,
-    margin: 'auto auto'
+    borderRadius: 125,
+    width: 250,
+    margin: '30px auto 0px auto'
   },
   iconContainer: {
     /* background-color: #CC6666; */
     display: 'flex',
     flexDirection: 'row',
     width: 250,
-    margin: 'auto auto'
+    margin: 'auto auto 15px auto'
   },
   animatedIcon: {
     margin: 8
@@ -215,6 +236,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start'
-  }
+  },
 
 }

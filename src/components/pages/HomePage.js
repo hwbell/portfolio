@@ -82,7 +82,7 @@ class HomePage extends Component {
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
     }
-    
+
     return (
 
       <Container className="container home-page-content" style={containerStyle}>
@@ -127,11 +127,11 @@ class HomePage extends Component {
 
           </Div>
 
+          <div className="row" style={styles.description}>
+            <P className="col">I love creating & developing full stack web & mobile apps.</P>
+          </div>
+        </div>
 
-        </div>
-        <div className="row" style={styles.description}>
-          <P>I love developing full stack web & mobile apps.</P>
-        </div>
       </Container>
     );
   }
@@ -145,11 +145,11 @@ const styles = {
   },
   iconRow: {
     width: '50%',
-    // minWidth: 350,
+    minWidth: 280,
     margin: 'auto auto',
   },
   name: {
-    fontSize: 25,
+    fontSize: 30,
     margin: '4vh 0vh'
   },
   iconHolder: {
@@ -158,21 +158,24 @@ const styles = {
   },
   icontext: {
     fontSize: 18,
+    fontWeight: 'lighter'
   },
   icon: {
     fontWeight: 'bolder',
     color: '#01a6d8',//#5C6BC0
     marginTop: '35px',
-    fontSize: 20
+    fontSize: 25
   },
   largeIcon: {
-    fontSize: 45,
+    fontSize: 55,
     margin: '5px 0px 5px 0px',
   },
   description: {
-    width: '50%',
+    // textAlign: 'left',
     margin: 'auto auto',
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: 'lighter',
     marginTop: '4vh',
+    textAlign: 'left'
   },
 }
