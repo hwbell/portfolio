@@ -46,6 +46,9 @@ class PortfolioPage extends Component {
     this.displayApps = this.displayApps.bind(this);
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
   // use this function to display each category of app when selected. types are the
   // imported vars from portfolioEntries.js
 

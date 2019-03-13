@@ -56,6 +56,10 @@ class HomePage extends Component {
     this.onExitHover = this.onExitHover.bind(this);
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
+
   onHoverDna() {
     console.log('firing on hover')
     this.setState(dnaHoverState);
@@ -95,7 +99,8 @@ class HomePage extends Component {
 
           {this.state.devBackground && <div className="developer-bg"></div>}
 
-          {/* <div className="animation-bg"></div> */}
+          {/* maybe add background animation? */}
+          {/* <div className="animation-bg"></div> */} 
 
         </ReactCSSTransitionGroup>
 

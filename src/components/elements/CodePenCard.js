@@ -88,12 +88,13 @@ const styles = {
     background: 'rgba(0,0,0,0.75)',
   },
   cardTitle: {
-    fontSize: 24
+    fontSize: 24,
+    fontWeight: 'bolder',
   },
   cardtext: {
     margin: 0,
     color: 'whitesmoke',
-    fontWeight: '550',
+    fontWeight: 'bolder',
     fontSize: 16
   },
 }

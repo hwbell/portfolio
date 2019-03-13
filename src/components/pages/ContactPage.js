@@ -28,11 +28,10 @@ class ContactPage extends Component {
     this.state = {
       //
     };
-    this.hover = this.hover.bind(this);
   }
 
-  hover() {
-    //
+  componentDidMount () {
+    window.scrollTo(0, 0);
   }
 
   render() {

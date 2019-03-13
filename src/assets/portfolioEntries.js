@@ -38,10 +38,10 @@ const webApps = [
     name: 'News Now',
     link: 'https://news-now-hb.herokuapp.com/',
     image: require('../assets/images/news-now.jpg'),
-    description: 'This news collector app was built on top of the free news api at newsapi.org',
+    description: 'Get the news from around the world, searching over 30,000 sources.',
     modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
       from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US.`,
+      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
   },
@@ -49,7 +49,7 @@ const webApps = [
     name: 'StoxFox',
     link: 'https://stox-fox.herokuapp.com',
     image: require('../assets/images/stox-fox.jpg'),
-    description: 'Get real-time stock market and currency exchange info',
+    description: 'Get real-time stock market & currency exchange information.',
     modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
       for worlwide markets and currencies. Data can be visualized in the long or short term to see the 
       performance of an equity over time.`,
@@ -60,10 +60,10 @@ const webApps = [
     name: 'Tetris',
     link: 'https://stark-waters-61663.herokuapp.com/',
     image: require('../assets/images/tetris-app.jpg'),
-    description: 'A full stack Tetris app built with react and nodejs.',
-    modalDescription: `I built this tetris game with create-react-app and a nodejs backend 
-      for high scores. For the game itself I used raw HTML canvas without any third-party
-      libraries.`,
+    description: 'A full stack Tetris app built from scratch with react & nodejs.',
+    modalDescription: `I built this tetris game with react and a nodejs backend 
+      for high scores. For the game itself I used HTML canvas without any third-party
+      libraries. See if you can top the leaderboard!`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
   },
@@ -72,7 +72,10 @@ const webApps = [
     link: 'https://conways-game-of-life-hb.herokuapp.com/',
     image: require('../assets/images/game-of-life-app.jpg'),
     description: 'A rite of passage for any developer & a classic in mathematics.',
-    modalDescription: `This app was one of my first experiences using react, originally made on codepen. I took the codepen I made and transferred the code to create-react-app structure, and deployed it to heroku.`,
+    modalDescription: `This app was one of my first experiences using react, originally made on codepen. This 
+      was a great introduction to managing state in react and handling game logic with an object-oriented approach.
+      I took the codepen I made and transferred the code to create-react-app structure, and deployed it to 
+      heroku.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
   },
@@ -119,7 +122,7 @@ const codePens = [
     name: 'Reversi',
     link: 'https://codepen.io/hbellatcodepen/pen/XVrZLB',
     image: require('../assets/images/reversi-app.jpg'),
-    description: 'Play a game of reversi, known to many as Othello',
+    description: 'Play a game of reversi, known to many as "Othello".',
     modalDescription: `Building this game was good practice for eventually making
       more complex apps. The rules for capture are very simple compared to Go or Chess.`,
     modalApp: (
@@ -133,7 +136,7 @@ const codePens = [
     name: 'Go',
     link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
     image: require('../assets/images/baduk-app.jpg'),
-    description: 'Play a game of Go, the oldest strategy game there is, and currently a frontier of A.I.',
+    description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
     modalDescription: `I am obsessed with this game. It has been a passion of mine 
       for quite some time. There are many useful apps for Go in existence, but I 
       thought I would try and just build a board with complete logic for legal 
@@ -150,7 +153,7 @@ const codePens = [
     name: 'Chess',
     link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
     image: require('../assets/images/chess-app.jpg'),
-    description: 'Play a game of chess, the "Royal Game"',
+    description: 'Play a game of chess, the "Royal Game".',
     modalDescription: `A bit more complex than reversi or Go. Programming all the rules for 
       piece movement, check, etc. was a lot of fun. I am a chess enthusiast, and thought this
       would be a decent challenge.`,
@@ -166,7 +169,7 @@ const codePens = [
     name: 'Simon',
     link: 'https://codepen.io/hbellatcodepen/pen/EWqPWb',
     image: require('../assets/images/simon-app.jpg'),
-    description: 'Play Simon. You know, from the 90s?',
+    description: 'Play Simon. You know, from the 80s?',
     modalDescription: `This was also a Free Code Camp assignment, one of my early 
       front-end projects. It was a quick build and good practice for handling user input.`,
     modalApp: (

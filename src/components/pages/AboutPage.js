@@ -45,6 +45,7 @@ class HomePage extends Component {
 
   componentDidMount() {
     // runIconAnimation();
+    window.scrollTo(0, 0);
   }
 
   hover() {
