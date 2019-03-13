@@ -67,18 +67,20 @@ class HomePage extends Component {
 
       <Container className="container" style={styles.main}>
 
-        <P className="text-center" style={styles.title}>
-          About Me
-        </P>
+        <Div className="row">
+          <P className="col" style={styles.title}>
+            About Me
+          </P>
+        </Div>
         <hr />
-        
+
 
         <Img src={ProfilePic} className="row" style={styles.image} />
-        
+
         {/* <P className="text-center" style={styles.subTitle}>
           Nice to meet you!
         </P> */}
-        
+
         <Div style={styles.textContainer}>
           <P className="" style={styles.paragraph}>
             For the past 8 years I have been a research biologist in the
@@ -155,9 +157,9 @@ class HomePage extends Component {
           </P>
 
           <P className="row" style={styles.paragraph}>
-            <a target="_blank" 
+            <a target="_blank"
               href="https://www.lambdatest.com/blog/top-javascript-frameworks-for-2019/"
-              style={{marginLeft: '10px'}}>
+              style={{ marginLeft: '10px' }}>
               Top front-end frameworks in 2019
             </a>
           </P>

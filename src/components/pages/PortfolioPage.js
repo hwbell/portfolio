@@ -96,7 +96,7 @@ class PortfolioPage extends Component {
 
         </Div>
 
-        <hr/>
+        <hr />
         <P className="" style={styles.appTitle}>
           Web
         </P>
@@ -116,6 +116,15 @@ class PortfolioPage extends Component {
           {this.displayApps(mobileApps)}
         </div>
 
+        <div className="" style={styles.paragraphHolder}>
+          <div className="" style={styles.paragraph}>
+            Check out the code for any of my projects on <a target="#blank" href="https://github.com/hwbell">github.</a>
+          </div>
+
+          <div className="" style={styles.paragraph}>
+            You can also see more apps & projects I've built on <a target="#blank" href="https://codepen.io/hbellatcodepen/pens/public/2/">codepen.</a>
+          </div>
+        </div>
       </Container >
     );
   }
@@ -126,7 +135,7 @@ export default PortfolioPage;
 const styles = {
   cardsContainer: {
     // width: '70%',
-    margin: '2vh 4vh 10vh 4vh',
+    margin: '2vh 4vh 2vh 4vh',
   },
   title: {
     // width: '80%',
@@ -161,5 +170,15 @@ const styles = {
     // minWidth: 180
     // margin: 'auto'
     // maxWidth: 300,
-  }
+  },
+  paragraphHolder: {
+    marginBottom: '14vh'
+  },
+  paragraph: {
+    // paddingTop: 10,
+    fontSize: 22,
+    width: '100%',
+    margin: '4vh',
+    // marginBottom: '14vh'
+  },
 }

@@ -95,6 +95,8 @@ class HomePage extends Component {
 
           {this.state.devBackground && <div className="developer-bg"></div>}
 
+          {/* <div className="animation-bg"></div> */}
+
         </ReactCSSTransitionGroup>
 
 
