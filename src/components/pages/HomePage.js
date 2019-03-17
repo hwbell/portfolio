@@ -57,7 +57,11 @@ class HomePage extends Component {
   }
 
   componentDidMount () {
-    window.scrollTo(0, 0);
+    // 600ms seems to be right for the pose animations between screens, so this
+    // will happen when the screen is blank, eliminating choppy animation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 600 )
   }
 
   onHoverDna() {
@@ -105,7 +109,7 @@ class HomePage extends Component {
         </ReactCSSTransitionGroup>
 
 
-        <div className="" style={styles.contentholder}
+        <Div className="" style={styles.contentholder}
           onMouseLeave={this.onExitHover}>
 
           <P className="text-center" style={styles.name}>Hi, I'm Harry</P>
@@ -134,10 +138,10 @@ class HomePage extends Component {
 
           </Div>
 
-          <div className="row" style={styles.description}>
+          <Div className="row" style={styles.description}>
             <P className="col">I love creating & developing full stack web & mobile apps.</P>
-          </div>
-        </div>
+          </Div>
+        </Div>
 
       </Container>
     );

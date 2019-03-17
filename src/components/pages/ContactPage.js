@@ -22,6 +22,11 @@ const Div = posed.div({
   exit: { x: 10, opacity: 0 }
 });
 
+const Hr = posed.hr({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 10, opacity: 0 }
+})
+
 class ContactPage extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +36,11 @@ class ContactPage extends Component {
   }
 
   componentDidMount () {
-    window.scrollTo(0, 0);
+    // 600ms seems to be right for the pose animations between screens, so this
+    // will happen when the screen is blank, eliminating choppy animation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 600 )
   }
 
   render() {
@@ -39,9 +48,9 @@ class ContactPage extends Component {
       <Container className="container" style={styles.main}>
         
         <P className="" style={styles.title}>
-          Contact me
+          Contact Me
         </P>
-        <hr/>
+        <Hr/>
         <P className="" style={styles.subTitle}>
           Get in touch with me to discuss anything at all
         </P>
@@ -110,7 +119,7 @@ const styles = {
   },
   subTitle: {
     width: '80%',
-    fontSize: 28,
+    fontSize: 'calc(18px + 1vw)',
     
   },
   textContainer: {

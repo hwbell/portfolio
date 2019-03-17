@@ -14,9 +14,14 @@ const P = posed.p({
   exit: { x: 10, opacity: 0 }
 });
 
+const Div = posed.div({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 10, opacity: 0 }
+});
+
 class EmailForm extends React.Component {
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,17 +33,17 @@ class EmailForm extends React.Component {
       icon: 'fa-envelope',
       buttonClass: 'send-button'
     }
-    
+
   }
 
-  handleSubmit (e) {
+  handleSubmit(e) {
     e.preventDefault();
     const self = this;
-    
+
     self.setState({
       emailSent: false,
       sendingEmail: true,
-      buttonClass: 'sent-button', 
+      buttonClass: 'sent-button',
       icon: 'fa-spinner fa-spin'
     });
 
@@ -52,14 +57,14 @@ class EmailForm extends React.Component {
       .then(res => res.json())
       .then((json) => {
         console.log(json);
-        setTimeout ( () => {
+        setTimeout(() => {
           self.setState({
             emailSent: true,
             sendingEmail: false,
             icon: 'fa-check',
-            buttonClass: 'send-button', 
+            buttonClass: 'send-button',
           }, () => {
-            setTimeout( () => {
+            setTimeout(() => {
               self.setState({
                 emailSent: false,
                 icon: 'fa-envelope'
@@ -73,8 +78,8 @@ class EmailForm extends React.Component {
       });
   }
 
-  handleChange (type, value) {
-    
+  handleChange(type, value) {
+
     let newMessageBody = JSON.parse(JSON.stringify(this.state.messageBody));
     newMessageBody[`${type}`] = value;
 
@@ -85,35 +90,38 @@ class EmailForm extends React.Component {
   }
 
   render() {
-    
+
     return (
       <Container style={styles.form}>
-    
-        <Form onSubmit={this.handleSubmit}>
-          <FormGroup>
-            <Input type="text" name="name" id="contactname" placeholder="name" 
-              onChange={(e) => this.handleChange('name', `${e.target.value}`)}
-            />
-          </FormGroup>
 
-          <FormGroup>
-            <Input type="email" name="email" id="contactemail" placeholder="email" 
-              onChange={(e) => this.handleChange('email', `${e.target.value}`)}
-            />
-          </FormGroup>
+        <Div>
+          <Form onSubmit={this.handleSubmit}>
+            <FormGroup>
+              <Input type="text" name="name" id="contactname" placeholder="name"
+                onChange={(e) => this.handleChange('name', `${e.target.value}`)}
+              />
+            </FormGroup>
 
-          <FormGroup>
-            <Input style={{ height: '150px' }} type="textarea" name="text" id="contactmessage" placeholder="message" 
-              onChange={(e) => this.handleChange('message', `${e.target.value}`)}
-            />
-          </FormGroup>
-          <Button outline color="secondary" 
-            type="submit" 
-            style={styles.button}
-            className={this.state.buttonClass}>
-            <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
-          </Button>
-        </Form>
+            <FormGroup>
+              <Input type="email" name="email" id="contactemail" placeholder="email"
+                onChange={(e) => this.handleChange('email', `${e.target.value}`)}
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Input style={{ height: '150px' }} type="textarea" name="text" id="contactmessage" placeholder="message"
+                onChange={(e) => this.handleChange('message', `${e.target.value}`)}
+              />
+            </FormGroup>
+            <Button outline color="secondary"
+              type="submit"
+              style={styles.button}
+              className={this.state.buttonClass}>
+              <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
+            </Button>
+          </Form>
+        </Div>
+
       </Container>
     );
   }
@@ -122,7 +130,7 @@ class EmailForm extends React.Component {
 export default EmailForm;
 
 const styles = {
-  
+
   form: {
     width: '80%',
     // margin: 30

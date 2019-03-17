@@ -33,6 +33,10 @@ const Div = posed.div({
   exit: { x: 10, opacity: 0 }
 });
 
+const Hr = posed.hr({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 10, opacity: 0 }
+})
 
 const cardHolderClass = "col-12 col-md-6 col-lg-4 px-0";
 
@@ -47,7 +51,11 @@ class PortfolioPage extends Component {
   }
 
   componentDidMount () {
-    window.scrollTo(0, 0);
+    // 600ms seems to be right for the pose animations between screens, so this
+    // will happen when the screen is blank, eliminating choppy animation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 600 )
   }
   // use this function to display each category of app when selected. types are the
   // imported vars from portfolioEntries.js
@@ -77,11 +85,13 @@ class PortfolioPage extends Component {
             My portfolio
           </P>
         </Div>
-        <hr />
+        <Hr />
 
-        <P className="text-center" style={styles.subTitle}>
+        <Div className="row">
+        <P className="col" style={styles.subTitle}>
           Take a look at some projects I have created.
         </P>
+        </Div>
 
         <Div className="row" style={styles.topIconHolder}>
           <Div className="col">
@@ -99,7 +109,7 @@ class PortfolioPage extends Component {
 
         </Div>
 
-        <hr />
+        <Hr />
         <P className="" style={styles.appTitle}>
           Web
         </P>
@@ -110,16 +120,16 @@ class PortfolioPage extends Component {
           {this.displayApps(codePens)}
         </div>
 
-        <hr />
+        <Hr />
         <P className="" style={styles.appTitle}>
           Mobile
         </P>
 
-        <div className="row" style={styles.cardsContainer}>
+        <Div className="row" style={styles.cardsContainer}>
           {this.displayApps(mobileApps)}
-        </div>
+        </Div>
 
-        <div className="" style={styles.paragraphHolder}>
+        <Div className="" style={styles.paragraphHolder}>
           <div className="" style={styles.paragraph}>
             Check out the code for any of my projects on <a target="#blank" href="https://github.com/hwbell">github.</a>
           </div>
@@ -127,7 +137,7 @@ class PortfolioPage extends Component {
           <div className="" style={styles.paragraph}>
             You can also see more apps & projects I've built on <a target="#blank" href="https://codepen.io/hbellatcodepen/pens/public/2/">codepen.</a>
           </div>
-        </div>
+        </Div>
       </Container >
     );
   }
@@ -147,7 +157,8 @@ const styles = {
     fontWeight: 'bold'
   },
   subTitle: {
-    fontSize: 24,
+    fontSize: 'calc(16px + 1vw)',
+    textAlign: 'left',
     margin: 25
   },
   skillTitle: {
@@ -175,11 +186,11 @@ const styles = {
     // maxWidth: 300,
   },
   paragraphHolder: {
-    marginBottom: '14vh'
+    margin: '0 3vw 14vh 0',
   },
   paragraph: {
     // paddingTop: 10,
-    fontSize: 22,
+    fontSize: 'calc(12px + 1vw)',
     width: '100%',
     margin: '4vh',
     // marginBottom: '14vh'

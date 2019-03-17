@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router onUpdate={() => window.scrollTo(0, 0)} >
+      <Router>
         <div>
           <Route render={({ location }) => (
             // pose is kind of awesome! and super easy for a simple 

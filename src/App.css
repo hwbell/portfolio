@@ -25,9 +25,14 @@ p {
   z-index: 1;
 }
 
+a {
+  transition: all 0.3s ease;
+}
 /* no underlines for links */
 a:hover, a:focus, a:active {
   text-decoration: none;
+  /* color: rgb(231, 111, 42); */
+  /* font-weight: bolder; */
 }
 
 /* for no padding between bootstrap cols */
@@ -117,32 +122,38 @@ a:hover, a:focus, a:active {
 }
 
 /*  set transition for transforms*/
-.grow, .grow-text, .shift-text, .send-button, .sent-button, .blink, .fa, .fas {
-  transition:all 0.3s ease;
+.grow, .grow-text, .send-button, .sent-button, .blink, .fa, .fas {
+  transition: all 0.3s ease;
+}
+.shift-text {
+  transition: all 0.5s ease;
 }
 
 /* for the Nav Bar hovering */
 .grow:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  color: rgb(159, 26, 248);
+  text-decoration: none;
+  /* left: 0px; */
+  /* -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg); */
+  /* color: rgb(159, 26, 248); */
+  color: rgba(140, 20, 161, 0.85);
 }
 
-
+/* for the skills list on the about page */
 .grow-text:hover {
-  -webkit-transform: translateX(15px) scale(1.1);
-  -ms-transform: translateX(15px) scale(1.1);
-  transform: translateX(15px) scale(1.1);
-  color: rgb(204, 26, 248);
+  -webkit-transform: translateX(8px) ;
+  -ms-transform: translateX(8px) ;
+  transform: translateX(8px) ;
+  color: rgba(140, 20, 161, 0.85);
   /* margin-left: 30px; */
 }
-/* for the individual skills hovering */
+/* for the individual tools hovering on modals */
 .shift-text:hover {
-  -webkit-transform: translateX(10px) scale(1.1) rotate(-5deg);
-  -ms-transform: translateX(10px) scale(1.1) rotate(-5deg);
-  transform: translateX(10px) scale(1.1) rotate(-5deg);
-  color: rgb(248, 133, 26);
+  -webkit-transform: rotateX(-360deg);
+  -ms-transform: rotateX(-360deg);
+  transform: rotateX(-360deg);
+  color: rgba(140, 20, 161, 0.85);
 }
 /* for the send email button */
 .send-button:hover {
@@ -243,7 +254,7 @@ a:hover, a:focus, a:active {
   display: inline-block;
   /* color: black; */
   
-  background: rgb(28, 5, 54) -webkit-gradient(linear, 50% 0, 0 0, from(#977af5), color-stop(0.5, #733fb6), to(#6422bb));
+  background: rgb(28, 5, 54) -webkit-gradient(linear, 50% 0, 0 0, from(#544f64), color-stop(0.5, #80778b), to(#3e3649));
   
   background-position: -4rem top; /*50px*/
   background-repeat: no-repeat;

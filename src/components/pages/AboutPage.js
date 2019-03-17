@@ -29,9 +29,14 @@ const Div = posed.div({
   exit: { x: 0, opacity: 0 }
 });
 
+const Hr = posed.hr({
+  enter: { x: 0, opacity: 1 },
+  exit: { x: 0, opacity: 0 }
+})
+
 // for the list display - each is a list, with the var name as the title
-const languages = ['HTML5', 'CSS', 'javascript', 'python', 'MATLAB'];
-const tools = ['npm', 'github', 'heroku', 'aws S3', 'postman', 'VS Code', 'CodePen', 'Linux OS'];
+const languages = ['HTML5', 'CSS', 'Javascript', 'Python', 'MATLAB'];
+const tools = ['Github', 'npm', 'Heroku', 'AWS S3', 'Postman', 'VS Code', 'CodePen', 'Linux OS'];
 const frameworks = ['React.js', 'React Native', 'Node.js', 'Express.js', 'MongoDB'];
 
 class HomePage extends Component {
@@ -44,8 +49,11 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    // runIconAnimation();
-    window.scrollTo(0, 0);
+    // 600ms seems to be right for the pose animations between screens, so this
+    // will happen when the screen is blank, eliminating choppy animation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 600 )
   }
 
   hover() {
@@ -73,7 +81,7 @@ class HomePage extends Component {
             About Me
           </P>
         </Div>
-        <hr />
+        <Hr />
 
 
         <Img src={ProfilePic} className="row" style={styles.image} />

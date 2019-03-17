@@ -50,7 +50,11 @@ class ModalButton extends React.Component {
             
             <div className="row" style={styles.toolsHolder}>
               {this.props.tools.map((tool, i) => {
-                return <p key={i} className="col-4 shift-text">{tool}</p>
+                return (
+                  <div className="col-4">
+                    <p key={i} className="shift-text">{tool}</p>
+                  </div>
+                  )
               })}
             </div>
 

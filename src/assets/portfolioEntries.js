@@ -8,20 +8,20 @@ const mobileApps = [
     name: 'Colorado Daily Info',
     link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
     image: require('../assets/images/colorado-daily-info.png'),
-    description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, an traffic to the mountains.',
+    description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, & traffic to the mountains.',
     modalDescription: `I made this app to gather some basic information on recent snowfall, 
       weather in the city and in the mountains, and traffic on the way to the mountains (a major 
       issue for us Denverites). I used darksky.net's API for the weather info. For snow and traffic 
-      data, I used the Node.js library Puppeteer to scrape information from several sources, as there
+      data, I used the node.js puppeteer library to scrape information from several sources, as there
       wasn't a suitable API available. Data was stored on an Express.js back-end for the mobile app.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react-native', 'node.js', 'puppeteer', 'git', 'heroku'],
+    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'puppeteer', 'git', 'heroku'],
   },
   {
     name: 'Flight Attendant Lung Health',
     link: 'https://expo.io/@hbell3xp0/snack-HJm8znJUX',
     image: require('../assets/images/famri.jpg'),
-    description: 'An information and recruitment tool for a research study at CU Denver',
+    description: 'An information & recruitment tool for a research study at CU Denver.',
     modalDescription: `I made this app for the lab I work in at CU Denver. It is designed 
       as a resource for people who may be interested in participating in the study. Users 
       may read some background information and basic information about the study itself, 
@@ -29,7 +29,7 @@ const mobileApps = [
       Assets such as videos and pdfs were hosted on an AWS S3 bucket and requests handled by a 
       node.js backend.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react-native', 'node.js', 'git', 'heroku'],
+    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'git', 'heroku'],
   }
 ]
 
@@ -43,7 +43,7 @@ const webApps = [
       from thousands of sources from across the world. The api is great for this reason - you get news from
       sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
   {
     name: 'StoxFox',
@@ -54,18 +54,18 @@ const webApps = [
       for worlwide markets and currencies. Data can be visualized in the long or short term to see the 
       performance of an equity over time.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
   {
     name: 'Tetris',
     link: 'https://stark-waters-61663.herokuapp.com/',
     image: require('../assets/images/tetris-app.jpg'),
-    description: 'A full stack Tetris app built from scratch with react & nodejs.',
-    modalDescription: `I built this tetris game with react and a nodejs backend 
+    description: 'A full stack Tetris app built from scratch with react.js & node.js.',
+    modalDescription: `I built this tetris game with react.js and a node.js backend 
       for high scores. For the game itself I used HTML canvas without any third-party
       libraries. See if you can top the leaderboard!`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
   {
     name: "Conway's Game of Life",
@@ -77,7 +77,7 @@ const webApps = [
       I took the codepen I made and transferred the code to create-react-app structure, and deployed it to 
       heroku.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react', 'react-router', 'nodejs', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
   },
 ]
 
@@ -108,15 +108,15 @@ const codePens = [
     image: require('../assets/images/dungeon-crawler-app.jpg'),
     description: `I made a dungeon crawler game for an assignment through Free Code 
       Camp.`,
-    modalDescription: `This was one of my initial experiences using React, and it made a lasting impression.
+    modalDescription: `This was one of my initial experiences using react, and it made a lasting impression.
     React is what I primarily use for front-end development now. A game that holds different types of 
-    ever changing information is a great example of why React's state management is so useful.`,
+    ever changing information is a great example of why react's state management is so useful.`,
     modalApp: (
       <div>
         {reversiEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react'],
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js'],
   },
   {
     name: 'Reversi',
