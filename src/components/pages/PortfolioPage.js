@@ -82,7 +82,7 @@ class PortfolioPage extends Component {
       <Container className="container">
         <Div className="row">
           <P className="col" style={styles.title}>
-            My portfolio
+            My Portfolio
           </P>
         </Div>
         <Hr />

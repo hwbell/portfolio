@@ -35,15 +35,17 @@ const mobileApps = [
 
 const webApps = [
   {
-    name: 'News Now',
-    link: 'https://news-now-hb.herokuapp.com/',
-    image: require('../assets/images/news-now.jpg'),
-    description: 'Get the news from around the world, searching over 30,000 sources.',
-    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-      from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+    name: 'Wiki Viewer',
+    link: 'https://wiki-bubbles.herokuapp.com/',
+    image: require('../assets/images/wiki-bubbles.jpg'),
+    description: 'Search Wikipedia & see page view data & the trending pages of the day.',
+    modalDescription: `I made this wikipedia viewer to make the free encyclopedia more user-friendly. I've
+    always thought it was frustrating to be brought straight to the top search result when searching a keyword 
+    on the Wikipedia website. Using this app you can see the top results of your search by relevance, and explore how a
+    page's popularity has changed over time. I've also made use of Google's API to display some popular images of the 
+    search.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
   },
   {
     name: 'StoxFox',
@@ -53,6 +55,17 @@ const webApps = [
     modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
       for worlwide markets and currencies. Data can be visualized in the long or short term to see the 
       performance of an equity over time.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+  },
+  {
+    name: 'News Now',
+    link: 'https://news-now-hb.herokuapp.com/',
+    image: require('../assets/images/news-now.jpg'),
+    description: 'Get the news from around the world, searching over 30,000 sources.',
+    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+      from thousands of sources from across the world. The api is great for this reason - you get news from
+      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
