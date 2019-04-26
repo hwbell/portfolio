@@ -38,12 +38,12 @@ const webApps = [
     name: 'Wiki Viewer',
     link: 'https://wiki-bubbles.herokuapp.com/',
     image: require('../assets/images/wiki-bubbles.jpg'),
-    description: 'Search Wikipedia & see page view data & the trending pages of the day.',
-    modalDescription: `I made this wikipedia viewer to make the free encyclopedia more user-friendly. I've
-    always thought it was frustrating to be brought straight to the top search result when searching a keyword 
-    on the Wikipedia website. Using this app you can see the top results of your search by relevance, and explore how a
-    page's popularity has changed over time. I've also made use of Google's API to display some popular images of the 
-    search.`,
+    description: `Experience Wikipedia in a new way. Search the encylopedia. See the most recent data on trending pages, 
+    views by country, and the most active editors.`,
+    modalDescription: `I made this wikipedia viewer for users to explore some information about the encyclopedia. Using 
+    this app you can see the top results of your search, and explore how a page's popularity has changed over time. Also 
+    available is data on wikipedia activity across the world and the top editors on the site.
+    I've made use of Google's API to display some popular images of searches.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
   },
@@ -135,9 +135,11 @@ const codePens = [
     name: 'Reversi',
     link: 'https://codepen.io/hbellatcodepen/pen/XVrZLB',
     image: require('../assets/images/reversi-app.jpg'),
-    description: 'Play a game of reversi, known to many as "Othello".',
-    modalDescription: `Building this game was good practice for eventually making
-      more complex apps. The rules for capture are very simple compared to Go or Chess.`,
+    description: `Play a game of reversi, known to many as "Othello". I loved this game as a kid, and it was 
+    fun to make recreate it for myself.`,
+    modalDescription: `Building this game was good practice for eventually making more complex apps. The rules 
+      for capture are very simple compared to Go or Chess, and the board is very small. Even so, there is plenty 
+      of logic to take into account.`,
     modalApp: (
       <div>
         {reversiEmbedded}
@@ -150,10 +152,9 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
     image: require('../assets/images/baduk-app.jpg'),
     description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
-    modalDescription: `I am obsessed with this game. It has been a passion of mine 
-      for quite some time. There are many useful apps for Go in existence, but I 
-      thought I would try and just build a board with complete logic for legal 
-      moves and captures. Read more about the rules on the CodePen.`,
+    modalDescription: `I am obsessed with this game. It has been a passion of mine for quite some time. There are 
+      many useful apps for Go in existence, but I wanted to build one for myself with complete logic for legal 
+      moves and captures. If you've never played, try it out! Read more about the rules on the CodePen.`,
     modalApp: (
       <div>
         {reversiEmbedded}
@@ -167,9 +168,9 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
     image: require('../assets/images/chess-app.jpg'),
     description: 'Play a game of chess, the "Royal Game".',
-    modalDescription: `A bit more complex than reversi or Go. Programming all the rules for 
-      piece movement, check, etc. was a lot of fun. I am a chess enthusiast, and thought this
-      would be a decent challenge.`,
+    modalDescription: `I am a chess enthusiast, and thought this would be a decent challenge. The basic layout 
+      of chess is a bit more complex than reversi or Go. Programming all the rules for piece movement, check, etc. 
+      was a lot of fun.`,
     modalApp: (
       <div>
         {chessEmbedded}
@@ -183,8 +184,9 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/EWqPWb',
     image: require('../assets/images/simon-app.jpg'),
     description: 'Play Simon. You know, from the 80s?',
-    modalDescription: `This was also a Free Code Camp assignment, one of my early 
-      front-end projects. It was a quick build and good practice for handling user input.`,
+    modalDescription: `This was also a Free Code Camp assignment, one of my early front-end projects. It was a quick 
+    build and good practice for handling user input. I think small games like these are a great stepping stone in 
+    becoming a developer.`,
     modalApp: (
       <div>
         {chessEmbedded}
