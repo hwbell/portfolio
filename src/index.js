@@ -35,7 +35,7 @@ apps.forEach((app) => {
 })
 
 // wake up the weather app every 30 mins
-setInterval( () => {
+let pingInterval = setInterval( () => {
   let appsToPing = [
     'https://hb-weather-server.herokuapp.com/',
     'https://hb-world-weather-map.herokuapp.com/'
@@ -52,7 +52,7 @@ setInterval( () => {
       });
   });
 
-}, 1000*60*30 );
+}, 1000*60*25 );
 
 
 
