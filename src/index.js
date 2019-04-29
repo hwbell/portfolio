@@ -17,7 +17,9 @@ const apps = [
   'https://lit-falls-35438.herokuapp.com/',
   'https://stox-fox.herokuapp.com/',
   'https://news-now-hb.herokuapp.com/',
-  'https://wiki-bubbles.herokuapp.com/'
+  'https://wiki-bubbles.herokuapp.com/',
+  'https://hb-weather-server.herokuapp.com/',
+  'https://hb-world-weather-map.herokuapp.com/'
 ]
 
 // wake 'em up! should take like 7-10 sec, and will do so 
@@ -35,7 +37,7 @@ apps.forEach((app) => {
 })
 
 // wake up the weather app every 30 mins
-let pingInterval = setInterval( () => {
+setInterval( () => {
   let appsToPing = [
     'https://hb-weather-server.herokuapp.com/',
     'https://hb-world-weather-map.herokuapp.com/'
@@ -52,7 +54,7 @@ let pingInterval = setInterval( () => {
       });
   });
 
-}, 1000*60*25 );
+}, 1000*10 );
 
 
 

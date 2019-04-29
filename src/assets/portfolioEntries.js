@@ -5,7 +5,7 @@ import React from 'react';
 // separate by type
 const mobileApps = [
   {
-    name: 'Colorado Daily Info',
+    name: 'Denver Mountain Daily',
     link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
     image: require('../assets/images/colorado-daily-info.png'),
     description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, & traffic to the mountains.',
