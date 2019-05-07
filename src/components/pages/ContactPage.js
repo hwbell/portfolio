@@ -119,6 +119,7 @@ const styles = {
   },
   subTitle: {
     width: '80%',
+    textAlign: 'left',
     fontSize: 'calc(18px + 1vw)',
     
   },

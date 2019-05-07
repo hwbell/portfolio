@@ -128,7 +128,7 @@ const styles = {
     fontSize: 'calc(16px + 0.5vw)',
   },
   navlink: {
-    margin: 8,
+    margin: '0.5vw 2vw',
     marginBottom: 5,
     fontWeight: 600,
     textDecoration: 'none'

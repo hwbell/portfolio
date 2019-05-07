@@ -157,6 +157,7 @@ const styles = {
     fontWeight: 'bold'
   },
   subTitle: {
+    width: '80%',
     fontSize: 'calc(16px + 1vw)',
     textAlign: 'left',
     margin: 25

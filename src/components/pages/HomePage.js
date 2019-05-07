@@ -117,7 +117,7 @@ class HomePage extends Component {
           <Div className="text-center row" style={styles.iconRow}>
 
             <div className="col padding-0" style={styles.iconHolder}
-              onMouseOver={this.onHoverDna}>
+              onMouseOver={this.onHoverDna} onClick={!this.state.bioBackground ? this.onHoverDna: null}>
               {/* onMouseLeave={this.onExitHover} */}
 
               <P className="" style={styles.icontext}>biologist</P>
@@ -129,7 +129,7 @@ class HomePage extends Component {
             </div>
 
             <div className="col padding-0" style={styles.iconHolder}
-              onMouseOver={this.onHoverLaptop}>
+              onMouseOver={this.onHoverLaptop} onClick={!this.state.devBackground ? this.onHoverLaptop: null}>
               {/* onMouseLeave={this.onExitHover} */}
 
               <P className="" style={styles.icontext}>developer</P>
