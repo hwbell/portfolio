@@ -15,11 +15,11 @@ const mobileApps = [
       data, I used the node.js puppeteer library to scrape information from several sources, as there
       wasn't a suitable API available. Data was stored on an Express.js back-end for the mobile app.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'puppeteer', 'git', 'heroku'],
+    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'puppeteer.js', 'git', 'heroku'],
   },
   {
     name: 'Flight Attendant Lung Health',
-    link: 'https://expo.io/@hbell3xp0/snack-HJm8znJUX',
+    link: 'https://play.google.com/store/apps/details?id=com.falunghealth.cu',
     image: require('../assets/images/famri.jpg'),
     description: 'An information & recruitment tool for a research study at CU Denver.',
     modalDescription: `I made this app for the lab I work in at CU Denver. It is designed 
@@ -29,11 +29,23 @@ const mobileApps = [
       Assets such as videos and pdfs were hosted on an AWS S3 bucket and requests handled by a 
       node.js backend.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'git', 'heroku'],
+    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'git', 'heroku'],
   }
 ]
 
 const webApps = [
+  {
+    name: 'World Weather Map',
+    link: 'https://hb-world-weather-map.herokuapp.com/',
+    image: require('../assets/images/world-weather-map.jpg'),
+    description: 'Explore the weather across the world using a map-based application.',
+    modalDescription: `This app was made using the amazing utility of Mapbox. Click anywhere on the map
+    to get the current, hourly, and daily weather forecast. Weather information was fetched from darksky.net's
+    API, routed through a node.js backend with express. If you are making a map-based app, try Mapbox! Their 
+    javascript library mapboxgl is really powerful.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'git', 'heroku', 'mapbox', 'darksky']
+  },
   {
     name: 'Wiki Viewer',
     link: 'https://wiki-bubbles.herokuapp.com/',
@@ -43,7 +55,7 @@ const webApps = [
     modalDescription: `I made this wikipedia viewer for users to explore some information about the encyclopedia. Using 
     this app you can see the top results of your search, and explore how a page's popularity has changed over time. Also 
     available is data on wikipedia activity across the world and the top editors on the site.
-    I've made use of Google's API to display some popular images of searches.`,
+    I used Google's API to display some popular images of searches.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
   },
