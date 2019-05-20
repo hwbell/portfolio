@@ -71,17 +71,6 @@ const webApps = [
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
   {
-    name: 'News Now',
-    link: 'https://news-now-hb.herokuapp.com/',
-    image: require('../assets/images/news-now.jpg'),
-    description: 'Get the news from around the world, searching over 30,000 sources.',
-    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-      from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
-  },
-  {
     name: 'Tetris',
     link: 'https://stark-waters-61663.herokuapp.com/',
     image: require('../assets/images/tetris-app.jpg'),
@@ -189,6 +178,17 @@ const codePens = [
       </div>
     ),
     tools: ['html', 'css', 'bootstrap', 'javascript',],
+  },
+  {
+    name: 'News Now',
+    link: 'https://news-now-hb.herokuapp.com/',
+    image: require('../assets/images/news-now.jpg'),
+    description: 'Get the news from around the world, searching over 30,000 sources.',
+    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+      from thousands of sources from across the world. The api is great for this reason - you get news from
+      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
 
   {

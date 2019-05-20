@@ -9,15 +9,16 @@ import { Nav, Button, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } fro
 // styling
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
-import MediaQuery from 'react-responsive';
-import { rgba } from 'style-value-types';
+import Media from 'react-media';
 
 class Navigator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'home'
+      page: 'home',
+      dropdownOpen: false
     }
+    this.toggle = this.toggle.bind(this);
   }
 
   handleClick(page) {
@@ -34,67 +35,65 @@ class Navigator extends Component {
   }
 
   renderLinks() {
+
+    let links = ['home', 'about', 'resume', 'portfolio', 'contact'];
+
     return (
       <Nav style={styles.nav}>
-        <NavLink className="grow" style={styles.navlink}
-          to="/">
-          <p onClick={() => this.handleClick('home')}>Home</p>
-        </NavLink>
-        <NavLink className="grow" style={styles.navlink}
-          to="/about/">
-          <p onClick={() => this.handleClick('about')}>About</p>
-        </NavLink>
-        <NavLink className="grow" style={styles.navlink}
-          to="/portfolio/" >
-          <p onClick={() => this.handleClick('portfolio')}>Portfolio</p>
-        </NavLink>
-        <NavLink className="grow" style={styles.navlink}
-          to="/contact/">
-          <p onClick={() => this.handleClick('contact')}>Contact</p>
-        </NavLink>
+        {links.map((link, i) => {
+
+          let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
+          let linkRoute = link === 'home' ? '/' : link;
+
+          return (
+            <NavLink key={i} className="grow" style={styles.navlink}
+              to={linkRoute}>
+              <p onClick={() => this.handleClick(link)}>{linkName}</p>
+            </NavLink>
+          )
+        })}
       </Nav>
     )
   }
 
   renderDropDown() {
+
+    let links = ['home', 'about', 'resume', 'portfolio', 'contact'];
+
     return (
-      <Dropdown className="float-right" style={styles.dropDownMenu}
-      isOpen={this.state.dropdownOpen}
-      toggle={this.toggle}>
+      <Dropdown className="" style={styles.dropDownMenu}
+        isOpen={this.state.dropdownOpen}
+        toggle={this.toggle}>
 
-      <DropdownToggle color='link'>
-        <i style={styles.dropDownIcon} className="dropdown fas fa-align-justify"></i>
-      </DropdownToggle>
+        <DropdownToggle color='link'>
+          <i style={styles.dropDownIcon} className="dropdown fas fa-align-justify"></i>
+        </DropdownToggle>
 
-      <DropdownMenu>
-        <DropdownItem >
-          <NavLink className="grow" style={styles.navlink}
-            to="/">
-            <p onClick={() => this.handleClick('home')}>Home</p>
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem >
-          <NavLink className="grow" style={styles.navlink}
-            to="/about/">
-            <p onClick={() => this.handleClick('about')}>About</p>
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem >
-          <NavLink className="grow" style={styles.navlink}
-            to="/portfolio/" >
-            <p onClick={() => this.handleClick('portfolio')}>Portfolio</p>
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem >
-          <NavLink className="grow" style={styles.navlink}
-            to="/contact/">
-            <p onClick={() => this.handleClick('contact')}>Contact</p>
-          </NavLink>
-        </DropdownItem>
-      </DropdownMenu>
+        <DropdownMenu style={{backgroundColor: 'whitesmoke'}}>
+          {links.map((link, i) => {
 
-    </Dropdown>
+            let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
+            let linkRoute = link === 'home' ? '/' : link;
+            return (
+              <DropdownItem key={i}>
+                <NavLink className="grow" style={styles.dropDownLink}
+                  to={linkRoute}>
+                  <p onClick={() => this.handleClick(link)}>{linkName}</p>
+                </NavLink>
+              </DropdownItem>
+            )
+          })}
+        </DropdownMenu>
+
+      </Dropdown>
     )
+  }
+
+  // for the dropdown menu on smaller screens
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    })
   }
 
   render() {
@@ -103,7 +102,7 @@ class Navigator extends Component {
       width: '100%',
       // maxWidth: 300,
       margin: '10px 0px 0px 0px',
-      background: this.state.bgColor
+      background: 'rgba(245,245,245, 0.9)',
     }
 
 
@@ -111,10 +110,18 @@ class Navigator extends Component {
       <div className="row fixed-bottom" style={mainStyle}>
         <hr />
         <div className="col-12">
-          {this.renderLinks()}
+
+          <Media query="(max-width: 499px)">
+            {matches =>
+              matches ? (
+                this.renderDropDown()
+              ) : (
+                  this.renderLinks()
+                )
+            }
+          </Media>
 
         </div>
-
 
       </div>
     );
@@ -128,10 +135,20 @@ const styles = {
     fontSize: 'calc(16px + 0.5vw)',
   },
   navlink: {
+    fontSize: 'calc(16px + 0.5vw)',
     margin: '0.5vw 2vw',
     marginBottom: 5,
     fontWeight: 600,
     textDecoration: 'none'
   },
+  dropDownLink: {
+    fontSize: 'calc(16px + 0.5vw)',
+    fontWeight: 600,
+    textDecoration: 'none'
+  },
+  dropDownIcon: {
+    fontSize: 'calc(34px + 0.5vw)',
+    
+  }
 
 }

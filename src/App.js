@@ -14,9 +14,8 @@ import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import PortfolioPage from './components/pages/PortfolioPage';
 import ContactPage from './components/pages/ContactPage';
-
+import ResumePage from './components/pages/ResumePage';
 import Navigator from './components/elements/Navigator';
-import { calc } from 'popmotion';
 
 const RoutesContainer = posed.div({
   enter: {
@@ -51,6 +50,7 @@ class App extends Component {
                 <Switch location={location}>
                   <Route exact path="/" component={HomePage} />
                   <Route path="/about/" component={AboutPage} />
+                  <Route path="/resume/" component={ResumePage} />
                   <Route path="/portfolio/" component={PortfolioPage} />
                   <Route path="/contact/" component={ContactPage} />
                 </Switch>
