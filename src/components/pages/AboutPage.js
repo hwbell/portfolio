@@ -35,17 +35,26 @@ const Hr = posed.hr({
 })
 
 // for the list display - each is a list, with the var name as the title
-const languages = ['HTML5', 'CSS', 'Javascript', 'Python', 'MATLAB'];
-const tools = ['Github', 'npm', 'Heroku', 'AWS S3', 'Postman', 'VS Code', 'CodePen', 'Linux OS'];
-const frameworks = ['React.js', 'React Native', 'Node.js', 'Express.js', 'MongoDB'];
+const languages = {
+  title: 'Languages',
+  skills: ['HTML5', 'CSS', 'Javascript', 'Python', 'MATLAB']
+};
+const tools = {
+  title: 'Tools',
+  skills: ['Github', 'npm', 'Heroku', 'AWS S3', 'Postman', 'VS Code', 'CodePen', 'Linux OS']
+}
+const frameworks = {
+  title: 'Frameworks',
+  skills: ['Bootstrap', 'React.js', 'React Native', 'Node.js', 'Express.js', 'MongoDB']
+}
 
-class HomePage extends Component {
+class AboutPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       //
     };
-    this.hover = this.hover.bind(this);
+    // this.hover = this.hover.bind(this);
   }
 
   componentDidMount() {
@@ -53,28 +62,44 @@ class HomePage extends Component {
     // will happen when the screen is blank, eliminating choppy animation
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 600 )
+    }, 600)
   }
 
-  hover() {
-    //
+  renderskills() {
+
+    return (
+      <Div className="" style={styles.skillsContainer}>
+
+        {[languages, frameworks, tools].map((skill) => {
+          return (
+
+            <Div className="" style={styles.list}>
+              
+              <P style={styles.skillTitle}>{skill.title}</P>
+              <ul>
+                {
+                  skill.skills.map((framework, i) =>
+                    <li className="grow-text" key={i}>{framework}</li>
+                  )
+                }
+              </ul>
+            
+            </Div>
+
+          )
+        })
+
+        }
+
+      </Div>
+    )
   }
 
   render() {
 
-    const languageSkills = languages.map((language, i) =>
-      <li className="grow-text" key={i}>{language}</li>
-    );
-    const toolsSkills = tools.map((tool, i) =>
-      <li className="grow-text" key={i}>{tool}</li>
-    );
-    const frameworksSkills = frameworks.map((framework, i) =>
-      <li className="grow-text" key={i}>{framework}</li>
-    );
-
     return (
 
-      <Container className="container" style={styles.main}>
+      <Container className="" style={styles.main}>
 
         <Div className="row">
           <P className="col" style={styles.title}>
@@ -134,30 +159,7 @@ class HomePage extends Component {
             My skills include:
           </P>
 
-          <Div className="row" >
-
-            <Div className="col-6 col-sm-4 " style={styles.list}>
-              <Div className="row">
-                <P style={styles.skillTitle}>Languages</P>
-              </Div>
-              <ul>{languageSkills}</ul>
-            </Div>
-
-            <Div className="col-6 col-sm-4 " style={styles.list}>
-              <Div className="row">
-                <P style={styles.skillTitle}>Frameworks</P>
-              </Div>
-              <ul>{frameworksSkills}</ul>
-            </Div>
-
-            <Div className="col-6 col-sm-4 " style={styles.list}>
-              <Div className="row">
-                <P style={styles.skillTitle}>Tools</P>
-              </Div>
-              <ul>{toolsSkills}</ul>
-            </Div>
-
-          </Div>
+          {this.renderskills()}
 
           <P style={styles.paragraph}>
             I'm always interested and motivated to learn new web technologies. It's one of the things
@@ -180,12 +182,14 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default AboutPage;
 
 const styles = {
   main: {
     paddingTop: '0',
     paddingBottom: 80,
+    width: '90%',
+    margin: 'auto auto'
   },
   title: {
     // width: '80%',
@@ -207,11 +211,13 @@ const styles = {
     margin: 30
   },
   skillsContainer: {
+    width:'100%',
+    // border: '1px solid',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'flex-start',
-    margin: 30
+    // margin: 30
   },
   skillTitle: {
     fontSize: 22,
@@ -240,13 +246,6 @@ const styles = {
   },
   icon: {
     fontSize: 40
-  },
-  list: {
-    borderRadius: 30,
-    paddingTop: 15,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start'
   },
 
 }

@@ -15,17 +15,17 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Div = posed.div({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Hr = posed.hr({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 })
 
 class ContactPage extends Component {
@@ -57,7 +57,7 @@ class ContactPage extends Component {
         </P>
         <Div style={styles.textContainer}>
           <P style={styles.paragraph}>
-            If you think we could create something together, send me a message, or just give me a call. I’m open to discussing any and all ideas for new projects.
+            Feel free to contact me with any questions. Send me a message, or just give me a call. I’m open to discussing any and all ideas for new projects.
           </P>
         </Div>
         <EmailForm />

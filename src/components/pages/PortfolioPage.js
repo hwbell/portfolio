@@ -25,17 +25,17 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Div = posed.div({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Hr = posed.hr({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 })
 
 const cardHolderClass = "col-12 col-md-6 col-lg-4 px-0";

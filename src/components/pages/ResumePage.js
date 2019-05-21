@@ -7,8 +7,7 @@ import '../../App.css';
 import posed, { PoseGroup } from 'react-pose';
 
 // components
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import PdfViewer from '../elements/PdfViewer';
 
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -17,17 +16,17 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Div = posed.div({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Hr = posed.hr({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 10, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 })
 
 class ResumePage extends Component {
@@ -55,9 +54,23 @@ class ResumePage extends Component {
   render() {
 
     return (
-      <Container className="container" style={styles.main}>
-        <embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=https://s3.amazonaws.com/hb-portfolio-assets/Harold+Bell+Resume.pdf" width="100%" height="600px"></embed>
+      <Container className="" style={styles.main}>
+
+        <P className="" style={styles.title}>
+          My Resume
+        </P>
+
+        <Hr />
+
+        <P className="" style={styles.subTitle}>
+          Check out my skills and experience.
+        </P>
+
+        <PdfViewer
+          height={'600px'}
+          width={'100%'}
+          url={'https://s3.amazonaws.com/hb-portfolio-assets/Harold+Bell+Resume.pdf'}
+        />
 
 
       </Container>
@@ -83,41 +96,8 @@ const styles = {
     fontWeight: 'bold'
   },
   subTitle: {
-    width: '80%',
-    textAlign: 'left',
-    fontSize: 'calc(18px + 1vw)',
-
-  },
-  textContainer: {
-    width: '80%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-  },
-  paragraph: {
-    fontSize: 18,
-    // width: '60%,'
-  },
-  iconContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: 250,
-    margin: '25px auto'
-  },
-  animatedIcon: {
-    margin: 8
-  },
-  link: {
-    color: 'black'
-  },
-  icon: {
-    fontSize: 40,
-    // color: 'black',
-  },
-  footer: {
-    fontSize: 18,
-    fontWeight: 600
+    fontSize: 'calc(16px + 1vw)',
+    margin: 25
   },
 
 }

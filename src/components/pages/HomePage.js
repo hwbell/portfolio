@@ -14,12 +14,12 @@ const Container = posed.div({
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: -20, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const Div = posed.div({
   enter: { x: 0, opacity: 1 },
-  exit: { x: -20, opacity: 0 }
+  exit: { x: 0, opacity: 0 }
 });
 
 const initialState = {

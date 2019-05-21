@@ -21,6 +21,11 @@ hr {
   height: 1px;
 }
 
+/* for the nav component */
+.dropdown-item:hover, .dropdown-item:focus:active, .dropdown-item:active {
+  background-color: white;
+}
+
 p {
   z-index: 1;
 }

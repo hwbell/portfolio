@@ -21,10 +21,10 @@ const mobileApps = [
     name: 'Flight Attendant Lung Health',
     link: 'https://play.google.com/store/apps/details?id=com.falunghealth.cu',
     image: require('../assets/images/famri.jpg'),
-    description: 'An information & recruitment tool for a research study at CU Denver.',
-    modalDescription: `I made this app for the lab I work in at CU Denver. It is designed 
+    description: 'An information & recruitment tool for a research study at CU Anschutz Medical Campus.',
+    modalDescription: `I made this app for the lab I worked in at the University of Colorado. It is designed 
       as a resource for people who may be interested in participating in the study. Users 
-      may read some background information and basic information about the study itself, 
+      may read some basic information about the study itself, 
       watch educational videos, and contact the researchers to find out more about participation.
       Assets such as videos and pdfs were hosted on an AWS S3 bucket and requests handled by a 
       node.js backend.`,
@@ -41,7 +41,7 @@ const webApps = [
     description: 'Explore the weather across the world using a map-based application.',
     modalDescription: `This app was made using the amazing utility of Mapbox. Click anywhere on the map
     to get the current, hourly, and daily weather forecast. Weather information was fetched from darksky.net's
-    API, routed through a node.js backend with express. If you are making a map-based app, try Mapbox! Their 
+    API and routed through a node.js backend. If you are making a map-based app, try Mapbox. Their 
     javascript library mapboxgl is really powerful.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'git', 'heroku', 'mapbox', 'darksky']
@@ -50,7 +50,7 @@ const webApps = [
     name: 'Wiki Viewer',
     link: 'https://wiki-bubbles.herokuapp.com/',
     image: require('../assets/images/wiki-bubbles.jpg'),
-    description: `Experience Wikipedia in a new way. Search the encylopedia. See the most recent data on trending pages, 
+    description: `Search the free encylopedia & see the most recent data on trending pages, 
     views by country, and the most active editors.`,
     modalDescription: `I made this wikipedia viewer for users to explore some information about the encyclopedia. Using 
     this app you can see the top results of your search, and explore how a page's popularity has changed over time. Also 
@@ -65,7 +65,7 @@ const webApps = [
     image: require('../assets/images/stox-fox.jpg'),
     description: 'Get real-time stock market & currency exchange information.',
     modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
-      for worlwide markets and currencies. Data can be visualized in the long or short term to see the 
+      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
       performance of an equity over time.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
@@ -137,7 +137,7 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/XVrZLB',
     image: require('../assets/images/reversi-app.jpg'),
     description: `Play a game of reversi, known to many as "Othello". I loved this game as a kid, and it was 
-    fun to make recreate it for myself.`,
+    fun to recreate with code.`,
     modalDescription: `Building this game was good practice for eventually making more complex apps. The rules 
       for capture are very simple compared to Go or Chess, and the board is very small. Even so, there is plenty 
       of logic to take into account.`,

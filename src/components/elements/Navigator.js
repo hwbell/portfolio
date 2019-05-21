@@ -75,7 +75,7 @@ class Navigator extends Component {
             let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
             let linkRoute = link === 'home' ? '/' : link;
             return (
-              <DropdownItem key={i}>
+              <DropdownItem key={i} className="dropdown-item">
                 <NavLink className="grow" style={styles.dropDownLink}
                   to={linkRoute}>
                   <p onClick={() => this.handleClick(link)}>{linkName}</p>
