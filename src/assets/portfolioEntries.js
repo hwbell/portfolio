@@ -35,6 +35,17 @@ const mobileApps = [
 
 const webApps = [
   {
+    name: 'Apple Music',
+    link: 'https://hb-music-app.herokuapp.com/',
+    image: require('../assets/images/apple-music-app.jpg'),
+    description: 'Check out the Apple Music catalog & preview songs or videos.',
+    modalDescription: `This music discovery app was made using the Apple Music API. You can search by anything - song, artist,
+    album, whatever you like. You can find just about anything - there are over 50,000,000 songs in the catalog! You can also 
+    take a look at what is currently trending on the platform.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'git', 'heroku']
+  },
+  {
     name: 'World Weather Map',
     link: 'https://hb-world-weather-map.herokuapp.com/',
     image: require('../assets/images/world-weather-map.jpg'),
@@ -121,7 +132,7 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/PjRdrG',
     image: require('../assets/images/dungeon-crawler-app.jpg'),
     description: `I made a dungeon crawler game for an assignment through Free Code 
-      Camp.`,
+      Camp. See if you can slay the dragon! Tip: collect lots of hearts.`,
     modalDescription: `This was one of my initial experiences using react, and it made a lasting impression.
     React is what I primarily use for front-end development now. A game that holds different types of 
     ever changing information is a great example of why react's state management is so useful.`,
