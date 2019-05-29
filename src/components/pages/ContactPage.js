@@ -53,11 +53,13 @@ class ContactPage extends Component {
         </P>
         <Hr/>
         <P className="" style={styles.subTitle}>
-          Get in touch with me to discuss anything at all
+          Get in touch with me to discuss anything at all.
         </P>
         <Div style={styles.textContainer}>
           <P style={styles.paragraph}>
-            Feel free to contact me with any questions. Send me a message, or just give me a call. I’m open to discussing any and all ideas for new projects.
+            {`Feel free to contact me with any questions, or maybe a game of chess. 
+            Send me a message, or just give me a call. 
+            I’m open to discussing any and all ideas for new projects!`}
           </P>
         </Div>
         <EmailForm />

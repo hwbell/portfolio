@@ -182,7 +182,8 @@ const styles = {
     margin: '5px 0px 5px 0px',
   },
   description: {
-    // textAlign: 'left',
+    // background: 'rgba(255,255,255, 0.5)',
+    borderRadius: '40px',
     margin: 'auto auto',
     fontSize: 20,
     fontWeight: 'lighter',

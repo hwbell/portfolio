@@ -102,7 +102,7 @@ class Navigator extends Component {
       width: '100%',
       // maxWidth: 300,
       margin: '10px 0px 0px 0px',
-      background: 'rgba(245,245,245, 0.9)',
+      background: 'rgba(255,255,255, 0.9)',
     }
 
 

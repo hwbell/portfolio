@@ -131,9 +131,9 @@ class AboutPage extends Component {
             <div className="" style={styles.animatedIcon}>
               <i className="fas fa-microscope flip-on-start grow-blue" style={styles.icon}></i>
             </div>
-            <div className="" style={styles.animatedIcon}>
+            {/* <div className="" style={styles.animatedIcon}>
               <i className="fa fa-atom flip-on-start rotate" style={styles.icon}></i>
-            </div>
+            </div> */}
             <div className="" style={styles.animatedIcon}>
               <i className="fa fa-dna flip-on-start flip-vertical-left" style={styles.icon}></i>
             </div>
@@ -204,11 +204,13 @@ const styles = {
   },
 
   textContainer: {
+    backgroundColor: 'rgba(255,255,255,0.8)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    margin: 30
+    margin: 20,
+    padding: 10
   },
   skillsContainer: {
     width:'100%',
@@ -220,13 +222,13 @@ const styles = {
     // margin: 30
   },
   skillTitle: {
-    fontSize: 22,
+    fontSize: 'calc(16px + 0.5vw)',
     paddingLeft: 10,
     fontWeight: 'bold'
   },
   paragraph: {
     // paddingTop: 10,
-    fontSize: 18,
+    fontSize: 16,
     width: '100%'
   },
   image: {

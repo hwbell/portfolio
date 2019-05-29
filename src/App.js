@@ -40,6 +40,10 @@ class App extends Component {
     return (
       <Router>
         <div>
+
+          {/* for a transparent overlay */}
+          {/* <div className="app-page"></div> */}
+
           <Route render={({ location }) => (
             // pose is kind of awesome! and super easy for a simple 
             // implementation like this

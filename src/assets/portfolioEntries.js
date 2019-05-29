@@ -58,6 +58,17 @@ const webApps = [
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'git', 'heroku', 'mapbox', 'darksky']
   },
   {
+    name: 'Market Monitor',
+    link: 'https://market-monitor-hb.herokuapp.com',
+    image: require('../assets/images/market-monitor.jpg'),
+    description: 'Get real-time stock market & currency exchange information.',
+    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
+      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
+      performance of an equity over time.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+  },
+  {
     name: 'Wiki Viewer',
     link: 'https://wiki-bubbles.herokuapp.com/',
     image: require('../assets/images/wiki-bubbles.jpg'),
@@ -69,17 +80,6 @@ const webApps = [
     I used Google's API to display some popular images of searches.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
-  },
-  {
-    name: 'StoxFox',
-    link: 'https://stox-fox.herokuapp.com',
-    image: require('../assets/images/stox-fox.jpg'),
-    description: 'Get real-time stock market & currency exchange information.',
-    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
-      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
-      performance of an equity over time.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
   {
     name: 'Tetris',
