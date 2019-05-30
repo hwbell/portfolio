@@ -20,7 +20,7 @@ import Navigator from './components/elements/Navigator';
 const RoutesContainer = posed.div({
   enter: {
     opacity: 1,
-    delay: 300,
+    // delay: 300,
     beforeChildren: true
   },
   exit: { opacity: 0 }

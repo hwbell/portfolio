@@ -143,11 +143,10 @@ const styles = {
   },
   dropDownLink: {
     fontSize: 'calc(16px + 0.5vw)',
-    fontWeight: 600,
     textDecoration: 'none'
   },
   dropDownIcon: {
-    fontSize: 'calc(34px + 0.5vw)',
+    fontSize: 'calc(24px + 0.5vw)',
     
   }
 

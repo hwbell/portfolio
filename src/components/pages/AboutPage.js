@@ -189,7 +189,11 @@ const styles = {
     paddingTop: '0',
     paddingBottom: 80,
     width: '90%',
-    margin: 'auto auto'
+    margin: 'auto auto',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
   title: {
     // width: '80%',
@@ -204,7 +208,8 @@ const styles = {
   },
 
   textContainer: {
-    backgroundColor: 'rgba(255,255,255,0.8)',
+    maxWidth: '700px',
+    backgroundColor: 'rgba(255,255,255,0.5)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -214,7 +219,6 @@ const styles = {
   },
   skillsContainer: {
     width:'100%',
-    // border: '1px solid',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -222,13 +226,13 @@ const styles = {
     // margin: 30
   },
   skillTitle: {
-    fontSize: 'calc(16px + 0.5vw)',
+    fontSize: 22,
     paddingLeft: 10,
     fontWeight: 'bold'
   },
   paragraph: {
     // paddingTop: 10,
-    fontSize: 16,
+    fontSize: 18,
     width: '100%'
   },
   image: {
@@ -240,6 +244,8 @@ const styles = {
     /* background-color: #CC6666; */
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 250,
     margin: 'auto auto 15px auto'
   },

@@ -26,7 +26,6 @@ const initialState = {
   bioBackground: false,
   devBackground: false,
   textColor: 'black',
-  fontWeight: 600,
   contentBackground: 'none',
   boxShadow: 'none'
 }
@@ -139,7 +138,7 @@ class HomePage extends Component {
           </Div>
 
           <Div className="row" style={styles.description}>
-            <P className="col">I love creating & developing full stack web & mobile apps.</P>
+            <P className="col">I'm a career scientist, but what I really love is creating & developing web & mobile apps.</P>
           </Div>
         </Div>
 
@@ -160,7 +159,7 @@ const styles = {
     margin: 'auto auto',
   },
   name: {
-    fontSize: 30,
+    fontSize: 34,
     margin: '4vh 0vh'
   },
   iconHolder: {
@@ -168,8 +167,8 @@ const styles = {
     // margin: 'auto auto'
   },
   icontext: {
-    fontSize: 18,
-    fontWeight: 'lighter'
+    fontSize: 20,
+    // fontWeight: 'lighter'
   },
   icon: {
     fontWeight: 'bolder',
