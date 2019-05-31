@@ -48,11 +48,11 @@ class ContactPage extends Component {
     return (
       <Container className="container" style={styles.main}>
         
-        <P className="col" style={styles.title}>
+        <P className="" style={styles.title}>
           Contact Me
         </P>
         <Hr/>
-        <P className="col" style={styles.subTitle}>
+        <P className="" style={styles.subTitle}>
           Get in touch with me to discuss anything at all.
         </P>
         <Div style={styles.textContainer}>
@@ -121,10 +121,10 @@ const styles = {
     fontWeight: 'bold'
   },
   subTitle: {
-    width: '80%',
-    textAlign: 'left',
+    width: '60%',
+    // textAlign: 'center',
     fontSize: 'calc(18px + 1vw)',
-    margin: 25
+    marginTop: '25px'
   },
   textContainer: {
     backgroundColor: 'rgba(255,255,255,0.5)',

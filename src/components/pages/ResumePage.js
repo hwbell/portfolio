@@ -90,12 +90,13 @@ const styles = {
     alignItems: 'center'
   },
   title: {
-    // width: '80%',
+    
     fontSize: 30,
     marginTop: 35,
     fontWeight: 'bold'
   },
   subTitle: {
+    width: '80%',
     fontSize: 'calc(16px + 1vw)',
     margin: 25
   },

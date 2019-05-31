@@ -208,25 +208,32 @@ const styles = {
   },
 
   textContainer: {
+    width: '95%',
     maxWidth: '700px',
     backgroundColor: 'rgba(255,255,255,0.5)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    margin: 20,
-    padding: 10
+    margin: '20px',
+    padding: '10px'
   },
   skillsContainer: {
-    width:'100%',
+    width:'90%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
     // margin: 30
   },
+  list: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   skillTitle: {
-    fontSize: 22,
+    fontSize: 18,
     paddingLeft: 10,
     fontWeight: 'bold'
   },
