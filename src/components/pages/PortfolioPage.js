@@ -79,7 +79,7 @@ class PortfolioPage extends Component {
   render() {
 
     return (
-      <Container className="container">
+      <Container className="">
         <Div className="row">
           <P className="col" style={styles.title}>
             My Portfolio

@@ -121,7 +121,7 @@ const styles = {
     fontWeight: 'bold'
   },
   subTitle: {
-    width: '60%',
+    width: '80%',
     // textAlign: 'center',
     fontSize: 'calc(18px + 1vw)',
     marginTop: '25px'
