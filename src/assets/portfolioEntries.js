@@ -46,6 +46,18 @@ const webApps = [
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'git', 'heroku']
   },
   {
+    name: 'Google Library',
+    link: 'https://hb-library-app.herokuapp.com/',
+    image: require('../assets/images/google-library-app.jpg'),
+    description: 'Create a reading list with the books made digitally available by the Google Books project.',
+    modalDescription: `Browse the incredible digital repository of Google Books! You can search for books, add them to your 
+    reading list, and edit the list however you like. This app was made using the public Google Books API. It was also my first 
+    app built with Vue.js, a newer UI framework and an alternative to React.js. I think I still prefer React, but Vue also has its strong points
+    and I would definitely use it again.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'vue.js', 'git', 'heroku']
+  },
+  {
     name: 'World Weather Map',
     link: 'https://hb-world-weather-map.herokuapp.com/',
     image: require('../assets/images/world-weather-map.jpg'),

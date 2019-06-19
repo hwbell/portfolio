@@ -20,7 +20,9 @@ const apps = [
   'https://wiki-bubbles.herokuapp.com/',
   'https://hb-weather-server.herokuapp.com/',
   'https://hb-world-weather-map.herokuapp.com/',
-  'https://hb-music-app.herokuapp.com/'
+  'https://hb-music-app.herokuapp.com/',
+  'https://market-monitor-hb.herokuapp.com/',
+  'https://hb-library-app.herokuapp.com/'
 ]
 
 // wake 'em up! should take like 7-10 sec, and will do so 
