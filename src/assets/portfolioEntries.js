@@ -4,19 +4,19 @@ import React from 'react';
 
 // separate by type
 const mobileApps = [
-  {
-    name: 'Denver Mountain Daily',
-    link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
-    image: require('../assets/images/colorado-daily-info.png'),
-    description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, & traffic to the mountains.',
-    modalDescription: `I made this app to gather some basic information on recent snowfall, 
-      weather in the city and in the mountains, and traffic on the way to the mountains (a major 
-      issue for us Denverites). I used darksky.net's API for the weather info. For snow and traffic 
-      data, I used the node.js puppeteer library to scrape information from several sources, as there
-      wasn't a suitable API available. Data was stored on an Express.js back-end for the mobile app.`,
-    modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'puppeteer.js', 'git', 'heroku'],
-  },
+  // {
+  //   name: 'Denver Mountain Daily',
+  //   link: 'https://expo.io/@hbell3xp0/colorado-daily-info',
+  //   image: require('../assets/images/colorado-daily-info.png'),
+  //   description: 'A useful mobile app for any enthusiastic skier living in Denver. Check the weather, recent snowfall, & traffic to the mountains.',
+  //   modalDescription: `I made this app to gather some basic information on recent snowfall, 
+  //     weather in the city and in the mountains, and traffic on the way to the mountains (a major 
+  //     issue for us Denverites). I used darksky.net's API for the weather info. For snow and traffic 
+  //     data, I used the node.js puppeteer library to scrape information from several sources, as there
+  //     wasn't a suitable API available. Data was stored on an Express.js back-end for the mobile app.`,
+  //   modalBG: '',
+  //   tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'puppeteer.js', 'git', 'heroku'],
+  // },
   {
     name: 'Flight Attendant Lung Health',
     link: 'https://play.google.com/store/apps/details?id=com.falunghealth.cu',
