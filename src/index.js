@@ -22,7 +22,9 @@ const apps = [
   'https://hb-world-weather-map.herokuapp.com/',
   'https://hb-music-app.herokuapp.com/',
   'https://market-monitor-hb.herokuapp.com/',
-  'https://hb-library-app.herokuapp.com/'
+  'https://hb-library-app.herokuapp.com/',
+  'https://pub-med-server.herokuapp.com/',
+  'https://pub-med-app.herokuapp.com/'
 ]
 
 // wake 'em up! should take like 7-10 sec, and will do so 
@@ -40,24 +42,24 @@ apps.forEach((app) => {
 })
 
 // wake up the weather app every 30 mins
-setInterval( () => {
-  let appsToPing = [
-    'https://hb-weather-server.herokuapp.com/',
-    'https://hb-world-weather-map.herokuapp.com/'
-  ]
+// setInterval( () => {
+//   let appsToPing = [
+//     'https://hb-weather-server.herokuapp.com/',
+//     'https://hb-world-weather-map.herokuapp.com/'
+//   ]
 
-  appsToPing.forEach((app) => {
-    fetch(app)
-      .then((res) => {
-        console.log(`${app} pinged! `)
-        console.log(res)
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  });
+//   appsToPing.forEach((app) => {
+//     fetch(app)
+//       .then((res) => {
+//         console.log(`${app} pinged! `)
+//         console.log(res)
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   });
 
-}, 1000*10 );
+// }, 1000*10 );
 
 
 

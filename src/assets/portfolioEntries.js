@@ -35,6 +35,19 @@ const mobileApps = [
 
 const webApps = [
   {
+    name: 'PubMed Portal',
+    link: 'https://pub-med-app.herokuapp.com/',
+    image: require('../assets/images/pub-med.jpg'),
+    description: 'An interface built around the scientific literature that PubMed Central Europe provides to the public.',
+    modalDescription: `As a scientist, I always wanted to make an interface for literature mining that allows researchers to
+    gather resources quickly and connect with other researchers. This app provides a fast and efficient way for scientists to
+    keep save and export a record of their literature searches, and gives researchers a public forum to discuss publications
+    or other topics. Users can easily make a user account and start saving collections or posting threads! This app is fully 
+    integrated with a node.js backend using mongoDB to save and access information for each user.`,
+    modalBG: '',
+    tools: ['html', 'css', 'sass', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'mongoDB', 'git', 'heroku']
+  },
+  {
     name: 'Apple Music',
     link: 'https://hb-music-app.herokuapp.com/',
     image: require('../assets/images/apple-music-app.jpg'),
@@ -171,48 +184,48 @@ const codePens = [
     ),
     tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
   },
-  {
-    name: 'Go',
-    link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
-    image: require('../assets/images/baduk-app.jpg'),
-    description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
-    modalDescription: `I am obsessed with this game. It has been a passion of mine for quite some time. There are 
-      many useful apps for Go in existence, but I wanted to build one for myself with complete logic for legal 
-      moves and captures. If you've never played, try it out! Read more about the rules on the CodePen.`,
-    modalApp: (
-      <div>
-        {reversiEmbedded}
-      </div>
-    ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
-  },
+  // {
+  //   name: 'Go',
+  //   link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
+  //   image: require('../assets/images/baduk-app.jpg'),
+  //   description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
+  //   modalDescription: `I am obsessed with this game. It has been a passion of mine for quite some time. There are 
+  //     many useful apps for Go in existence, but I wanted to build one for myself with complete logic for legal 
+  //     moves and captures. If you've never played, try it out! Read more about the rules on the CodePen.`,
+  //   modalApp: (
+  //     <div>
+  //       {reversiEmbedded}
+  //     </div>
+  //   ),
+  //   tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
+  // },
   
-  {
-    name: 'Chess',
-    link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
-    image: require('../assets/images/chess-app.jpg'),
-    description: 'Play a game of chess, the "Royal Game".',
-    modalDescription: `I am a chess enthusiast, and thought this would be a decent challenge. The basic layout 
-      of chess is a bit more complex than reversi or Go. Programming all the rules for piece movement, check, etc. 
-      was a lot of fun.`,
-    modalApp: (
-      <div>
-        {chessEmbedded}
-      </div>
-    ),
-    tools: ['html', 'css', 'bootstrap', 'javascript',],
-  },
-  {
-    name: 'News Now',
-    link: 'https://news-now-hb.herokuapp.com/',
-    image: require('../assets/images/news-now.jpg'),
-    description: 'Get the news from around the world, searching over 30,000 sources.',
-    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-      from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
-  },
+  // {
+  //   name: 'Chess',
+  //   link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
+  //   image: require('../assets/images/chess-app.jpg'),
+  //   description: 'Play a game of chess, the "Royal Game".',
+  //   modalDescription: `I am a chess enthusiast, and thought this would be a decent challenge. The basic layout 
+  //     of chess is a bit more complex than reversi. Programming all the rules for piece movement, check, etc. 
+  //     was a lot of fun.`,
+  //   modalApp: (
+  //     <div>
+  //       {chessEmbedded}
+  //     </div>
+  //   ),
+  //   tools: ['html', 'css', 'bootstrap', 'javascript',],
+  // },
+  // {
+  //   name: 'News Now',
+  //   link: 'https://news-now-hb.herokuapp.com/',
+  //   image: require('../assets/images/news-now.jpg'),
+  //   description: 'Get the news from around the world, searching over 30,000 sources.',
+  //   modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+  //     from thousands of sources from across the world. The api is great for this reason - you get news from
+  //     sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+  //   modalBG: '',
+  //   tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+  // },
 
   {
     name: 'Simon',
