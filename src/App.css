@@ -414,9 +414,13 @@ a:hover, a:focus, a:active {
   background-size: cover;
 }
 
-
-
-/* for the contact page */
-/* .send-button {
-  border: none;
-} */
+/* Reactstrap Modals */
+body.modal-open {
+  overflow: visible;
+  padding-right: 0 !important;
+}
+.modal-xl {
+  /* margin: 0px; */
+  padding: 1vw;
+  max-width: 750px;
+}
