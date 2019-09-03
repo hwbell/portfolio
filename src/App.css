@@ -1,71 +1,272 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+
+.space-all-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.space-even-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.center-all-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.left-all-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.shadow-card {
+  box-shadow: -2px 2px 3px 1px rgba(24, 24, 24, 0.2);
+}
 
 body {
-  background: url('./assets/images/background.png') no-repeat;
+  background: url("./assets/images/background.png") no-repeat;
   background-size: 1200px;
-  background-position: 0% 0%; 
+  background-position: 0% 0%;
   background-attachment: fixed;
   color: rgb(9, 8, 46);
   font-family: Quicksand;
   overflow-x: hidden;
-
 }
 
-/* for the hexagon image - thanks http://jsfiddle.net/kizu/bhGn4/ */
-.hexagon {
-  overflow: hidden;
-  visibility: hidden;
-  -webkit-transform: rotate(120deg);
-     -moz-transform: rotate(120deg);
-      -ms-transform: rotate(120deg);
-       -o-transform: rotate(120deg);
-          transform: rotate(120deg);
-  cursor: pointer;
-}
-.hexagon-in1 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotate(-60deg);
-     -moz-transform: rotate(-60deg);
-      -ms-transform: rotate(-60deg);
-       -o-transform: rotate(-60deg);
-          transform: rotate(-60deg);
-}
-.hexagon-in2 {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 150px;
-  background-image: url(./assets/images/profile-pic.jpg);
-  visibility: visible;
-  -webkit-transform: rotate(-60deg);
-     -moz-transform: rotate(-60deg);
-      -ms-transform: rotate(-60deg);
-       -o-transform: rotate(-60deg);
-          transform: rotate(-60deg);
+/* Animations for the HomePage - dancing icons */
+@-webkit-keyframes bg-dna {
+  0% {
+    color: black;
   }
-.hexagon1 {
-  width: 300px;
-  height: 150px;
-  /* margin: 0 0 0 -80px; */
+
+  20% {
+    transform: rotateY(180deg) translateX(50vw);
+    color: white;
+  }
+
+  70% {
+    transform: translateX(-30vw);
+    color: grey;
+  }
+  80% {
+    transform: translateX(-20vw);
+  }
+  /* 90% {
+    transform: translateX(-10vw);
+    color: black;
+  } */
+}
+@keyframes bg-dna {
+  0% {
+    color: black;
+  }
+
+  20% {
+    transform: rotateY(180deg) translateX(50vw);
+    color: white;
+  }
+
+  70% {
+    transform: translateX(-30vw);
+    color: grey;
+  }
+  80% {
+    transform: translateX(-20vw);
+  }
+  90% {
+    transform: translateX(-10vw);
+    color: black;
+  }
+}
+
+@-webkit-keyframes bg-comp {
+  0% {
+    color: rgb(255, 0, 170);
+  }
+
+  15% {
+    transform: translateX(-50vw) rotate(10deg);
+  }
+  25% {
+    transform: translateX(0px) rotate(0deg);
+    color: blueviolet;
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+    color: blueviolet;
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+  82% {
+    transform: rotate(-15deg);
+  }
+  84% {
+    transform: rotate(15deg);
+  }
+  85% {
+    transform: rotate(-15deg);
+  }
+  86% {
+    transform: rotate(15deg);
+  }
+  87% {
+    color: rgb(255, 0, 170);
+    transform: rotate(-15deg);
+  }
+  88% {
+    transform: rotate(15deg);
+  }
+  89% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(15deg);
+  }
+  91% {
+    transform: rotate(-15deg);
+  }
+  92% {
+    transform: rotate(15deg);
+  }
+  93% {
+    transform: rotate(-15deg);
+  }
+  95% {
+    transform: rotate(15deg);
+  }
+  97% {
+    transform: rotate(-15deg);
+  }
+  99% {
+    transform: rotate(15deg);
+  }
+  100% {
+    color: rgb(255, 0, 170);
+  }
+}
+@keyframes bg-comp {
+  0% {
+    color: rgb(255, 0, 170);
+  }
+
+  15% {
+    transform: translateX(-50vw) rotate(10deg);
+  }
+  25% {
+    transform: translateX(0px) rotate(0deg);
+    color: blueviolet;
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+    color: blueviolet;
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+  82% {
+    transform: rotate(-15deg);
+  }
+  84% {
+    transform: rotate(15deg);
+  }
+  85% {
+    transform: rotate(-15deg);
+  }
+  86% {
+    transform: rotate(15deg);
+  }
+  87% {
+    color: rgb(255, 0, 170);
+    transform: rotate(-15deg);
+  }
+  88% {
+    transform: rotate(15deg);
+  }
+  89% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(15deg);
+  }
+  91% {
+    transform: rotate(-15deg);
+  }
+  92% {
+    transform: rotate(15deg);
+  }
+  93% {
+    transform: rotate(-15deg);
+  }
+  95% {
+    transform: rotate(15deg);
+  }
+  97% {
+    transform: rotate(-15deg);
+  }
+  99% {
+    transform: rotate(15deg);
+  }
+  100% {
+    color: rgb(255, 0, 170);
+  }
+}
+
+.animation-dna, .animation-comp {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  font-size: 40px;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+.animation-dna {
+  left: 20%;
+  animation-name: bg-dna;
+}
+
+.animation-comp {
+  color: blueviolet;
+  position: absolute;
+  right: 20%;
+  animation-name: bg-comp;
 }
 
 hr {
   border: 0;
   margin: 0 0 8px 0;
-  clear:both;
-  display:block;
-  width: 100%;               
+  clear: both;
+  display: block;
+  width: 100%;
   background-color: rgb(221, 221, 221);
   height: 1px;
 }
 
 /* for the nav component */
-.dropdown-item:hover, .dropdown-item:focus:active, .dropdown-item:active {
+.dropdown-item:hover,
+.dropdown-item:focus:active,
+.dropdown-item:active {
   background-color: white;
 }
 
@@ -77,16 +278,18 @@ a {
   transition: all 0.3s ease;
 }
 /* no underlines for links */
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   /* color: rgb(231, 111, 42); */
   /* font-weight: bolder; */
 }
 
 /* for no padding between bootstrap cols */
-.padding-0{
-  padding-right:0;
-  padding-left:0;
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .container {
@@ -95,7 +298,8 @@ a:hover, a:focus, a:active {
   /* border: 1px solid whitesmoke; */
 }
 
-.Center, .col {
+.Center,
+.col {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,14 +310,13 @@ a:hover, a:focus, a:active {
   font-size: calc(16px + 2vmin);
 }
 
-
 /* ----------------------------------------------
 /* for the background changing color on startup*/
 /* .home-page-content {
 
 } */
 
- /* * Generated by Animista on 2019-2-18 9:28:2
+/* * Generated by Animista on 2019-2-18 9:28:2
  * w: http://animista.net, t: @cssanimista */
 
 /**
@@ -121,12 +324,12 @@ a:hover, a:focus, a:active {
  * animation color-change-2x
  * ----------------------------------------
  */
- @-webkit-keyframes color-change-bg {
+@-webkit-keyframes color-change-bg {
   0% {
     background: rgb(79, 23, 177);
   }
   80% {
-    background: #4DD0E1;
+    background: #4dd0e1;
   }
   100% {
     background: whitesmoke;
@@ -137,7 +340,7 @@ a:hover, a:focus, a:active {
     background: rgb(79, 23, 177);
   }
   80% {
-    background: #4DD0E1;
+    background: #4dd0e1;
   }
   100% {
     background: whitesmoke;
@@ -168,7 +371,13 @@ a:hover, a:focus, a:active {
 }
 
 /*  set transition for transforms*/
-.grow, .grow-text, .send-button, .sent-button, .blink, .fa, .fas {
+.grow,
+.grow-text,
+.send-button,
+.sent-button,
+.blink,
+.fa,
+.fas {
   transition: all 0.3s ease;
 }
 .shift-text {
@@ -188,9 +397,9 @@ a:hover, a:focus, a:active {
 
 /* for the skills list on the about page */
 .grow-text:hover {
-  -webkit-transform: translateX(8px) ;
-  -ms-transform: translateX(8px) ;
-  transform: translateX(8px) ;
+  -webkit-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  transform: translateX(8px);
   color: rgba(140, 20, 161, 0.85);
   /* margin-left: 30px; */
 }
@@ -206,7 +415,7 @@ a:hover, a:focus, a:active {
   -webkit-transform: translateX(-10px);
   -ms-transform: translateX(-10px);
   transform: translateX(-10px);
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
 }
 /* for the send email button when sending email  */
 .sent-button {
@@ -215,11 +424,15 @@ a:hover, a:focus, a:active {
   transform: translateX(30vw);
   background-color: whitesmoke;
 }
-.sent-button:focus, .sent-button:active:focus, .sent-button.active:focus, .send-button:focus, .send-button:active:focus, .send-button.active:focus {
-  outline:none;
-  box-shadow:none;
+.sent-button:focus,
+.sent-button:active:focus,
+.sent-button.active:focus,
+.send-button:focus,
+.send-button:active:focus,
+.send-button.active:focus {
+  outline: none;
+  box-shadow: none;
   background-color: whitesmoke;
-
 }
 
 /* icons on the contact page (social icons) */
@@ -245,7 +458,8 @@ a:hover, a:focus, a:active {
 }
 
 /* icons on the about page */
-.flip-on-start, .flip-top {
+.flip-on-start,
+.flip-top {
   transition: all 0.5s ease;
 }
 
@@ -262,27 +476,27 @@ a:hover, a:focus, a:active {
   /* color: rgb(26, 141, 248); */
 }
 .grow-blue:hover {
-	-webkit-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   color: rgb(26, 141, 248);
 }
 .pour:hover {
-	-webkit-transform: rotate(60deg); 
+  -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
   color: rgb(26, 141, 248);
 }
 
 .rotate:hover {
-	-webkit-transform: rotate(360deg); 
+  -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
   color: rgb(26, 141, 248);
 }
 
 .rotate-quarter:hover {
-	-webkit-transform: rotate(90deg) rotateY(-180deg); 
+  -webkit-transform: rotate(90deg) rotateY(-180deg);
   -ms-transform: rotate(90deg) rotateY(-180deg);
   transform: rotate(90deg) rotateY(-180deg);
   color: rgb(26, 141, 248);
@@ -290,7 +504,7 @@ a:hover, a:focus, a:active {
 
 /* about page title */
 .about-title {
-  -webkit-transform: rotate(360deg); 
+  -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
 }
@@ -299,9 +513,9 @@ a:hover, a:focus, a:active {
 .shimmer {
   display: inline-block;
   /* color: black; */
-  
+
   background: rgb(28, 5, 54) -webkit-gradient(linear, 50% 0, 0 0, from(#5d48a3), color-stop(0.5, #80778b), to(#3e3649));
-  
+
   background-position: -4rem top; /*50px*/
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -315,48 +529,45 @@ a:hover, a:focus, a:active {
   animation-iteration-count: infinite;
   -webkit-background-size: 4rem 100%; /*50px*/
   background-size: 4rem 100%; /*50px*/
-  
 }
 
 @-webkit-keyframes shimmer {
   0% {
-      background-position: -4rem top; /*50px*/
+    background-position: -4rem top; /*50px*/
   }
 
   70% {
-      background-position: 12.5rem top; /*200px*/
+    background-position: 12.5rem top; /*200px*/
   }
 
   100% {
-      background-position: 12.5rem top; /*200px*/
+    background-position: 12.5rem top; /*200px*/
   }
 }
 @keyframes shimmer {
   0% {
-      background-position: -4rem top; /*50px*/
+    background-position: -4rem top; /*50px*/
   }
 
   70% {
-      background-position: 12.5rem top; /*200px*/
+    background-position: 12.5rem top; /*200px*/
   }
 
   100% {
-      background-position: 12.5rem top; /*200px*/
+    background-position: 12.5rem top; /*200px*/
   }
 }
 
-
-
 /* for fontAwesome icon's gradient appearance on the home page */
 .fa-gradient-left {
-	background: -webkit-gradient(linear, left top, right bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 90px;
 }
 .fa-gradient-right {
-	background: -webkit-gradient(linear, right top, left bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
+  background: -webkit-gradient(linear, right top, left bottom, from(rgb(103, 58, 183)), to(rgb(77, 208, 225)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -388,7 +599,8 @@ a:hover, a:focus, a:active {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   /* background: #4DD0E1; */
 }
 
@@ -398,7 +610,8 @@ a:hover, a:focus, a:active {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   background: url(./assets/images/Snap-619.jpg) no-repeat;
   background-size: cover;
 }
@@ -409,7 +622,8 @@ a:hover, a:focus, a:active {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   background: url(./assets/images/developer-bg.jpg) no-repeat;
   background-size: cover;
 }
@@ -423,4 +637,20 @@ body.modal-open {
   /* margin: 0px; */
   padding: 1vw;
   max-width: 750px;
+}
+.modal-body {
+  padding: 15px;
+  background-color: whitesmoke;
+}
+.modal-body,
+.modal-header,
+.modal-footer {
+  background-color: rgb(243, 243, 243);
+}
+.fa-times {
+  transition: all 0.3s ease;
+}
+.fa-times:hover {
+  cursor: pointer;
+  color: silver;
 }

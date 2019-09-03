@@ -55,12 +55,12 @@ class HomePage extends Component {
     this.onExitHover = this.onExitHover.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     // 600ms seems to be right for the pose animations between screens, so this
     // will happen when the screen is blank, eliminating choppy animation
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 600 )
+    }, 600)
   }
 
   onHoverDna() {
@@ -93,6 +93,8 @@ class HomePage extends Component {
     return (
 
       <Container className="container home-page-content" style={containerStyle}>
+
+
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
         <ReactCSSTransitionGroup
           transitionName="example"
@@ -103,7 +105,7 @@ class HomePage extends Component {
           {this.state.devBackground && <div className="developer-bg"></div>}
 
           {/* maybe add background animation? */}
-          {/* <div className="animation-bg"></div> */} 
+          {/* <div className="animation-bg"></div> */}
 
         </ReactCSSTransitionGroup>
 
@@ -113,27 +115,20 @@ class HomePage extends Component {
 
           <P className="text-center" style={styles.name}>Hi, I'm Harry</P>
 
-          <Div className="text-center row" style={styles.iconRow}>
+          <Div className="space-all-col" style={styles.iconRow}>
 
-            <div className="col padding-0" style={styles.iconHolder}
-              onMouseOver={this.onHoverDna} onClick={!this.state.bioBackground ? this.onHoverDna: null}>
-              {/* onMouseLeave={this.onExitHover} */}
 
+
+            <Div className="space-even-row">
               <P className="" style={styles.icontext}>biologist</P>
-              <i className="fa fa-dna fa-gradient-left grow" style={styles.largeIcon}></i>
-            </div>
-
-            <div className="col padding-0" style={styles.iconHolder}>
-              <i className="fas fa-random flip-top" style={styles.icon}></i>
-            </div>
-
-            <div className="col padding-0" style={styles.iconHolder}
-              onMouseOver={this.onHoverLaptop} onClick={!this.state.devBackground ? this.onHoverLaptop: null}>
-              {/* onMouseLeave={this.onExitHover} */}
-
+              <i className="fas fa-random flip-top"></i>
               <P className="" style={styles.icontext}>developer</P>
-              <i className="fa fa-laptop fa-gradient-right grow" style={styles.largeIcon}></i>
-            </div>
+
+            </Div>
+
+              {/* the static animations */}
+              <i className="fas fa-dna animation-dna"></i>
+              <i className="fa fa-laptop animation-comp"></i>
 
           </Div>
 
@@ -154,9 +149,12 @@ const styles = {
     margin: 20,
   },
   iconRow: {
-    width: '50%',
+    width: '100%',
+    // backgroundColor: 'silver',
+    height: '100px',
     minWidth: 280,
     margin: 'auto auto',
+    position: 'relative'
   },
   name: {
     fontSize: 34,
@@ -167,14 +165,12 @@ const styles = {
     // margin: 'auto auto'
   },
   icontext: {
+    margin: '10px',
     fontSize: 20,
-    // fontWeight: 'lighter'
   },
   icon: {
+    margin: '10px',
     fontWeight: 'bolder',
-    color: '#01a6d8',//#5C6BC0
-    marginTop: '35px',
-    fontSize: 25
   },
   largeIcon: {
     fontSize: 55,
@@ -187,6 +183,6 @@ const styles = {
     fontSize: 20,
     fontWeight: 'lighter',
     marginTop: '4vh',
-    textAlign: 'left'
+    // textAlign: 'left'
   },
 }

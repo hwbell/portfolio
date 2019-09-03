@@ -33,41 +33,38 @@ class ModalButton extends React.Component {
           isOpen={this.state.modal}
           toggle={this.toggle}>
 
-          <ModalHeader toggle={this.toggle}>
-            <p style={styles.title}>{this.props.name}</p>
-          </ModalHeader>
+          <ModalBody className="left-all-col">
+            <div className="space-all-row" style={{width: '100%'}}>
+              <p toggle={this.toggle}>
+                <p style={styles.title}>{this.props.name}</p>
+              </p>
 
-          {/* the body must me an actual html element, not just an image */}
-          {/* if there is a modalBG it will run the codepen rather than just an image*/}
-          <ModalBody> 
-          {/* {
-            this.props.modalBG ?
-            this.props.modalBG :
-            <img style={styles.image} src={this.props.image}></img>} */}
+              <i className="fas fa-times" onClick={this.toggle}></i>
+            </div>
+
+            <img className="shadow-card" style={styles.image} src={this.props.image}></img>
             <p style={styles.modalDescription}>{this.props.modalDescription}</p>
-          </ModalBody>
             <p style={styles.modalTools}>tools employed:</p>
-            
+
             <div className="row" style={styles.toolsHolder}>
               {this.props.tools.map((tool, i) => {
                 return (
                   <div className="col">
                     <p key={i} className="shift-text">{tool}</p>
                   </div>
-                  )
+                )
               })}
             </div>
-
-          <ModalBody>
-
           </ModalBody>
 
           <ModalFooter>
 
-            <a target="#blank" 
-              href={this.props.link} 
-              style={styles.link}
-              className="btn btn-md btn-primary">run app!</a>
+            <a target="#blank"
+              href={this.props.link}
+              style={styles.link}>
+              <Button color="primary">run app!</Button>
+            </a>
+
             <Button color="secondary" onClick={this.toggle}>back</Button>
           </ModalFooter>
         </Modal>
@@ -80,7 +77,8 @@ const styles = {
   main: {
   },
   title: {
-    fontSize: 26
+    fontWeight: 'bolder',
+    fontSize: 20
   },
   button: {
     margin: 12,
@@ -91,7 +89,7 @@ const styles = {
   },
   modalDescription: {
     margin: 15,
-    fontSize: 18,
+    fontSize: 14,
   },
   modalTools: {
     fontWeight: 700,
@@ -103,7 +101,9 @@ const styles = {
     marginTop: 0
   },
   image: {
-    width: '100%',
+    // width: '100%',
+    alignSelf: 'center',
+    maxHeight: '400px'
   },
   link: {
     color: 'whitesmoke',

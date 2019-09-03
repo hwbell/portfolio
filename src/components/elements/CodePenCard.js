@@ -37,7 +37,7 @@ class CodePenCard extends React.Component {
 
   render() {
     return (
-      <div style={styles.main}>
+      <div className="shadow-card" style={styles.main}>
         <Card inverse
           style={{border: 'none'}}
           onMouseOver={this.onHover}
@@ -76,8 +76,9 @@ class CodePenCard extends React.Component {
 
 const styles = {
   main: {
-    minHeight: '250px',
-    minWidth: '250px',
+    margin: '4px',
+    minHeight: '220px',
+    minWidth: '220px',
   },
   image: {
     width: '100%',
@@ -87,14 +88,14 @@ const styles = {
     background: 'rgba(0,0,0,0.75)',
   },
   cardTitle: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bolder',
   },
   cardtext: {
     margin: 0,
     color: 'whitesmoke',
-    fontWeight: 'bolder',
-    fontSize: 16
+    // fontWeight: 'bolder',
+    fontSize: 14
   },
 }
 

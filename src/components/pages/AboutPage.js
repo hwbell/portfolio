@@ -243,8 +243,9 @@ const styles = {
     width: '100%'
   },
   image: {
-    borderRadius: 125,
-    width: 250,
+    borderRadius: 25,
+    width: '80%',
+    maxWidth: 500,
     margin: '30px auto 0px auto'
   },
   iconContainer: {
