@@ -48,29 +48,6 @@ const webApps = [
     tools: ['html', 'css', 'sass', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'mongoDB', 'git', 'heroku']
   },
   {
-    name: 'Apple Music',
-    link: 'https://hb-music-app.herokuapp.com/',
-    image: require('../assets/images/apple-music-app.jpg'),
-    description: 'Check out the Apple Music catalog & preview songs or videos.',
-    modalDescription: `This music discovery app was made using the Apple Music API. You can search by anything - song, artist,
-    album, whatever you like. You can find just about anything - there are over 50,000,000 songs in the catalog! You can also 
-    take a look at what is currently trending on the platform.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'git', 'heroku']
-  },
-  {
-    name: 'Google Library',
-    link: 'https://hb-library-app.herokuapp.com/',
-    image: require('../assets/images/google-library-app.jpg'),
-    description: 'Create a reading list with the books made digitally available by the Google Books project.',
-    modalDescription: `Browse the incredible digital repository of Google Books! You can search for books, add them to your 
-    reading list, and edit the list however you like. This app was made using the public Google Books API. It was also my first 
-    app built with Vue.js, a newer UI framework and an alternative to React.js. I think I still prefer React, but Vue also has its strong points
-    and I would definitely use it again.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'vue.js', 'git', 'heroku']
-  },
-  {
     name: 'World Weather Map',
     link: 'https://hb-world-weather-map.herokuapp.com/',
     image: require('../assets/images/world-weather-map.jpg'),
@@ -83,15 +60,15 @@ const webApps = [
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'git', 'heroku', 'mapbox', 'darksky']
   },
   {
-    name: 'Market Monitor',
-    link: 'https://market-monitor-hb.herokuapp.com',
-    image: require('../assets/images/market-monitor.jpg'),
-    description: 'Get real-time stock market & currency exchange information.',
-    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
-      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
-      performance of an equity over time.`,
+    name: 'Apple Music',
+    link: 'https://hb-music-app.herokuapp.com/',
+    image: require('../assets/images/apple-music-app.jpg'),
+    description: 'Check out the Apple Music catalog & preview songs or videos.',
+    modalDescription: `This music discovery app was made using the Apple Music API. You can search by anything - song, artist,
+    album, whatever you like. You can find just about anything - there are over 50,000,000 songs in the catalog! You can also 
+    take a look at what is currently trending on the platform.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'git', 'heroku']
   },
   {
     name: 'Wiki Viewer',
@@ -114,6 +91,29 @@ const webApps = [
     modalDescription: `I built this tetris game with react.js and a node.js backend 
       for high scores. For the game itself I used HTML canvas without any third-party
       libraries. See if you can top the leaderboard!`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+  },
+  {
+    name: 'Google Library',
+    link: 'https://hb-library-app.herokuapp.com/',
+    image: require('../assets/images/google-library-app.jpg'),
+    description: 'Create a reading list with the books made digitally available by the Google Books project.',
+    modalDescription: `Browse the incredible digital repository of Google Books! You can search for books, add them to your 
+    reading list, and edit the list however you like. This app was made using the public Google Books API. It was also my first 
+    app built with Vue.js, a newer UI framework and an alternative to React.js. I think I still prefer React, but Vue also has its strong points
+    and I would definitely use it again.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'vue.js', 'git', 'heroku']
+  },
+  {
+    name: 'Market Monitor',
+    link: 'https://market-monitor-hb.herokuapp.com',
+    image: require('../assets/images/market-monitor.jpg'),
+    description: 'Get real-time stock market & currency exchange information.',
+    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
+      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
+      performance of an equity over time.`,
     modalBG: '',
     tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
   },
