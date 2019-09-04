@@ -16,7 +16,8 @@ class Navigator extends Component {
     super(props);
     this.state = {
       page: 'home',
-      dropdownOpen: false
+      dropdownOpen: false,
+      dropDown: false
     }
     this.toggle = this.toggle.bind(this);
   }
@@ -66,10 +67,10 @@ class Navigator extends Component {
         toggle={this.toggle}>
 
         <DropdownToggle color='link'>
-          <i style={styles.dropDownIcon} className="dropdown fas fa-align-justify"></i>
+          <i style={styles.dropDownIcon} className="dropdown fas fa-compass"></i>
         </DropdownToggle>
 
-        <DropdownMenu style={{backgroundColor: 'whitesmoke'}}>
+        <DropdownMenu style={{ backgroundColor: 'whitesmoke' }}>
           {links.map((link, i) => {
 
             let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
@@ -105,7 +106,6 @@ class Navigator extends Component {
       background: 'rgba(255,255,255, 0.9)',
     }
 
-
     return (
       <div className="row fixed-bottom" style={mainStyle}>
         <hr />
@@ -114,7 +114,7 @@ class Navigator extends Component {
           <Media query="(max-width: 499px)">
             {matches =>
               matches ? (
-                this.renderDropDown()
+                  this.renderDropDown()
               ) : (
                   this.renderLinks()
                 )
@@ -146,8 +146,7 @@ const styles = {
     textDecoration: 'none'
   },
   dropDownIcon: {
-    fontSize: 'calc(24px + 0.5vw)',
-    
+    fontSize: '40px',
   }
 
 }

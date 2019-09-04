@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
 
           <Route render={({ location }) => (
             // pose is kind of awesome! and super easy for a simple 

@@ -123,12 +123,15 @@ class HomePage extends Component {
               <P className="" style={styles.icontext}>biologist</P>
               <i className="fas fa-random flip-top"></i>
               <P className="" style={styles.icontext}>developer</P>
-
             </Div>
 
+            <Div className="space-even-row">
               {/* the static animations */}
               <i className="fas fa-dna animation-dna"></i>
+              <i style={{color: 'white'}} className="fas fa-random flip-top"></i>
+
               <i className="fa fa-laptop animation-comp"></i>
+            </Div>
 
           </Div>
 

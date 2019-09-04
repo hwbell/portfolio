@@ -43,13 +43,14 @@ class ModalButton extends React.Component {
             </div>
 
             <img className="shadow-card" style={styles.image} src={this.props.image}></img>
+
             <p style={styles.modalDescription}>{this.props.modalDescription}</p>
             <p style={styles.modalTools}>tools employed:</p>
 
             <div className="row" style={styles.toolsHolder}>
               {this.props.tools.map((tool, i) => {
                 return (
-                  <div className="col">
+                  <div className="col-6">
                     <p key={i} className="shift-text">{tool}</p>
                   </div>
                 )
@@ -101,9 +102,9 @@ const styles = {
     marginTop: 0
   },
   image: {
-    // width: '100%',
+    height: '300px',
     alignSelf: 'center',
-    maxHeight: '400px'
+    // maxHeight: '600px'
   },
   link: {
     color: 'whitesmoke',

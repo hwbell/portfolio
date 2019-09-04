@@ -35,10 +35,12 @@ class PdfViewer extends React.Component {
       height: this.props.height,
     };
 
+    let failMessage = `there was a problem loading the pdf ... try refreshing the page!`;
+
     return (
       <Div className="container" style={styles.main}>
         <embed src={`https://drive.google.com/viewerng/viewer?embedded=true&url=${this.props.url}`}
-        style={embedStyle}></embed>
+        style={embedStyle} alt={failMessage}></embed>
       </Div>
     );
   }
