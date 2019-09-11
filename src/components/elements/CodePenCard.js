@@ -57,6 +57,7 @@ class CodePenCard extends React.Component {
                 <CardText style={styles.cardtext}>{this.props.description}</CardText>
                 <ModalButton className="" buttonLabel="read more" 
                   link={this.props.link}
+                  gitLink={this.props.gitLink}
                   image={this.props.image}
                   modalDescription={this.props.modalDescription}
                   tools={this.props.tools}

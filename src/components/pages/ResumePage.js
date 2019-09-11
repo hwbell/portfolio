@@ -8,6 +8,7 @@ import posed, { PoseGroup } from 'react-pose';
 
 // components
 import PdfViewer from '../elements/PdfViewer';
+import { Fade } from 'reactstrap';
 
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -33,6 +34,7 @@ class ResumePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showWarning: true,
       numPages: null,
       pageNumber: 1,
     }
@@ -45,6 +47,12 @@ class ResumePage extends Component {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 600)
+
+    setTimeout(() => {
+      this.setState({
+        showWarning: false
+      })
+    }, 2000)
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
@@ -62,16 +70,19 @@ class ResumePage extends Component {
 
         <Hr />
 
-        <P className="" style={styles.subTitle}>
+        <P style={styles.subTitle}>
           Check out my skills and experience.
         </P>
+
+        <Fade style={styles.warning} in={this.state.showWarning}>
+          If you don't see a pdf below, please try refreshing the page!
+        </Fade>
 
         <PdfViewer
           height={'600px'}
           width={'100%'}
           url={'https://s3.amazonaws.com/hb-portfolio-assets/Harold+Bell+Resume.pdf'}
         />
-
 
       </Container>
     );
@@ -90,7 +101,6 @@ const styles = {
     alignItems: 'center'
   },
   title: {
-    
     fontSize: 30,
     marginTop: 35,
     fontWeight: 'bold'
@@ -99,5 +109,9 @@ const styles = {
     fontSize: 'calc(16px + 1vw)',
     margin: 25
   },
-
+  warning: { 
+    margin: 0, 
+    padding: 0, 
+    color: 'rgb(19, 1, 100)' 
+  }
 }

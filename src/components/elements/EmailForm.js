@@ -113,11 +113,11 @@ class EmailForm extends React.Component {
                 onChange={(e) => this.handleChange('message', `${e.target.value}`)}
               />
             </FormGroup>
-            <Button outline color="secondary"
+            <Button color="link"
               type="submit"
               style={styles.button}
               className={this.state.buttonClass}>
-              <i className={`fas ${this.state.icon} fa-gradient-right`} style={styles.image}></i>
+              <i className={`fas ${this.state.icon}`}></i>
             </Button>
           </Form>
         </Div>
@@ -134,10 +134,6 @@ const styles = {
   form: {
     width: '80%',
     // margin: 30
-  },
-  image: {
-    fontSize: 45,
-    padding: 0,
   },
   button: {
     border: 'none'

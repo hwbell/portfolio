@@ -38,7 +38,7 @@ const Hr = posed.hr({
   exit: { x: 0, opacity: 0 }
 })
 
-const cardHolderClass = "col-12 col-md-6 col-lg-4 px-0";
+const cardHolderClass = "col-12 col-sm-6 col-md-4 px-0";
 
 
 class PortfolioPage extends Component {

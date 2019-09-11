@@ -84,7 +84,7 @@ class HomePage extends Component {
       // maxWidth: '350px',
       // minWidth: '220px',
       // minHeight: '68vh',
-      paddingTop: '20vh',
+      paddingTop: '10vh',
       paddingBottom: 80,
       color: this.state.textColor,
       fontWeight: this.state.fontWeight,
@@ -96,18 +96,18 @@ class HomePage extends Component {
 
 
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
-        <ReactCSSTransitionGroup
+        {/* <ReactCSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           {this.state.bioBackground && <div className="biologist-bg"></div>}
 
-          {this.state.devBackground && <div className="developer-bg"></div>}
+          {this.state.devBackground && <div className="developer-bg"></div>} */}
 
-          {/* maybe add background animation? */}
-          {/* <div className="animation-bg"></div> */}
+        {/* maybe add background animation? */}
+        {/* <div className="animation-bg"></div> */}
 
-        </ReactCSSTransitionGroup>
+        {/* </ReactCSSTransitionGroup> */}
 
 
         <Div className="" style={styles.contentholder}
@@ -120,23 +120,25 @@ class HomePage extends Component {
 
 
             <Div className="space-even-row">
-              <P className="" style={styles.icontext}>biologist</P>
+              <div className="center-all-col">
+                <P className="" style={styles.icontext}>biologist</P>
+                <i className="fas fa-dna animation-dna"></i>
+              </div>
+
               <i className="fas fa-random flip-top"></i>
-              <P className="" style={styles.icontext}>developer</P>
-            </Div>
 
-            <Div className="space-even-row">
-              {/* the static animations */}
-              <i className="fas fa-dna animation-dna"></i>
-              <i style={{color: 'white'}} className="fas fa-random flip-top"></i>
-
-              <i className="fa fa-laptop animation-comp"></i>
+              <div className="center-all-col">
+                <P className="" style={styles.icontext}>developer</P>
+                <i className="fa fa-laptop animation-comp"></i>
+              </div>
             </Div>
 
           </Div>
 
           <Div className="row" style={styles.description}>
-            <P className="col">I'm a career scientist, but what I really love is creating & developing web & mobile apps.</P>
+            <P className="col">{`I'm a career scientist, but what I really love is creating & 
+            developing web & mobile apps. Have a look around to find out more about me and 
+            the work I've done!`}</P>
           </Div>
         </Div>
 
@@ -183,7 +185,7 @@ const styles = {
     // background: 'rgba(255,255,255, 0.5)',
     borderRadius: '40px',
     margin: 'auto auto',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'lighter',
     marginTop: '4vh',
     // textAlign: 'left'

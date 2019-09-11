@@ -11,6 +11,34 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../App.css';
 import Media from 'react-media';
 
+const links = [
+  {
+    text: 'Home',
+    route: '/',
+    iconClass: 'fas fa-home'
+  },
+  {
+    text: 'About',
+    route: 'about',
+    iconClass: 'far fa-user-circle'
+  },
+  {
+    text: 'Resume',
+    route: 'resume',
+    iconClass: 'far fa-address-card'
+  },
+  {
+    text: 'Portfolio',
+    route: 'portfolio',
+    iconClass: 'fas fa-project-diagram'
+  },
+  {
+    text: 'Contact',
+    route: 'contact',
+    iconClass: 'fas fa-mobile-alt'
+  }
+]
+
 class Navigator extends Component {
   constructor(props) {
     super(props);
@@ -22,34 +50,17 @@ class Navigator extends Component {
     this.toggle = this.toggle.bind(this);
   }
 
-  handleClick(page) {
-    this.setState({
-      page: page
-    });
-    console.log(page)
-
-    if (page !== 'home') {
-      this.setState({ bgColor: 'rgba(245,245,245, 0.9)' });
-    } else {
-      this.setState({ bgColor: 'none' });
-    }
-  }
-
   renderLinks() {
 
-    let links = ['home', 'about', 'resume', 'portfolio', 'contact'];
-
     return (
-      <Nav style={styles.nav}>
+      <Nav className="center-all-row">
         {links.map((link, i) => {
 
-          let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
-          let linkRoute = link === 'home' ? '/' : link;
-
           return (
-            <NavLink key={i} className="grow" style={styles.navlink}
-              to={linkRoute}>
-              <p onClick={() => this.handleClick(link)}>{linkName}</p>
+            <NavLink key={i} className="nav-item center-all-col"
+              to={link.route}>
+              <i className={`nav-icon ${link.iconClass}`}></i>
+              <p className="nav-text">{link.text}</p>
             </NavLink>
           )
         })}
@@ -59,27 +70,25 @@ class Navigator extends Component {
 
   renderDropDown() {
 
-    let links = ['home', 'about', 'resume', 'portfolio', 'contact'];
-
     return (
-      <Dropdown className="" style={styles.dropDownMenu}
+      <Dropdown className="nav dropdown" 
         isOpen={this.state.dropdownOpen}
         toggle={this.toggle}>
 
         <DropdownToggle color='link'>
-          <i style={styles.dropDownIcon} className="dropdown fas fa-compass"></i>
+          <i style={styles.dropDownIcon} className="nav-item fas fa-compass"></i>
         </DropdownToggle>
 
-        <DropdownMenu style={{ backgroundColor: 'whitesmoke' }}>
+        <DropdownMenu className="center-all-col">
           {links.map((link, i) => {
 
-            let linkName = link.slice(0, 1).toUpperCase() + link.slice(1);
-            let linkRoute = link === 'home' ? '/' : link;
             return (
-              <DropdownItem key={i} className="dropdown-item">
-                <NavLink className="grow" style={styles.dropDownLink}
-                  to={linkRoute}>
-                  <p onClick={() => this.handleClick(link)}>{linkName}</p>
+              <DropdownItem key={i}>
+                <NavLink className="center-all-col"
+                  to={link.route}>
+                  <i className={`nav-icon ${link.iconClass}`}></i>
+                  <p className="nav-text">{link.text}</p>
+
                 </NavLink>
               </DropdownItem>
             )
@@ -99,29 +108,18 @@ class Navigator extends Component {
 
   render() {
 
-    const mainStyle = {
-      width: '100%',
-      // maxWidth: 300,
-      margin: '10px 0px 0px 0px',
-      background: 'rgba(255,255,255, 0.9)',
-    }
-
     return (
-      <div className="row fixed-bottom" style={mainStyle}>
-        <hr />
-        <div className="col-12">
+      <div className="center-all-col fixed-bottom">
 
-          <Media query="(max-width: 499px)">
-            {matches =>
-              matches ? (
-                  this.renderDropDown()
-              ) : (
-                  this.renderLinks()
-                )
-            }
-          </Media>
-
-        </div>
+        <Media query="(max-width: 499px)">
+          {matches =>
+            matches ? (
+              this.renderDropDown()
+            ) : (
+                this.renderLinks()
+              )
+          }
+        </Media>
 
       </div>
     );

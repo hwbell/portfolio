@@ -37,6 +37,7 @@ const webApps = [
   {
     name: 'PubMed Portal',
     link: 'https://pub-med-app.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/pub-med-app',
     image: require('../assets/images/pub-med.jpg'),
     description: 'An interface built around the scientific literature that PubMed Central Europe provides to the public.',
     modalDescription: `As a scientist, I always wanted to make an interface for literature mining that allows researchers to
@@ -49,6 +50,7 @@ const webApps = [
   },
   {
     name: 'World Weather Map',
+    gitLink: 'https://github.com/hwbell/weather-world-map',
     link: 'https://hb-world-weather-map.herokuapp.com/',
     image: require('../assets/images/world-weather-map.jpg'),
     description: 'Explore the weather across the world using a map-based application.',
@@ -62,6 +64,7 @@ const webApps = [
   {
     name: 'Apple Music',
     link: 'https://hb-music-app.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/music-app',
     image: require('../assets/images/apple-music-app.jpg'),
     description: 'Check out the Apple Music catalog & preview songs or videos.',
     modalDescription: `This music discovery app was made using the Apple Music API. You can search by anything - song, artist,
@@ -73,6 +76,7 @@ const webApps = [
   {
     name: 'Wiki Viewer',
     link: 'https://wiki-bubbles.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/wiki-bubbles',
     image: require('../assets/images/wiki-bubbles.jpg'),
     description: `Search the free encylopedia & see the most recent data on trending pages, 
     views by country, and the most active editors.`,
@@ -86,6 +90,7 @@ const webApps = [
   {
     name: 'Tetris',
     link: 'https://stark-waters-61663.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/react-tetris-app',
     image: require('../assets/images/tetris-app.jpg'),
     description: 'A full stack Tetris app built from scratch with react.js & node.js.',
     modalDescription: `I built this tetris game with react.js and a node.js backend 
@@ -97,6 +102,7 @@ const webApps = [
   {
     name: 'Google Library',
     link: 'https://hb-library-app.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/library-app',
     image: require('../assets/images/google-library-app.jpg'),
     description: 'Create a reading list with the books made digitally available by the Google Books project.',
     modalDescription: `Browse the incredible digital repository of Google Books! You can search for books, add them to your 
@@ -109,6 +115,7 @@ const webApps = [
   {
     name: 'Market Monitor',
     link: 'https://market-monitor-hb.herokuapp.com',
+    gitLink: 'https://github.com/hwbell/stox-fox',
     image: require('../assets/images/market-monitor.jpg'),
     description: 'Get real-time stock market & currency exchange information.',
     modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
@@ -120,6 +127,7 @@ const webApps = [
   {
     name: "Conway's Game of Life",
     link: 'https://conways-game-of-life-hb.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/conways-game-of-life',
     image: require('../assets/images/game-of-life-app.jpg'),
     description: 'A rite of passage for any developer & a classic in mathematics.',
     modalDescription: `This app was one of my first experiences using react, originally made on codepen. This 
@@ -157,7 +165,7 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/PjRdrG',
     image: require('../assets/images/dungeon-crawler-app.jpg'),
     description: `I made a dungeon crawler game for an assignment through Free Code 
-      Camp. See if you can slay the dragon! Tip: collect lots of hearts.`,
+      Camp. See if you can slay the dragon!.`,
     modalDescription: `This was one of my initial experiences using react, and it made a lasting impression.
     React is what I primarily use for front-end development now. A game that holds different types of 
     ever changing information is a great example of why react's state management is so useful.`,

@@ -34,7 +34,7 @@ class ModalButton extends React.Component {
           toggle={this.toggle}>
 
           <ModalBody className="left-all-col">
-            <div className="space-all-row" style={{width: '100%'}}>
+            <div className="space-all-row" style={{ width: '100%' }}>
               <p toggle={this.toggle}>
                 <p style={styles.title}>{this.props.name}</p>
               </p>
@@ -60,11 +60,19 @@ class ModalButton extends React.Component {
 
           <ModalFooter>
 
-            <a target="#blank"
-              href={this.props.link}
-              style={styles.link}>
-              <Button color="primary">run app!</Button>
-            </a>
+            {this.props.link &&
+              <a target="#blank"
+                href={this.props.link}
+                style={styles.link}>
+                <Button color="primary">run app!</Button>
+              </a>}
+
+            {this.props.gitLink &&
+              <a target="#blank"
+                href={this.props.gitLink}
+                style={styles.link}>
+                <Button color="primary">see code</Button>
+              </a>}
 
             <Button color="secondary" onClick={this.toggle}>back</Button>
           </ModalFooter>
