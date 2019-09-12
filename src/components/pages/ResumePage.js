@@ -52,7 +52,7 @@ class ResumePage extends Component {
       this.setState({
         showWarning: false
       })
-    }, 2000)
+    }, 5000)
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
