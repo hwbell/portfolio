@@ -15,7 +15,8 @@ import CodePenCard from '../elements/CodePenCard';
 import {
   webApps,
   mobileApps,
-  codePens
+  codePens,
+  dataApps
 } from '../../assets/portfolioEntries';
 
 const Container = posed.div({
@@ -79,7 +80,7 @@ class PortfolioPage extends Component {
   render() {
 
     return (
-      <Container className="">
+      <Container style={styles.main}>
         <Div className="row">
           <P className="col" style={styles.title}>
             My Portfolio
@@ -129,15 +130,26 @@ class PortfolioPage extends Component {
           {this.displayApps(mobileApps)}
         </Div>
 
+        <Hr />
+        <P className="" style={styles.appTitle}>
+          Data Visualization
+        </P>
+
+        <Div className="row" style={styles.cardsContainer}>
+          {this.displayApps(dataApps)}
+        </Div>
+
+
         <Div className="" style={styles.paragraphHolder}>
           <div className="" style={styles.paragraph}>
             Check out the code for any of my projects on <a target="#blank" href="https://github.com/hwbell">github.</a>
           </div>
 
           <div className="" style={styles.paragraph}>
-            You can also see more apps & projects I've built on <a target="#blank" href="https://codepen.io/hbellatcodepen/pens/public/2/">codepen.</a>
+            You can also see more apps & projects I've built on <a target="#blank" href="https://codepen.io/hbellatcodepen/pens/public/">codepen.</a>
           </div>
         </Div>
+
       </Container >
     );
   }
@@ -146,6 +158,9 @@ class PortfolioPage extends Component {
 export default PortfolioPage;
 
 const styles = {
+  main: {
+    marginBottom: '10vh'
+  },
   cardsContainer: {
     // width: '70%',
     margin: '2vh 4vh 2vh 4vh',

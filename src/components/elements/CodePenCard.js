@@ -78,11 +78,8 @@ class CodePenCard extends React.Component {
 const styles = {
   main: {
     margin: '4px',
-    minHeight: '220px',
-    minWidth: '220px',
-  },
-  image: {
-    width: '100%',
+    // minHeight: '220px',
+    // minWidth: '220px',
   },
   overlay: {
     width: '100%',

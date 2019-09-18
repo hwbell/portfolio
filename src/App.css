@@ -2,9 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Dosis");
 
-* > i {
-  transition: all 0.3s ease;
-}
 .space-all-row {
   display: flex;
   flex-direction: row;
@@ -100,66 +97,7 @@ body {
   }
 }
 
-/* @-webkit-keyframes bg-comp { */
-/* 15% {
-    transform: translateX(-50vw) rotate(10deg);
-  }
-  25% {
-    transform: translateX(0px) rotate(0deg);
-  }
 
-  50% {
-    transform: rotate(0deg);
-  }
-  70% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(15deg);
-  }
-  82% {
-    transform: rotate(-15deg);
-  }
-  84% {
-    transform: rotate(15deg);
-  }
-  85% {
-    transform: rotate(-15deg);
-  }
-  86% {
-    transform: rotate(15deg);
-  }
-  87% {
-    transform: rotate(-15deg);
-  }
-  88% {
-    transform: rotate(15deg);
-  }
-  89% {
-    transform: rotate(-15deg);
-  }
-  90% {
-    transform: rotate(15deg);
-  }
-  91% {
-    transform: rotate(-15deg);
-  }
-  92% {
-    transform: rotate(15deg);
-  }
-  93% {
-    transform: rotate(-15deg);
-  }
-  95% {
-    transform: rotate(15deg);
-  }
-  97% {
-    transform: rotate(-15deg);
-  }
-  99% {
-    transform: rotate(15deg);
-  }
-} */
 @keyframes bg-comp {
   30% {
     transform: translateX(10px);
@@ -224,6 +162,7 @@ body {
   }
 }
 
+/* On the HomePage */
 .animation-dna,
 .animation-comp {
   font-size: 55px;
@@ -245,6 +184,22 @@ body {
   animation-name: bg-comp;
 }
 
+/* on the PortfolioPage */
+.card {
+  height: 100%;
+}
+.card-img {
+  height: 100%;
+  /* width: 100%  */
+}
+
+
+
+
+
+
+
+
 hr {
   border: 0;
   margin: 0 auto 8px auto;
@@ -260,9 +215,6 @@ p {
   z-index: 1;
 }
 
-a {
-  transition: all 0.3s ease;
-}
 /* no underlines for links */
 a:hover,
 a:focus,
@@ -578,48 +530,67 @@ body.modal-open {
 
 /* Navigator component */
 .fixed-bottom {
-  width: 80%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 600px;
   margin: auto auto;
 }
 .nav {
-  box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);  
+  /* box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);   */
   margin: 10px;
   padding: 10px;
-  background-color: rgb(19, 1, 100);
-  border-radius: 20px;
+  /* border-radius: 20px; */
+}
+.nav-item, .nav-icon, .nav-text {
+  transition: all 0.3s ease;
 }
 .nav-item {
+  min-width: 50px;
+  box-shadow: -2px 2px 3px 2px rgba(24, 24, 24, 0.5);  
+  border-radius: 35px;
+  padding: 10px;
   color: rgb(231, 231, 231);
+  background-color: rgb(19, 1, 100);
   margin: 8px;
   margin-bottom: 0px;
 }
+.nav-item:hover {
+  color: silver;
+  transform: translateX(5px) translateY(-5px)
+}
 .nav-text {
-  color: rgb(231, 231, 231);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bolder;
   margin: 0;
+  color: rgb(231, 231, 231);
+
 }
 .nav-icon {
-  color: rgb(231, 231, 231);
-  transition: all 0.3s ease;
-  font-size: 24px;
+  font-size: 28px;
+  /* color: rgb(231, 231, 231); */
 }
+/* .nav-icon:hover {
+  color: silver
+} */
 .dropdown {
   border-radius: 50px;
   padding: 2px;
   align-self: flex-end
 }
 .dropdown-menu {
+  transition: all 0.3s ease;
   margin: 10px;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: rgb(19, 1, 100);
 }
 .dropdown-item {
+  transition: all 0.3s ease;
   padding: 4px 0px;
   width: 80%;
   margin: auto auto;
-  border-radius: 25px;
+  border-radius: 5px;
+}
+.dropdown-item:hover {
+  background-color: rgb(9, 1, 48);  
 }
 .fa-compass {
   margin: 0;

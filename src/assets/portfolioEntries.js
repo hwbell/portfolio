@@ -252,8 +252,45 @@ const codePens = [
   },
 ]
 
+const dataApps = [
+  {
+    name: "D3 Scatterplot",
+    link: 'https://codepen.io/hbellatcodepen/pen/BdmbPr',
+    image: require('../assets/images/scatter-plot.jpg'),
+    description: `A visualization of doping in the Tour de France.`,
+    modalDescription: `This scatter plot was made with the D3.js library as a project for Free Code Camp. It is easy to
+    see the influence doping has had on record times in the race. Hopefully in another ten years a graph like this will contain
+    more blue than red.`,
+    modalBG: '',
+    tools: ['html', 'css', 'javascript', 'D3.js']
+  },
+  {
+    name: "D3 Heat Map",
+    link: 'https://codepen.io/hbellatcodepen/pen/WEgNge',
+    image: require('../assets/images/bar-chart.jpg'),
+    description: 'A visualization of earth surface temperature anomalies.',
+    modalDescription: `This heat map was made with the D3.js library as a project for Free Code Camp. Heat maps are a great way
+    of showing data such as this. The graph shows an obvious trend visualized by warm and cool colors - the earth has been warming
+    over the past 200+ years.`,
+    modalBG: '',
+    tools: ['html', 'css', 'javascript', 'D3.js']
+  },
+  {
+    name: "D3 Map of Asteroid Strikes",
+    link: 'https://codepen.io/hbellatcodepen/pen/JOPxeW',
+    image: require('../assets/images/world-map.jpg'),
+    description: 'A visualization of asteroid strikes on earth.',
+    modalDescription: `This world map was made with the D3.js library as a project for Free Code Camp.  It is a little scary to 
+    look at, but also pretty interesting! The differences in strikes are represented by color and size on the chart, according to 
+    their estimated mass.`,
+    modalBG: '',
+    tools: ['html', 'css', 'javascript', 'D3.js']
+  }
+]
+
 export {
   webApps,
   mobileApps,
-  codePens
+  codePens,
+  dataApps
 }

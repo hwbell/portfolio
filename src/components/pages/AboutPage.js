@@ -41,7 +41,7 @@ const languages = {
 };
 const tools = {
   title: 'Tools',
-  skills: ['Github', 'npm', 'Heroku', 'AWS S3', 'Postman', 'VS Code', 'CodePen', 'Linux OS']
+  skills: ['Github', 'npm', 'Heroku', 'AWS', 'Postman', 'VS Code', 'CodePen', 'Linux OS']
 }
 const frameworks = {
   title: 'Frameworks',

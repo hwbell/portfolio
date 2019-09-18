@@ -60,7 +60,7 @@ class Navigator extends Component {
             <NavLink key={i} className="nav-item center-all-col"
               to={link.route}>
               <i className={`nav-icon ${link.iconClass}`}></i>
-              <p className="nav-text">{link.text}</p>
+              {/* <p className="nav-text">{link.text}</p> */}
             </NavLink>
           )
         })}
