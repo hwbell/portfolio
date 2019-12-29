@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Raleway: 400, 500, 600");
 
 body {
   background: url("./assets/images/skiing-bg.jpg") no-repeat;
@@ -8,8 +8,9 @@ body {
   background-position: 0% 0%;
   background-attachment: fixed;
   background-color: rgb(58, 58, 58);
-  color: rgb(231, 231, 231);
+  color: rgb(24, 24, 24);
   font-family: Raleway;
+  font-weight: 500;
   overflow-x: hidden;
 }
 .overlay {
@@ -19,7 +20,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(63, 63, 63, 0.719);
+  background-color: rgba(255, 255, 255, 0.719);
 }
 .App {
   z-index: 10;
@@ -35,6 +36,15 @@ body {
 /* get rid of all button borders */
 .btn {
   border: none;
+}
+
+* > a {
+  font-weight: bolder;
+  transition: all 0.3s ease;
+  color: rgb(0, 68, 255);
+}
+* > a:hover {
+  color: rgb(0, 53, 199);
 }
 
 .space-all-row {
@@ -105,7 +115,7 @@ body {
     transform: translateX(0px);
   }
   40% {
-    transform: translateX(-50vw) rotateY(1080deg);
+    transform: translateX(-50vw) rotateY(1440deg);
   }
   70% {
     transform: translateX(-30vw);
@@ -266,15 +276,14 @@ a:active {
   /* border: 1px solid whitesmoke; */
 }
 
-.Center,
-.col {
+.Center, .col{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.Center {
+.Center, {
   font-size: calc(16px + 2vmin);
 }
 
@@ -314,7 +323,15 @@ a:active {
 .fa-envelope, .fa-check, .fa-spin {
   font-size: 45px;
   margin: 0;
-  color: rgb(25, 0, 134);  
+  padding: 0;
+  color: rgb(44, 86, 202);  
+}
+.fa-envelope:hover {
+  color: rgb(21, 57, 155);
+}
+.send-button {
+  margin: 0;
+  padding: 0;
 }
 .send-button:hover {
   -webkit-transform: translateX(-10px);
@@ -323,7 +340,7 @@ a:active {
 }
 /* for the send email button when sending email  */
 .sent-button {
-  color: rgb(19, 1, 100);
+  color: rgb(44, 86, 202);
   -webkit-transform: translateX(8vw);
   -ms-transform: translateX(8vw);
   transform: translateX(8vw);
@@ -361,16 +378,58 @@ a:active {
 }
 
 /* icons on the about page */
+
+@keyframes about-laptop {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg) translateY(-5px);;
+  }
+  50% {
+    transform: rotate(15deg) translateY(-10px);
+  }
+  60% {
+    transform: rotate(-15deg) translateY(-5px);
+  }
+  70% {
+    transform: rotate(15deg) translateY(0px);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .flip-on-start,
 .flip-top {
   transition: all 0.5s ease;
+}
+.shake {
+  transition: all 1.5s ease;
+}
+.shake:hover {
+  animation-name: about-laptop;
+  animation-duration: 1s;
+  color: rgb(33, 65, 247);
 }
 
 .flip-vertical-left:hover {
   -webkit-transform: rotateY(-360deg);
   -ms-transform: rotateY(-360deg);
   transform: rotateY(-360deg);
-  color: rgb(26, 141, 248);
+  color: rgb(33, 65, 247);
 }
 .flip-top:hover {
   -webkit-transform: rotateX(-180deg);
@@ -382,27 +441,26 @@ a:active {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-  color: rgb(26, 141, 248);
+  color: rgb(33, 65, 247);
 }
 .pour:hover {
   -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
-  color: rgb(26, 141, 248);
+  color: rgb(33, 65, 247);
 }
-
 .rotate:hover {
   -webkit-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);
-  color: rgb(26, 141, 248);
+  color: rgb(33, 65, 247);
 }
 
 .rotate-quarter:hover {
   -webkit-transform: rotate(90deg) rotateY(-180deg);
   -ms-transform: rotate(90deg) rotateY(-180deg);
   transform: rotate(90deg) rotateY(-180deg);
-  color: rgb(26, 141, 248);
+  color: rgb(33, 65, 247);
 }
 
 /* about page title */
@@ -417,7 +475,7 @@ a:active {
   display: inline-block;
   /* color: black; */
 
-  background: rgb(28, 5, 54) -webkit-gradient(linear, 50% 0, 0 0, from(#5d48a3), color-stop(0.5, #80778b), to(#3e3649));
+  background: rgb(44, 86, 202) -webkit-gradient(linear, 50% 0, 0 0, from(rgb(44, 86, 202)), color-stop(0.5, #80778b), to(#041992));
 
   background-position: -4rem top; /*50px*/
   background-repeat: no-repeat;
@@ -541,6 +599,9 @@ body.modal-open {
   padding: 1vw;
   max-width: 750px;
 } 
+.modal-body, .modal-content {
+  width: 100%;
+}
 .modal-body {
   padding: 15px;
   background-color: whitesmoke;

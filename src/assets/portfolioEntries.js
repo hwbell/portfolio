@@ -20,7 +20,7 @@ const mobileApps = [
   {
     name: 'Flight Attendant Lung Health',
     link: 'https://play.google.com/store/apps/details?id=com.falunghealth.cu',
-    image: require('../assets/images/famri.jpg'),
+    image: require('../assets/images/famri.png'),
     description: 'An information & recruitment tool for a research study at CU Anschutz Medical Campus.',
     modalDescription: `I made this app for the lab I worked in at the University of Colorado. It is designed 
       as a resource for people who may be interested in participating in the study. Users 
@@ -165,10 +165,10 @@ const codePens = [
     link: 'https://codepen.io/hbellatcodepen/pen/PjRdrG',
     image: require('../assets/images/dungeon-crawler-app.jpg'),
     description: `I made a dungeon crawler game for an assignment through Free Code 
-      Camp. See if you can slay the dragon!.`,
+      Camp.`,
     modalDescription: `This was one of my initial experiences using react, and it made a lasting impression.
     React is what I primarily use for front-end development now. A game that holds different types of 
-    ever changing information is a great example of why react's state management is so useful.`,
+    ever changing information is a great example of why react's state management is so useful. See if you can slay the dragon!`,
     modalApp: (
       <div>
         {reversiEmbedded}

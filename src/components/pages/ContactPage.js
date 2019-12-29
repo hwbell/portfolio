@@ -140,7 +140,8 @@ const styles = {
   iconContainer: {
     display: 'flex',
     flexDirection: 'row',
-    width: 250,
+    justifyContent: "flex-end",
+    width: "80%",
     margin: '25px auto'
   },
   animatedIcon: {

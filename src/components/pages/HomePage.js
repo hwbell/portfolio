@@ -136,7 +136,7 @@ class HomePage extends Component {
                   <P className="" style={styles.icontext}>
                     developer
                   </P>
-                  <i className="fa fa-laptop animation-comp"></i>
+                  <i className="fas fa-laptop-code animation-comp"></i>
                 </div>
               </Div>
             </Div>
@@ -209,7 +209,6 @@ const styles = {
     borderRadius: "40px",
     margin: "10px",
     fontSize: "18px",
-    fontWeight: "lighter",
     marginTop: "80px"
     // textAlign: 'left'
   },
