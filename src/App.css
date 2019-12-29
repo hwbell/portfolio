@@ -1,6 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
-@import url("https://fonts.googleapis.com/css?family=Dosis");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body {
+  background: url("./assets/images/skiing-bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
+  background-attachment: fixed;
+  background-color: rgb(58, 58, 58);
+  color: rgb(231, 231, 231);
+  font-family: Raleway;
+  overflow-x: hidden;
+}
+.overlay {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 63, 63, 0.719);
+}
+.App {
+  z-index: 10;
+  max-width: 800px;
+  min-height: 100vh;
+  margin: auto auto;
+  /* background-color: rgba(255, 255, 255, 0.335); */
+}
+.shadow-card {
+  box-shadow: -2px 2px 3px 1px rgba(24, 24, 24, 0.2);
+}
+
+/* get rid of all button borders */
+.btn {
+  border: none;
+}
 
 .space-all-row {
   display: flex;
@@ -12,6 +47,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+}
+.space-between-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .center-all-row {
@@ -42,26 +83,6 @@
   align-items: flex-start;
 }
 
-.shadow-card {
-  box-shadow: -2px 2px 3px 1px rgba(24, 24, 24, 0.2);
-}
-
-body {
-  background: url("./assets/images/background.png") no-repeat;
-  background-size: 1200px;
-  background-position: 0% 0%;
-  background-attachment: fixed;
-  color: black;
-  font-family: Quicksand;
-  overflow-x: hidden;
-}
-
-.App {
-  max-width: 800px;
-  min-height: 100vh;
-  margin: auto auto;
-  background-color: rgba(255, 255, 255, 0.335);
-}
 
 /* Animations for the HomePage - dancing icons */
 /* @-webkit-keyframes bg-dna {
@@ -84,7 +105,7 @@ body {
     transform: translateX(0px);
   }
   40% {
-    transform: rotateY(180deg) translateX(50vw);
+    transform: translateX(-50vw) rotateY(1080deg);
   }
   70% {
     transform: translateX(-30vw);
@@ -172,7 +193,7 @@ body {
   animation-play-state: running;
 }
 .animation-dna {
-  color: rgb(25, 0, 134);  
+  color: rgb(44, 86, 202);  
   animation-name: bg-dna;
 }
 
@@ -182,6 +203,15 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation-name: bg-comp;
+}
+
+.home-button {
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  background: rgb(44, 86, 202);
+}
+.home-button:hover {
+  background: rgb(21, 57, 155);
 }
 
 /* on the PortfolioPage */
@@ -510,10 +540,11 @@ body.modal-open {
   /* margin: 0px; */
   padding: 1vw;
   max-width: 750px;
-}
+} 
 .modal-body {
   padding: 15px;
   background-color: whitesmoke;
+  color: black;
 }
 .modal-body,
 .modal-header,
@@ -531,25 +562,27 @@ body.modal-open {
 /* Navigator component */
 .fixed-bottom {
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: auto auto;
 }
 .nav {
-  /* box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);   */
-  margin: 10px;
-  padding: 10px;
+  width: 100%;
+  box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);  
+  /* margin: 10px; */
+  padding: 10px 0px;
+  background-color: rgb(61, 61, 61);
   /* border-radius: 20px; */
 }
 .nav-item, .nav-icon, .nav-text {
   transition: all 0.3s ease;
 }
 .nav-item {
-  min-width: 50px;
-  box-shadow: -2px 2px 3px 2px rgba(24, 24, 24, 0.5);  
-  border-radius: 35px;
+  min-width: 65px;
+  min-height: 50px;
+  /* box-shadow: -2px 2px 3px 2px rgba(24, 24, 24, 0.5);   */
+  /* border-radius: 6px; */
   padding: 10px;
   color: rgb(231, 231, 231);
-  background-color: rgb(19, 1, 100);
   margin: 8px;
   margin-bottom: 0px;
 }
@@ -561,7 +594,6 @@ body.modal-open {
   font-size: 12px;
   font-weight: bolder;
   margin: 0;
-  color: rgb(231, 231, 231);
 
 }
 .nav-icon {
@@ -572,7 +604,7 @@ body.modal-open {
   color: silver
 } */
 .dropdown {
-  border-radius: 50px;
+  /* border-radius: 50px; */
   padding: 2px;
   align-self: flex-end
 }
@@ -580,7 +612,6 @@ body.modal-open {
   transition: all 0.3s ease;
   margin: 10px;
   border-radius: 5px;
-  background-color: rgb(19, 1, 100);
 }
 .dropdown-item {
   transition: all 0.3s ease;

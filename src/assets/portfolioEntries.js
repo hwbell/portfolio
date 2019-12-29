@@ -192,48 +192,48 @@ const codePens = [
     ),
     tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
   },
-  // {
-  //   name: 'Go',
-  //   link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
-  //   image: require('../assets/images/baduk-app.jpg'),
-  //   description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
-  //   modalDescription: `I am obsessed with this game. It has been a passion of mine for quite some time. There are 
-  //     many useful apps for Go in existence, but I wanted to build one for myself with complete logic for legal 
-  //     moves and captures. If you've never played, try it out! Read more about the rules on the CodePen.`,
-  //   modalApp: (
-  //     <div>
-  //       {reversiEmbedded}
-  //     </div>
-  //   ),
-  //   tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
-  // },
+  {
+    name: 'Go',
+    link: 'https://codepen.io/hbellatcodepen/pen/OajrmP',
+    image: require('../assets/images/baduk-app.jpg'),
+    description: 'Play a game of Go, the oldest strategy game there is & a frontier in artificial intelligence.',
+    modalDescription: `I am obsessed with this game. It has been a passion of mine for quite some time. There are 
+      many useful apps for Go in existence, but I wanted to build one for myself with complete logic for legal 
+      moves and captures. If you've never played, try it out! Read more about the rules on the CodePen.`,
+    modalApp: (
+      <div>
+        {reversiEmbedded}
+      </div>
+    ),
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
+  },
   
-  // {
-  //   name: 'Chess',
-  //   link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
-  //   image: require('../assets/images/chess-app.jpg'),
-  //   description: 'Play a game of chess, the "Royal Game".',
-  //   modalDescription: `I am a chess enthusiast, and thought this would be a decent challenge. The basic layout 
-  //     of chess is a bit more complex than reversi. Programming all the rules for piece movement, check, etc. 
-  //     was a lot of fun.`,
-  //   modalApp: (
-  //     <div>
-  //       {chessEmbedded}
-  //     </div>
-  //   ),
-  //   tools: ['html', 'css', 'bootstrap', 'javascript',],
-  // },
-  // {
-  //   name: 'News Now',
-  //   link: 'https://news-now-hb.herokuapp.com/',
-  //   image: require('../assets/images/news-now.jpg'),
-  //   description: 'Get the news from around the world, searching over 30,000 sources.',
-  //   modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-  //     from thousands of sources from across the world. The api is great for this reason - you get news from
-  //     sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
-  //   modalBG: '',
-  //   tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
-  // },
+  {
+    name: 'Chess',
+    link: 'https://codepen.io/hbellatcodepen/pen/GxqmaJ',
+    image: require('../assets/images/chess-app.jpg'),
+    description: 'Play a game of chess, the "Royal Game".',
+    modalDescription: `I am a chess enthusiast, and thought this would be a decent challenge. The basic layout 
+      of chess is a bit more complex than reversi. Programming all the rules for piece movement, check, etc. 
+      was a lot of fun.`,
+    modalApp: (
+      <div>
+        {chessEmbedded}
+      </div>
+    ),
+    tools: ['html', 'css', 'bootstrap', 'javascript',],
+  },
+  {
+    name: 'News Now',
+    link: 'https://news-now-hb.herokuapp.com/',
+    image: require('../assets/images/news-now.jpg'),
+    description: 'Get the news from around the world, searching over 30,000 sources.',
+    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+      from thousands of sources from across the world. The api is great for this reason - you get news from
+      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+    modalBG: '',
+    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+  },
 
   {
     name: 'Simon',

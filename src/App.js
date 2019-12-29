@@ -39,6 +39,9 @@ class App extends Component {
   render() {
     return (
       <Router>
+      <div className="overlay">
+
+      </div>
         <div className="App">
 
           <Route render={({ location }) => (

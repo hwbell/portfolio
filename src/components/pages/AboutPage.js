@@ -117,7 +117,7 @@ class AboutPage extends Component {
 
         <Div style={styles.textContainer}>
           <P className="" style={styles.paragraph}>
-            For the past 8 years I have been a research biologist in the
+            In the past, I have been a research biologist in the
             fields of <a target="#blank" href="https://en.wikipedia.org/wiki/Molecular_biology">molecular</a> & <a target="#blank" href="https://en.wikipedia.org/wiki/Cell_biology">cell biology</a>, <a target="#blank" href="https://en.wikipedia.org/wiki/Neuroscience">neuroscience</a>, <a target="#blank" href="https://en.wikipedia.org/wiki/Immunology">immunology</a> and <a target="#blank" href="https://en.wikipedia.org/wiki/Stem_cell">stem cell biology</a>.
             I've always enjoyed being an investigator of sorts and solving problems in creative ways.
           </P>
@@ -169,9 +169,9 @@ class AboutPage extends Component {
 
           <P className="row" style={styles.paragraph}>
             <a target="_blank"
-              href="https://www.lambdatest.com/blog/top-javascript-frameworks-for-2019/"
+              href="https://medium.com/javascript-in-plain-english/top-javascript-frameworks-to-learn-in-2020-7ec198d05bfa"
               style={{ marginLeft: '10px' }}>
-              Top front-end frameworks in 2019
+              Top front-end frameworks for 2020
             </a>
           </P>
 
@@ -210,7 +210,6 @@ const styles = {
   textContainer: {
     width: '95%',
     maxWidth: '700px',
-    backgroundColor: 'rgba(255,255,255,0.5)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -243,7 +242,7 @@ const styles = {
     width: '100%'
   },
   image: {
-    borderRadius: 25,
+    borderRadius: 100,
     width: '80%',
     maxWidth: 500,
     margin: '30px auto 0px auto'

@@ -29,6 +29,7 @@ class ModalButton extends React.Component {
 
         {/* button will toggle making this modal visible */}
         <Modal className={this.props.className}
+          centered={true}
           style={styles.modal}
           isOpen={this.state.modal}
           toggle={this.toggle}>
@@ -98,7 +99,7 @@ const styles = {
   },
   modalDescription: {
     margin: 15,
-    fontSize: 14,
+    fontSize: 16,
   },
   modalTools: {
     fontWeight: 700,

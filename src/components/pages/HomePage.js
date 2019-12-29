@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import 'bootstrap/dist/css/bootstrap.css';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import "bootstrap/dist/css/bootstrap.css";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-import posed, { PoseGroup } from 'react-pose';
+import posed, { PoseGroup } from "react-pose";
+
+import { Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 // this will apply a stagger to whatever animation is specified for the child
 // components
@@ -25,26 +28,26 @@ const Div = posed.div({
 const initialState = {
   bioBackground: false,
   devBackground: false,
-  textColor: 'black',
-  contentBackground: 'none',
-  boxShadow: 'none'
-}
+  textColor: "black",
+  contentBackground: "none",
+  boxShadow: "none"
+};
 
 const dnaHoverState = {
   bioBackground: true,
   devBackground: false,
-  textColor: 'whitesmoke',
-  contentBackground: 'rgba(0,0,0,0.2)',
+  textColor: "whitesmoke",
+  contentBackground: "rgba(0,0,0,0.2)"
   // boxShadow: '5px 5px 5px 15px rgba(0,0,0,0.25)'
-}
+};
 
 const laptopHoverState = {
   bioBackground: false,
   devBackground: true,
-  textColor: 'whitesmoke',
-  contentBackground: 'rgba(0,0,0,0.5)',
+  textColor: "whitesmoke",
+  contentBackground: "rgba(0,0,0,0.5)"
   // boxShadow: '5px 5px 5px 15px rgba(0,0,0,0.5)'
-}
+};
 
 class HomePage extends Component {
   constructor(props) {
@@ -60,23 +63,22 @@ class HomePage extends Component {
     // will happen when the screen is blank, eliminating choppy animation
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 600)
+    }, 600);
   }
 
   onHoverDna() {
-    console.log('firing on hover')
+    console.log("firing on hover");
     this.setState(dnaHoverState);
-
   }
 
   onHoverLaptop() {
-    console.log('firing on hover')
+    console.log("firing on hover");
     this.setState(laptopHoverState);
   }
 
   onExitHover() {
-    console.log('firing on exit')
-    this.setState(initialState)
+    console.log("firing on exit");
+    this.setState(initialState);
   }
 
   render() {
@@ -84,17 +86,19 @@ class HomePage extends Component {
       // maxWidth: '350px',
       // minWidth: '220px',
       // minHeight: '68vh',
-      paddingTop: '10vh',
+      // width: '100%',
+      paddingTop: "10vh",
       paddingBottom: 80,
-      color: this.state.textColor,
-      fontWeight: this.state.fontWeight,
-    }
+      // color: this.state.textColor,
+
+      fontWeight: this.state.fontWeight
+    };
 
     return (
-
-      <Container className="container home-page-content" style={containerStyle}>
-
-
+      <Container
+        className="home-page-container home-page-content"
+        style={containerStyle}
+      >
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
         {/* <ReactCSSTransitionGroup
           transitionName="example"
@@ -109,39 +113,49 @@ class HomePage extends Component {
 
         {/* </ReactCSSTransitionGroup> */}
 
+        <Div
+          className="content"
+          style={styles.contentholder}
+          onMouseLeave={this.onExitHover}
+        >
+          <Div className="row" style={styles.textHolder}>
+            <P style={styles.name}>Hi, I'm Harry</P>
 
-        <Div className="" style={styles.contentholder}
-          onMouseLeave={this.onExitHover}>
+            <Div className="left-all-col col" style={styles.iconRow}>
+              <Div className="space-between-row" style={styles.iconRowContent}>
+                <div className="center-all-col">
+                  <P className="" style={styles.icontext}>
+                    biologist
+                  </P>
+                  <i className="fas fa-dna animation-dna"></i>
+                </div>
 
-          <P className="text-center" style={styles.name}>Hi, I'm Harry</P>
+                <i className="fas fa-random flip-top"></i>
 
-          <Div className="space-all-col" style={styles.iconRow}>
-
-
-
-            <Div className="space-even-row">
-              <div className="center-all-col">
-                <P className="" style={styles.icontext}>biologist</P>
-                <i className="fas fa-dna animation-dna"></i>
-              </div>
-
-              <i className="fas fa-random flip-top"></i>
-
-              <div className="center-all-col">
-                <P className="" style={styles.icontext}>developer</P>
-                <i className="fa fa-laptop animation-comp"></i>
-              </div>
+                <div className="center-all-col">
+                  <P className="" style={styles.icontext}>
+                    developer
+                  </P>
+                  <i className="fa fa-laptop animation-comp"></i>
+                </div>
+              </Div>
             </Div>
-
           </Div>
 
           <Div className="row" style={styles.description}>
-            <P className="col">{`I'm a career scientist, but what I really love is creating & 
-            developing web & mobile apps. Have a look around to find out more about me and 
-            the work I've done!`}</P>
+            <P>{`I'm a scientist who fell in love with programming. 
+            Web Development is my passion and occupation! I love creating web and 
+            mobile apps that excite and engage users. Creating something entirely 
+            new with code is what I enjoy most. Besides skiing.`}</P>
+            <P>{`Have a look around to see more about me and the work I've done!`}</P>
+          </Div>
+
+          <Div>
+            <NavLink className="left-all-col" to="about">
+              <Button className="home-button">let's go!</Button>
+            </NavLink>
           </Div>
         </Div>
-
       </Container>
     );
   }
@@ -151,43 +165,55 @@ export default HomePage;
 
 const styles = {
   contentholder: {
-    margin: 20,
+    margin: "20px"
+  },
+  textHolder: {
+    textAlign: "left"
   },
   iconRow: {
-    width: '100%',
+    // width: "100%",
     // backgroundColor: 'silver',
-    height: '100px',
+    height: "100px",
     minWidth: 280,
-    margin: 'auto auto',
-    position: 'relative'
+    margin: "auto auto",
+    position: "relative"
+  },
+  iconRowContent: {
+    width: "100%",
+    maxWidth: "300px",
+    marginTop: "60px"
   },
   name: {
-    fontSize: 34,
-    margin: '4vh 0vh'
+    fontSize: 44,
+    padding: "0px", 
+    margin: "22px",
+    minWidth: "250px",
   },
   iconHolder: {
     // width: '30%',
     // margin: 'auto auto'
   },
   icontext: {
-    margin: '10px',
-    fontSize: 20,
+    margin: "10px",
+    fontSize: 20
   },
   icon: {
-    margin: '10px',
-    fontWeight: 'bolder',
+    margin: "10px",
+    fontWeight: "bolder"
   },
   largeIcon: {
     fontSize: 55,
-    margin: '5px 0px 5px 0px',
+    margin: "5px 0px 5px 0px"
   },
   description: {
-    // background: 'rgba(255,255,255, 0.5)',
-    borderRadius: '40px',
-    margin: 'auto auto',
-    fontSize: 18,
-    fontWeight: 'lighter',
-    marginTop: '4vh',
+    borderRadius: "40px",
+    margin: "10px",
+    fontSize: "18px",
+    fontWeight: "lighter",
+    marginTop: "80px"
     // textAlign: 'left'
   },
-}
+  keyWords: {
+    margin: "40px"
+  }
+};

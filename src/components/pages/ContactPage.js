@@ -127,7 +127,6 @@ const styles = {
     marginTop: '25px'
   },
   textContainer: {
-    backgroundColor: 'rgba(255,255,255,0.5)',
     width: '80%',
     display: 'flex',
     flexDirection: 'column',
