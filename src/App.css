@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
   background-color: rgb(58, 58, 58);
   color: rgb(24, 24, 24);
-  font-family: Raleway;
+  font-family: Raleway, Quicksand;
   font-weight: 500;
   overflow-x: hidden;
 }
