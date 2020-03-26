@@ -39,7 +39,7 @@ class PdfViewer extends React.Component {
 
     return (
       <Div className="container" style={styles.main}>
-        <embed src={`https://drive.google.com/viewerng/viewer?embedded=true&url=${this.props.url}`}
+        <embed src={`${this.props.url}`}
         style={embedStyle} alt={failMessage}></embed>
       </Div>
     );
