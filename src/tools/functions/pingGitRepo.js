@@ -1,5 +1,4 @@
-// /repos/:owner/:repo/stats/participation
-// a83b6cb793cf1555c384d6e6dabdf760f0a53bcf
+
 
 const fetch = require('node-fetch');
 const token = process.env.REACT_APP_GIT_TOKEN;
