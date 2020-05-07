@@ -7,6 +7,7 @@ import posed, { PoseGroup } from "react-pose";
 import { Button } from "reactstrap";
 // image
 import ProfilePic from "../../assets/images/profile-pic.jpg";
+import PageTitle from "../elements/PageTitle";
 
 // components
 const Container = posed.div({
@@ -147,15 +148,10 @@ class AboutPage extends Component {
   render() {
     return (
       <Container className="" style={styles.main}>
-        <Div className="row">
-          <P className="col" style={styles.title}>
-            About Me
-          </P>
-        </Div>
-        <Hr />
+        <PageTitle title={"About Me"} subtitle={"Nice to meet you!"}/>
 
-        <Div className="row" style={{ width: "95%" }}>
-          <div className="col">
+        <Div className="row" style={{ maxWidth: "700px" }}>
+          <div className="col left-all-col">
             <Img src={ProfilePic} style={styles.image} />
             {this.renderIcons()}
           </div>
@@ -202,7 +198,7 @@ class AboutPage extends Component {
           Nice to meet you!
         </P> */}
 
-        <Div style={styles.textContainer}>
+        <Div className="left-all-col">
           {/* the animation icons */}
 
           <P style={styles.paragraph}>
@@ -255,34 +251,14 @@ const styles = {
     paddingTop: "0",
     paddingBottom: 80,
     width: "90%",
+    maxWidth: '700px',
     margin: "auto auto",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center"
   },
-  title: {
-    // width: '80%',
-    fontSize: 30,
-    marginTop: 35,
-    fontWeight: "bold"
-  },
-  subTitle: {
-    fontSize: 28,
-    margin: 25
-    // fontWeight: ''
-  },
-
-  textContainer: {
-    width: "95%",
-    maxWidth: "700px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    margin: "0 20px 20px 20px",
-    padding: "10px"
-  },
+  
   skillsContainer: {
     width: "90%",
     display: "flex",

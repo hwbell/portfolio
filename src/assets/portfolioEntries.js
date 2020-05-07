@@ -12,10 +12,10 @@ const mobileApps = [
   //   modalDescription: `I made this app to gather some basic information on recent snowfall, 
   //     weather in the city and in the mountains, and traffic on the way to the mountains (a major 
   //     issue for us Denverites). I used darksky.net's API for the weather info. For snow and traffic 
-  //     data, I used the node.js puppeteer library to scrape information from several sources, as there
+  //     data, I used the nodejs puppeteer library to scrape information from several sources, as there
   //     wasn't a suitable API available. Data was stored on an Express.js back-end for the mobile app.`,
   //   modalBG: '',
-  //   tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'puppeteer.js', 'git', 'heroku'],
+  //   tools: ['html5', 'css3', 'javascript', 'react native', 'nodejs', 'expressjs', 'puppeteer.js', 'git', 'heroku'],
   // },
   {
     name: 'Flight Attendant Lung Health',
@@ -27,15 +27,16 @@ const mobileApps = [
       may read some basic information about the study itself, 
       watch educational videos, and contact the researchers to find out more about participation.
       Assets such as videos and pdfs were hosted on an AWS S3 bucket and requests handled by a 
-      node.js backend.`,
+      nodejs backend.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'react native', 'node.js', 'express.js', 'git', 'heroku'],
+    tools: ['html5', 'css3', 'javascript', 'react native', 'nodejs', 'expressjs', 'git', 'heroku'],
   }
 ]
 
 const webApps = [
   {
     name: 'PubMed Portal',
+    repoName:'pub-med-app',
     link: 'https://pub-med-app.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/pub-med-app',
     image: require('../assets/images/pub-med.jpg'),
@@ -44,25 +45,27 @@ const webApps = [
     gather resources quickly and connect with other researchers. This app provides a fast and efficient way for scientists to
     keep save and export a record of their literature searches, and gives researchers a public forum to discuss publications
     or other topics. Users can easily make a user account and start saving collections or posting threads! This app is fully 
-    integrated with a node.js backend using mongoDB to save and access information for each user.`,
+    integrated with a nodejs backend using mongoDB to save and access information for each user.`,
     modalBG: '',
-    tools: ['html', 'css', 'sass', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'mongoDB', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'expressjs', 'mongoDB', 'git', 'heroku']
   },
   {
     name: 'World Weather Map',
+    repoName:'weather-world-map',
     gitLink: 'https://github.com/hwbell/weather-world-map',
     link: 'https://hb-world-weather-map.herokuapp.com/',
     image: require('../assets/images/world-weather-map.jpg'),
     description: 'Explore the weather across the world using a map-based application.',
     modalDescription: `This app was made using the amazing utility of Mapbox. Click anywhere on the map
     to get the current, hourly, and daily weather forecast. Weather information was fetched from darksky.net's
-    API and routed through a node.js backend. If you are making a map-based app, try Mapbox. Their 
+    API and routed through a nodejs backend. If you are making a map-based app, try Mapbox. Their 
     javascript library mapboxgl is really powerful.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'express.js', 'git', 'heroku', 'mapbox', 'darksky']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'expressjs', 'git', 'heroku', 'mapbox', 'darksky']
   },
   {
     name: 'Apple Music',
+    repoName: 'music-app',
     link: 'https://hb-music-app.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/music-app',
     image: require('../assets/images/apple-music-app.jpg'),
@@ -71,10 +74,11 @@ const webApps = [
     album, whatever you like. You can find just about anything - there are over 50,000,000 songs in the catalog! You can also 
     take a look at what is currently trending on the platform.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'git', 'heroku']
   },
   {
     name: 'Wiki Viewer',
+    repoName: 'wiki-bubbles',
     link: 'https://wiki-bubbles.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/wiki-bubbles',
     image: require('../assets/images/wiki-bubbles.jpg'),
@@ -85,22 +89,24 @@ const webApps = [
     available is data on wikipedia activity across the world and the top editors on the site.
     I used Google's API to display some popular images of searches.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
   },
   {
     name: 'Tetris',
+    repoName: 'react-tetris-app',
     link: 'https://stark-waters-61663.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/react-tetris-app',
     image: require('../assets/images/tetris-app.jpg'),
-    description: 'A full stack Tetris app built from scratch with react.js & node.js.',
-    modalDescription: `I built this tetris game with react.js and a node.js backend 
+    description: 'A full stack Tetris app built from scratch with reactjs & nodejs.',
+    modalDescription: `I built this tetris game with reactjs and a nodejs backend 
       for high scores. For the game itself I used HTML canvas without any third-party
       libraries. See if you can top the leaderboard!`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'expressjs', 'mongoDB', 'git', 'heroku']
   },
   {
     name: 'Google Library',
+    repoName: 'library-app',
     link: 'https://hb-library-app.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/library-app',
     image: require('../assets/images/google-library-app.jpg'),
@@ -110,22 +116,23 @@ const webApps = [
     app built with Vue.js, a newer UI framework and an alternative to React.js. I think I still prefer React, but Vue also has its strong points
     and I would definitely use it again.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'vue.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'vuejs', 'git', 'heroku']
   },
-  {
-    name: 'Market Monitor',
-    link: 'https://market-monitor-hb.herokuapp.com',
-    gitLink: 'https://github.com/hwbell/stox-fox',
-    image: require('../assets/images/market-monitor.jpg'),
-    description: 'Get real-time stock market & currency exchange information.',
-    modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
-      for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
-      performance of an equity over time.`,
-    modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
-  },
+  // {
+  //   name: 'Market Monitor',
+  //   link: 'https://market-monitor-hb.herokuapp.com',
+  //   gitLink: 'https://github.com/hwbell/stox-fox',
+  //   image: require('../assets/images/market-monitor.jpg'),
+  //   description: 'Get real-time stock market & currency exchange information.',
+  //   modalDescription: `Using Alpha Vantage's free api, I built an app that gives real-time information
+  //     for worldwide markets and currencies. Data can be visualized in the long or short term to see the 
+  //     performance of an equity over time.`,
+  //   modalBG: '',
+  //   tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
+  // },
   {
     name: "Conway's Game of Life",
+    repoName: 'conways-game-of-life',
     link: 'https://conways-game-of-life-hb.herokuapp.com/',
     gitLink: 'https://github.com/hwbell/conways-game-of-life',
     image: require('../assets/images/game-of-life-app.jpg'),
@@ -135,11 +142,11 @@ const webApps = [
       I took the codepen I made and transferred the code to create-react-app structure, and deployed it to 
       heroku.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'node.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
   },
 ]
 
-// codepens have embedded pen html taken from the site's embed tool
+// codepens have embedded pen html5 taken from the site's embed tool
 
 // define just the embedded pens first
 const reversiEmbedded = (
@@ -174,7 +181,7 @@ const codePens = [
         {reversiEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js'],
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs'],
   },
   {
     name: 'Reversi',
@@ -190,7 +197,7 @@ const codePens = [
         {reversiEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
   },
   {
     name: 'Go',
@@ -205,7 +212,7 @@ const codePens = [
         {reversiEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
   },
   
   {
@@ -221,7 +228,7 @@ const codePens = [
         {chessEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript',],
+    tools: ['html5', 'css3', 'bootstrap', 'javascript',],
   },
   {
     name: 'News Now',
@@ -232,7 +239,7 @@ const codePens = [
       from thousands of sources from across the world. The api is great for this reason - you get news from
       sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
     modalBG: '',
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'react.js', 'react router', 'node.js', 'git', 'heroku']
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
   },
 
   {
@@ -248,7 +255,7 @@ const codePens = [
         {chessEmbedded}
       </div>
     ),
-    tools: ['html', 'css', 'bootstrap', 'javascript', 'jQuery'],
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
   },
 ]
 
@@ -262,7 +269,7 @@ const dataApps = [
     see the influence doping has had on record times in the race. Hopefully in another ten years a graph like this will contain
     more blue than red.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'D3.js']
+    tools: ['html5', 'css3', 'javascript', 'D3js']
   },
   {
     name: "D3 Heat Map",
@@ -273,7 +280,7 @@ const dataApps = [
     of showing data such as this. The graph shows an obvious trend visualized by warm and cool colors - the earth has been warming
     over the past 200+ years.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'D3.js']
+    tools: ['html5', 'css3', 'javascript', 'D3js']
   },
   {
     name: "D3 Map of Asteroid Strikes",
@@ -284,7 +291,7 @@ const dataApps = [
     look at, but also pretty interesting! The differences in strikes are represented by color and size on the chart, according to 
     their estimated mass.`,
     modalBG: '',
-    tools: ['html', 'css', 'javascript', 'D3.js']
+    tools: ['html5', 'css3', 'javascript', 'D3js']
   }
 ]
 

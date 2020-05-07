@@ -24,7 +24,8 @@ body {
 }
 .App {
   z-index: 10;
-  max-width: 900px;
+  width: 90vw;
+  max-width: 1000px;
   min-height: 100vh;
   margin: auto auto;
   /* background-color: rgba(255, 255, 255, 0.335); */
@@ -35,7 +36,7 @@ body {
 
 /* get rid of all button borders */
 .btn {
-  border: none;
+  /* border: none; */
 }
 
 * > a {
@@ -66,14 +67,13 @@ body {
   align-items: center;
 }
 .center-all-row {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .center-all-col {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,6 +90,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
+}
+.right-all-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
@@ -283,9 +289,9 @@ a:active {
   justify-content: center;
 }
 
-.Center, {
+/* .Center, {
   font-size: calc(16px + 2vmin);
-}
+} */
 
 
 
@@ -698,4 +704,116 @@ body.modal-open {
 .nav-item:hover, .dropdown-item:hover {
   text-decoration: none;
   color: rgb(148, 148, 148);
+}
+
+
+.project-card {
+  background-color: white;
+  text-align: left;
+  /* max-width: 950px; */
+  margin: 10px 0px;
+  /* padding: 6px; */
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 6px;
+  /* box-shadow: -2px 2px 3px 1px rgba(65, 94, 158, 0.2); */
+}
+.tool-image {
+  border: 2px solid white;  
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.tool-image:hover {
+  border: 2px solid rgb(66, 79, 158);  
+  background-color: rgb(66, 79, 158);  
+}
+.react-calendar-heatmap {
+  margin: 10px;  
+  max-height: 200px;
+}
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+.react-calendar-heatmap-weekday-labels {
+  /* margin-right: 10px; */
+
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #555;
+  stroke-width: 1px;
+}
+
+/*
+ * Default color scale
+ */
+
+.react-calendar-heatmap .color-empty {
+  fill: #eeeeee;
+}
+
+.react-calendar-heatmap .color-filled {
+  fill: #8cc665;
+}
+
+/*
+ * Github color scale for .react-calendar-heatmap
+ */
+
+.react-calendar-heatmap .color-github-0 {
+  fill: #eeeeee;
+}
+.react-calendar-heatmap .color-github-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-github-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-github-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-github-4 {
+  fill: #1e6823;
+}
+.react-calendar-heatmap .color-github-5 {
+  fill: #288b7b;
+}
+.react-calendar-heatmap .color-github-6 {
+  fill: #28778b;
+}
+.react-calendar-heatmap .color-github-7 {
+  fill: #28538b;
+}
+.react-calendar-heatmap .color-github-8 {
+  fill: #28328b;
+}
+.react-calendar-heatmap .color-github-9 {
+  fill: #46288b;
+}
+.react-calendar-heatmap .color-github-10 {
+  fill: #8b2886;
+}
+
+/*
+ * Gitlab color scale
+ */
+
+.react-calendar-heatmap .color-gitlab-0 {
+  fill: #ededed;
+}
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #acd5f2;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7fa8d1;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #49729b;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #254e77;
 }

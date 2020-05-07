@@ -142,11 +142,10 @@ class HomePage extends Component {
             </Div>
           </Div>
 
-          <Div className="row" style={styles.description}>
-            <P>{`I'm a scientist who fell in love with programming. 
-            Web Development is my passion and occupation! I love creating web and 
-            mobile apps that excite and engage users. Creating something entirely 
-            new with code is what I enjoy most. Besides skiing.`}</P>
+          <Div style={styles.description}>
+            <P>{`I'm a scientist who recently made the transition to programming and web development. 
+            I love creating web apps that excite and engage users. Creating something entirely 
+            new with code is what I enjoy most.`}</P>
             <P>{`Have a look around to see more about me and the work I've done!`}</P>
           </Div>
 
@@ -206,11 +205,8 @@ const styles = {
     margin: "5px 0px 5px 0px"
   },
   description: {
-    borderRadius: "40px",
-    margin: "10px",
+    margin: "60px 10px 10px 10px",
     fontSize: "18px",
-    marginTop: "80px"
-    // textAlign: 'left'
   },
   keyWords: {
     margin: "40px"

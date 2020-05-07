@@ -1,46 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 //styling
-import 'bootstrap/dist/css/bootstrap.css';
-import '../../App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import "../../App.css";
 
 // animation
-import posed from 'react-pose';
+import posed from "react-pose";
 
 // elements
-import { FaRandom } from 'react-icons/fa';
-import CodePenCard from '../elements/CodePenCard';
+import PortfolioCard from "../elements/PortfolioCard";
+import PageTitle from "../elements/PageTitle";
 
 // portfolio entries data for each card
 import {
   webApps,
   mobileApps,
   codePens,
-  dataApps
-} from '../../assets/portfolioEntries';
+  dataApps,
+} from "../../assets/portfolioEntries";
 
 const Container = posed.div({
   enter: { staggerChildren: 50 },
-  exit: { staggerChildren: 50, staggerDirection: -1 }
+  exit: { staggerChildren: 50, staggerDirection: -1 },
 });
 
 const P = posed.p({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 0, opacity: 0 }
+  exit: { x: 0, opacity: 0 },
 });
 
 const Div = posed.div({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 0, opacity: 0 }
+  exit: { x: 0, opacity: 0 },
 });
 
 const Hr = posed.hr({
   enter: { x: 0, opacity: 1 },
-  exit: { x: 0, opacity: 0 }
-})
+  exit: { x: 0, opacity: 0 },
+});
 
-const cardHolderClass = "col-12 col-sm-6 col-md-4 px-0";
-
+const cardHolderClass = "col-12";
 
 class PortfolioPage extends Component {
   constructor(props) {
@@ -51,68 +50,83 @@ class PortfolioPage extends Component {
     this.displayApps = this.displayApps.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     // 600ms seems to be right for the pose animations between screens, so this
     // will happen when the screen is blank, eliminating choppy animation
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 600 )
+    }, 600);
   }
-  // use this function to display each category of app when selected. types are the
-  // imported vars from portfolioEntries.js
 
-  displayApps(appType) {
+  renderTopIcons() {
+    // const icons = ['fab fa-leanpub', 'fas fa-code', 'fas fa-chalkboard-teacher'];
+    const icons = [
+      {
+        class: "fab fa-leanpub",
+        text: "Learn",
+      },
+      {
+        class: "fas fa-code",
+        text: "Code",
+      },
+      {
+        class: "fas fa-chalkboard-teacher",
+        text: "Create",
+      },
+    ];
 
     return (
-      appType.map((app, i) => {
-        return (
-          <Div key={i} style={styles.cardholder}
-            className={cardHolderClass}>
-            <CodePenCard
+      <Div className="right-all-row" style={styles.topIconHolder}>
+        {icons.map((icon, i) => {
+          return (
+            <Div className="center-top-all-col" style={{margin: '0 15px'}}>
+              <P className="" style={styles.skillTitle}>
+                {icon.text}
+              </P>
+              <i
+                className={`shimmer fab ${icon.class}`}
+                style={styles.topIcon}
+              ></i>
+            </Div>
+          );
+        })}
+      </Div>
+    );
+  }
+
+  // use this function to display each category of app when selected. types are the
+  // imported vars from portfolioEntries.js
+  displayApps(appType) {
+    return appType.map((app, i) => {
+      return (
+        <Div key={i} style={styles.cardholder} className={cardHolderClass}>
+          {/* <CodePenCard
               {...app}
-            />
-          </Div>
-        )
-      })
-    )
+            /> */}
+
+          <PortfolioCard {...app} />
+        </Div>
+      );
+    });
   }
 
   render() {
-
     return (
       <Container style={styles.main}>
-        <Div className="row">
-          <P className="col" style={styles.title}>
-            My Portfolio
-          </P>
-        </Div>
-        <Hr />
+        <PageTitle
+          title={"My Portfolio"}
+          subtitle={"Take a look at some projects I've worked on and created."}
+          description={"Below you can see many examples of my programming and development project over the past few years. Many of the web apps you see below were built to gain experience and exposure to different toolsets. "}
+          style={{
+            width: "100%",
+            margin: '0 20px'
+          }}
+        />
 
-        <Div className="row">
-        <P className="col" style={styles.subTitle}>
-          Take a look at some projects I have created.
-        </P>
-        </Div>
+        {this.renderTopIcons()}
 
-        <Div className="row" style={styles.topIconHolder}>
-          <Div className="col">
-            <P className="row" style={styles.skillTitle}>Learn</P>
-            <i className="row shimmer fab fa-leanpub flip-on-start" style={styles.topIcon}></i>
-          </Div>
-          <Div className="col">
-            <P className="row" style={styles.skillTitle}>Code</P>
-            <i className="row shimmer fas fa-code flip-on-start" style={styles.topIcon}></i>
-          </Div>
-          <Div className="col">
-            <P className="row" style={styles.skillTitle}>Create</P>
-            <i className="row shimmer fas fa-chalkboard-teacher flip-on-start" style={styles.topIcon}></i>
-          </Div>
-
-        </Div>
-
-        <Hr />
         <P className="" style={styles.appTitle}>
-          Web
+          Web Apps
         </P>
 
         <div className="row" style={styles.cardsContainer}>
@@ -121,15 +135,7 @@ class PortfolioPage extends Component {
           {this.displayApps(codePens)}
         </div>
 
-        <Hr />
-        <P className="" style={styles.appTitle}>
-          Mobile
-        </P>
-
-        <Div className="row" style={styles.cardsContainer}>
-          {this.displayApps(mobileApps)}
-        </Div>
-
+       
         <Hr />
         <P className="" style={styles.appTitle}>
           Data Visualization
@@ -139,18 +145,25 @@ class PortfolioPage extends Component {
           {this.displayApps(dataApps)}
         </Div>
 
-
         <Div className="" style={styles.paragraphHolder}>
           <div className="" style={styles.paragraph}>
-            Check out the code for any of my projects on <a target="#blank" href="https://github.com/hwbell">github.</a>
+            Check out the code for any of my projects on{" "}
+            <a target="#blank" href="https://github.com/hwbell">
+              github.
+            </a>
           </div>
 
           <div className="" style={styles.paragraph}>
-            You can also see more apps & projects I've built on <a target="#blank" href="https://codepen.io/hbellatcodepen/pens/public/">codepen.</a>
+            You can also see more apps & projects I've built on{" "}
+            <a
+              target="#blank"
+              href="https://codepen.io/hbellatcodepen/pens/public/"
+            >
+              codepen.
+            </a>
           </div>
         </Div>
-
-      </Container >
+      </Container>
     );
   }
 }
@@ -159,41 +172,34 @@ export default PortfolioPage;
 
 const styles = {
   main: {
-    marginBottom: '10vh'
+    marginBottom: "10vh",
   },
   cardsContainer: {
     // width: '70%',
-    margin: '2vh 4vh 2vh 4vh',
+    // margin: '2vh 4vh 2vh 4vh',
   },
-  title: {
-    // width: '80%',
-    fontSize: 30,
-    marginTop: 35,
-    fontWeight: 'bold'
-  },
-  subTitle: {
-    width: '80%',
-    fontSize: 'calc(16px + 1vw)',
-    margin: 25
-  },
+  
   skillTitle: {
     fontSize: 18,
-    paddingLeft: 10,
-    fontWeight: 'bold'
+    fontWeight: "bold",
+    margin: 0
   },
   topIconHolder: {
-    margin: '3vh 0vw'
+    margin: "10px 0vw",
+    position: 'absolute',
+    top: 0,
+    right: 0
   },
   topIcon: {
     fontSize: 40,
-    marginLeft: '0px'
+    marginLeft: "0px",
   },
   appTitle: {
     // width: '80%',
-    margin: 30,
+    fontFamily: "Quicksand",
     fontSize: 28,
-    marginTop: 15,
-    fontWeight: 'bold'
+    // margin: "15px 20px",
+    fontWeight: "bold",
   },
   cardholder: {
     // minWidth: 180
@@ -201,13 +207,13 @@ const styles = {
     // maxWidth: 300,
   },
   paragraphHolder: {
-    margin: '0 3vw 14vh 0',
+    margin: "0 3vw 14vh 0",
   },
   paragraph: {
     // paddingTop: 10,
-    fontSize: 'calc(12px + 1vw)',
-    width: '100%',
-    margin: '4vh',
+    fontSize: "calc(12px + 1vw)",
+    width: "100%",
+    margin: "4vh",
     // marginBottom: '14vh'
   },
-}
+};
