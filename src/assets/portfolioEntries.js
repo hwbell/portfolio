@@ -33,6 +33,35 @@ const mobileApps = [
   }
 ]
 
+const workProjects = [
+  {
+    name: 'Granicus govMeetings',
+    link: 'https://granicus.com/solution/govmeetings/',
+    image: require('../assets/images/granicus.png'),
+    description: 'Bringing software solutions to public sector clients across the world.',
+    modalDescription: `As a member of the Web Design and Technical Services team at Granicus Inc, I was able to enhance and improve
+    software customizations for new and exisiting clients. I also particpation in the maintenance of websites and CMS systems to improve user experience and software reliability. I gained valuable technical experience at Granicus while working across various teams and departments to ensure customer success.`,
+    modalBG: '',
+    tools: ['html5', 'css3', 'javascript', 'php', 'jira'],
+    message: 'You can read more about Granicus and the work they do ',
+    code: false
+
+  },
+  {
+    name: 'Data Analysis with MATLAB',
+    link: 'https://www.mathworks.com/products/matlab.html',
+    image: require('../assets/images/dataanalysis.png'),
+    description: 'Transforming experimental image data to meaningful statistics and visual representations.',
+    modalDescription: `In the research laboratories I've worked in, I made heavy use of the technical computing language MATLAB for many types of data analysis and representation. I developed many custom tailored scripts and GUI tools for researchers to improve the accuracy and efficiency of their analysis. This was a really useful experience in developing software tools for specific, yet flexible use cases.`,
+    modalBG: '',
+    tools: ['matlab'],
+    message: 'Explore more about MATLAB technical computing software ',
+    code: false
+
+  },
+]
+
+
 const webApps = [
   {
     name: 'PubMed Portal',
@@ -144,6 +173,19 @@ const webApps = [
     modalBG: '',
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
   },
+  {
+    name: 'News Now',
+    repoName: 'news-now',
+    link: 'https://news-now-hb.herokuapp.com/',
+    image: require('../assets/images/news-now.jpg'),
+    gitLink: 'https://github.com/hwbell/news-now',
+    description: 'Get the news from around the world, searching over 30,000 sources.',
+    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+      from thousands of sources from across the world. The api is great for this reason - you get news from
+      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+    modalBG: '',
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
+  },
 ]
 
 // codepens have embedded pen html5 taken from the site's embed tool
@@ -182,6 +224,7 @@ const codePens = [
       </div>
     ),
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
   {
     name: 'Reversi',
@@ -198,6 +241,7 @@ const codePens = [
       </div>
     ),
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
   {
     name: 'Go',
@@ -213,6 +257,7 @@ const codePens = [
       </div>
     ),
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
   
   {
@@ -229,17 +274,7 @@ const codePens = [
       </div>
     ),
     tools: ['html5', 'css3', 'bootstrap', 'javascript',],
-  },
-  {
-    name: 'News Now',
-    link: 'https://news-now-hb.herokuapp.com/',
-    image: require('../assets/images/news-now.jpg'),
-    description: 'Get the news from around the world, searching over 30,000 sources.',
-    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-      from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
-    modalBG: '',
-    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
+    message: 'This app was developed on CodePen. You can see it in action '
   },
 
   {
@@ -256,6 +291,7 @@ const codePens = [
       </div>
     ),
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'jQuery'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
 ]
 
@@ -269,7 +305,8 @@ const dataApps = [
     see the influence doping has had on record times in the race. Hopefully in another ten years a graph like this will contain
     more blue than red.`,
     modalBG: '',
-    tools: ['html5', 'css3', 'javascript', 'D3js']
+    tools: ['html5', 'css3', 'javascript', 'D3js'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
   {
     name: "D3 Heat Map",
@@ -280,7 +317,8 @@ const dataApps = [
     of showing data such as this. The graph shows an obvious trend visualized by warm and cool colors - the earth has been warming
     over the past 200+ years.`,
     modalBG: '',
-    tools: ['html5', 'css3', 'javascript', 'D3js']
+    tools: ['html5', 'css3', 'javascript', 'D3js'],
+    message: 'This app was developed on CodePen. You can see it in action '
   },
   {
     name: "D3 Map of Asteroid Strikes",
@@ -291,11 +329,13 @@ const dataApps = [
     look at, but also pretty interesting! The differences in strikes are represented by color and size on the chart, according to 
     their estimated mass.`,
     modalBG: '',
-    tools: ['html5', 'css3', 'javascript', 'D3js']
+    tools: ['html5', 'css3', 'javascript', 'D3js'],
+    message: 'This app was developed on CodePen. You can see it in action '
   }
 ]
 
 export {
+  workProjects,
   webApps,
   mobileApps,
   codePens,

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 //styling
 import "bootstrap/dist/css/bootstrap.css";
 import "../../App.css";
-
+import Media from "react-media";
 // animation
 import posed from "react-pose";
 
@@ -14,7 +14,7 @@ import PageTitle from "../elements/PageTitle";
 // portfolio entries data for each card
 import {
   webApps,
-  mobileApps,
+  workProjects,
   codePens,
   dataApps,
 } from "../../assets/portfolioEntries";
@@ -76,20 +76,22 @@ class PortfolioPage extends Component {
     ];
 
     return (
-      <Div className="right-all-row" style={styles.topIconHolder}>
-        {icons.map((icon, i) => {
-          return (
-            <Div className="center-top-all-col" style={{margin: '0 15px'}}>
-              <P className="" style={styles.skillTitle}>
-                {icon.text}
-              </P>
-              <i
-                className={`shimmer fab ${icon.class}`}
-                style={styles.topIcon}
-              ></i>
-            </Div>
-          );
-        })}
+      <Div style={styles.topIconHolder} className="center-all-col" >
+        <Div className="right-all-row" style={{width: '90%'}}>
+          {icons.map((icon, i) => {
+            return (
+              <Div className="center-top-all-col" style={{ margin: "0 15px" }}>
+                <P className="" style={styles.skillTitle}>
+                  {icon.text}
+                </P>
+                <i
+                  className={`shimmer fab ${icon.class}`}
+                  style={styles.topIcon}
+                ></i>
+              </Div>
+            );
+          })}
+        </Div>
       </Div>
     );
   }
@@ -116,17 +118,31 @@ class PortfolioPage extends Component {
         <PageTitle
           title={"My Portfolio"}
           subtitle={"Take a look at some projects I've worked on and created."}
-          description={"Below you can see many examples of my programming and development project over the past few years. Many of the web apps you see below were built to gain experience and exposure to different toolsets. "}
+          description={
+            "Below you can see many examples of my programming and development project over the past few years. Many of the web apps you see below were built to gain experience and exposure to different toolsets. "
+          }
           style={{
             width: "100%",
-            margin: '0 20px'
+            margin: "0 20px",
           }}
         />
 
-        {this.renderTopIcons()}
+        <Media query="(min-width: 499px)">
+          {(matches) => (matches ? this.renderTopIcons() : null)}
+        </Media>
 
         <P className="" style={styles.appTitle}>
-          Web Apps
+          Work Projects
+        </P>
+
+        <div className="row" style={styles.cardsContainer}>
+          {/* map through apps and make a card for each, with the props from portfolioEntries.js */}
+          {this.displayApps(workProjects)}
+        </div>
+
+        <Hr style={{width: '100%'}}/>
+        <P className="" style={styles.appTitle}>
+          Web apps I've built
         </P>
 
         <div className="row" style={styles.cardsContainer}>
@@ -135,8 +151,7 @@ class PortfolioPage extends Component {
           {this.displayApps(codePens)}
         </div>
 
-       
-        <Hr />
+        <Hr style={{width: '100%'}}/>
         <P className="" style={styles.appTitle}>
           Data Visualization
         </P>
@@ -178,17 +193,18 @@ const styles = {
     // width: '70%',
     // margin: '2vh 4vh 2vh 4vh',
   },
-  
+
   skillTitle: {
     fontSize: 18,
     fontWeight: "bold",
-    margin: 0
+    margin: 0,
   },
   topIconHolder: {
-    margin: "10px 0vw",
-    position: 'absolute',
+    margin: "10px 0",
+    position: "absolute",
     top: 0,
-    right: 0
+    left: 0,
+    width: "100%",
   },
   topIcon: {
     fontSize: 40,
@@ -196,6 +212,7 @@ const styles = {
   },
   appTitle: {
     // width: '80%',
+    margin: '20px 0',
     fontFamily: "Quicksand",
     fontSize: 28,
     // margin: "15px 20px",

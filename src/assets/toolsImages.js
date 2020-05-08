@@ -13,7 +13,10 @@ const toolsImages = {
   jQuery: require('./icons/jQuery.png'),
   mongoDB: require('./icons/mongoDB.png'),
   vuejs: require('./icons/vuejs.png'),
-  D3js: require('./icons/d3js.png')
+  D3js: require('./icons/d3js.png'),
+  php: require('./icons/php.png'),
+  jira: require('./icons/jira.png'),
+  matlab: require('./icons/matlab.jpeg'),
 }
 
 export {

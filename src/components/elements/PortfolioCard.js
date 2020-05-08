@@ -16,32 +16,6 @@ class PortfolioCard extends React.Component {
     this.state = {
       popoverOpen: false,
       popoverMessage: null,
-      // name: "World Weather Map",
-    //   repoName: "weather-world-map",
-    //   gitLink: "https://github.com/hwbell/weather-world-map",
-    //   link: "https://hb-world-weather-map.herokuapp.com/",
-    //   image:
-    //     "http://www.harrybell.me/static/media/world-weather-map.fc001390.jpg",
-    //   description:
-    //     "Explore the weather across the world using a map-based application.",
-    //   modalDescription: `This app was made using the amazing utility of Mapbox. Click anywhere on the map
-    // to get the current, hourly, and daily weather forecast. Weather information was fetched from darksky.net's
-    // API and routed through a node.js backend. If you are making a map-based app, try Mapbox. Their 
-    // javascript library mapboxgl is really powerful.`,
-    //   modalBG: "",
-    //   tools: [
-    //     "html5",
-    //     "css3",
-    //     "bootstrap",
-    //     "javascript",
-    //     "reactjs",
-    //     "nodejs",
-    //     "expressjs",
-    //     "git",
-    //     "heroku",
-    //     "mapbox",
-    //     "darksky",
-    //   ],
       heatMapValues: null,
     };
 
@@ -83,14 +57,14 @@ class PortfolioCard extends React.Component {
 
   renderHeatMap() {
     const endDate = new Date(this.state.heatMapValues[0].date);
-    const startDate = new Date(this.state.heatMapValues[
-      this.state.heatMapValues.length - 1
-    ].date);
+    const startDate = new Date(
+      this.state.heatMapValues[this.state.heatMapValues.length - 1].date
+    );
 
     console.log(this.state.heatMapValues);
-    console.log('rendering heatmap')
-    console.log(startDate)
-    console.log(endDate)
+    console.log("rendering heatmap");
+    console.log(startDate);
+    console.log(endDate);
     return (
       <CalendarHeatmap
         startDate={shiftDate(startDate, -30)}
@@ -104,9 +78,49 @@ class PortfolioCard extends React.Component {
         }}
         showWeekdayLabels={true}
         onClick={(value) =>
-          value && alert(`There were ${value.count} commits to this app on ${value.date}`)
+          value &&
+          alert(
+            `There were ${value.count} commits to this app on ${value.date}`
+          )
         }
       />
+    );
+  }
+
+  renderMessage() {
+    return (
+      <span style={{ alignSelf: "flex-start" }}>
+        {this.props.message}
+        <a target="_blank" href={this.props.link} alt="link to app">
+          here!
+        </a>
+      </span>
+    );
+  }
+
+  renderImageWithButtons() {
+
+
+    let runAppMessage = this.props.gitLink ? "run app!" : "run app / see code";
+
+    return (
+      <div className="col space-all-col" style={styles.imageHolder}>
+        <img style={styles.image} src={this.props.image} alt="" />
+        {this.props.code != false && <div
+          className="left-all-row"
+          style={{ margin: "20px 0", alignSelf: "flex-end" }}
+        >
+          <a target="_blank" href={this.props.link} alt="link to app">
+            <Button color="outline-primary">{runAppMessage}</Button>
+          </a>
+
+          {this.props.gitLink && (
+            <a target="_blank" href={this.props.gitLink} alt="link to repo">
+              <Button color="outline-info">see the code</Button>
+            </a>
+          )}
+        </div>}
+      </div>
     );
   }
 
@@ -116,16 +130,15 @@ class PortfolioCard extends React.Component {
     return (
       <div className="center-all-row row project-card">
         <div className="col left-all-col" style={styles.textHolder}>
-          <h3 style={{alignSelf: 'flex-start'}}>{this.props.name}</h3>
+          <h3 style={{ alignSelf: "flex-start" }}>{this.props.name}</h3>
           <p>{this.props.modalDescription}</p>
 
-          <div style={{alignSelf: 'flex-start'}}>
+          <div style={{ alignSelf: "flex-start" }}>
             App made with: <strong>{this.state.popoverMessage}</strong>
           </div>
           <div className="row left-all-row" style={styles.toolsHolder}>
             {this.props.tools.map((tool, i) => {
               imageId = `${this.props.name.split(" ").join("")}-tool${i}`;
-
 
               return (
                 <div className="tool-image" key={i}>
@@ -154,25 +167,10 @@ class PortfolioCard extends React.Component {
 
           {this.state.heatMapValues && this.renderHeatMap()}
 
-          
+          {this.props.message && this.renderMessage()}
         </div>
 
-        <div className="col space-all-col" style={styles.imageHolder}>
-          <img
-            style={styles.image}
-            src={this.props.image}
-            alt=""
-          />
-          <div className="left-all-row" style={{margin: '20px 0', alignSelf: 'flex-end'}}>
-            <a target="_blank" href={this.props.link} alt="link to app">
-            <Button color="outline-primary">run app!</Button>
-            </a>
-
-            <a target="_blank" href={this.props.gitLink} alt="link to repo">
-            <Button color="outline-info">see the code</Button>
-            </a>
-          </div>
-        </div>
+        {this.renderImageWithButtons()}
       </div>
     );
   }
@@ -183,7 +181,7 @@ const styles = {
     // width: '50%'
   },
   imageHolder: {
-    height: '100%',
+    height: "100%",
     padding: "25px",
     minWidth: "350px",
     maxWidth: "450px",
@@ -194,14 +192,14 @@ const styles = {
     width: "100%",
   },
   textHolder: {
-    textAlign: 'left',
+    textAlign: "left",
     minWidth: "350px",
     maxWidth: "600px",
     padding: "25px 0 0 25px",
   },
   toolsHolder: {
     padding: "10px",
-    alignSelf: 'flex-start'
+    alignSelf: "flex-start",
   },
   toolImage: {
     height: "40px",
