@@ -150,13 +150,13 @@ class AboutPage extends Component {
       <Container className="" style={styles.main}>
         <PageTitle title={"About Me"} subtitle={"Nice to meet you!"}/>
 
-        <Div className="row" style={{ maxWidth: "700px" }}>
-          <div className="col left-all-col">
+        <Div className="row">
+          <div className="col col-md-6 col-lg-4" style={{textAlign: 'left'}}>
             <Img src={ProfilePic} style={styles.image} />
             {this.renderIcons()}
           </div>
 
-          <P className="col" style={styles.paragraph}>
+          <P className="col col-md-6 col-lg-8" style={styles.paragraph}>
             In the past, I have been a research biologist in the fields of{" "}
             <a
               target="#blank"
@@ -190,7 +190,8 @@ class AboutPage extends Component {
             problems in creative ways. More recently, I have shifted my focus to
             programming and web development. I hope to bring a unique
             perspective to the software industry, with a focus on productivity
-            and detail-oriented design and user experience.
+            and detail-oriented design and user experience. <br/><br/>
+            Programming and development is something I truly enjoy, and I try to bring this approach to everything I work on. Building something complex or solving a difficult problem is always a fun challenge that I look forward to.
           </P>
         </Div>
 
@@ -213,8 +214,8 @@ class AboutPage extends Component {
             never-ending puzzle of creating the best user experience with the
             highest functionality. Since making the switch to development
             full-time, I've continued to gain experience and exposure to more
-            areas of the modern developer's toolset and pursue personal
-            development goals in my spare time. I love this stuff!
+            areas of the modern developer's toolset while pursuing personal
+            development goals in my spare time.
           </P>
 
           <P style={styles.paragraph}>My current skillset includes:</P>
@@ -250,8 +251,8 @@ const styles = {
   main: {
     paddingTop: "0",
     paddingBottom: 80,
-    width: "90%",
-    maxWidth: '700px',
+    // width: "90%",
+    // maxWidth: '700px',
     margin: "auto auto",
     display: "flex",
     flexDirection: "column",
@@ -263,7 +264,7 @@ const styles = {
     width: "90%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "flex-start",
     alignItems: "flex-start"
     // margin: 30
   },
@@ -271,7 +272,8 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    margin: '0px 20px'
   },
   skillTitle: {
     fontSize: 18,
@@ -281,28 +283,26 @@ const styles = {
   paragraph: {
     marginTop: "14px",
     display: "inline",
-    alignSelf: "center",
+    // alignSelf: "center",
     fontSize: 18,
     width: "100%",
     minWidth: 300
   },
   image: {
     padding: "20px",
-    borderRadius: 150,
-    width: "100%",
-    height: "100%",
-    maxWidth: 300,
-    maxHeight: 300,
-    margin: "0px auto"
+    borderRadius: 30,
+    maxWidth: "350px",
+    maxHeight: "350px",
+
+    // margin: "0px auto"
   },
   iconContainer: {
     /* background-color: #CC6666; */
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
-    width: 250,
-    margin: "0 auto 15px auto"
+    // width: 250,
   },
   animatedIcon: {
     margin: 8

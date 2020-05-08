@@ -6,7 +6,7 @@ import "../../App.css";
 import EmailForm from "../elements/EmailForm";
 
 import posed, { PoseGroup } from "react-pose";
-import { FaBlackTie } from "react-icons/fa";
+import PageTitle from '../elements/PageTitle';
 
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -47,20 +47,12 @@ class ContactPage extends Component {
   render() {
     return (
       <Container className="container" style={styles.main}>
-        <P className="" style={styles.title}>
-          Contact Me
-        </P>
-        <Hr />
-        <P className="" style={styles.subTitle}>
-          Get in touch with me to discuss anything at all.
-        </P>
-        <Div style={styles.textContainer}>
-          <P style={styles.paragraph}>
-            {`Feel free to contact me with any questions, or maybe a game of chess. 
+
+        <PageTitle title={"Contact Me"} subtitle={"Get in touch with me to discuss anything at all."} description={`Feel free to contact me with any questions, or maybe a game of chess. 
             Send me a message, or just give me a call. 
-            I’m open to discussing any and all ideas for new projects!`}
-          </P>
-        </Div>
+            I’m open to discussing any and all ideas for new projects!`}/>
+        
+       
         <EmailForm />
 
         <Div style={styles.iconContainer}>
@@ -149,22 +141,11 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-start",
   },
-  title: {
-    // width: '80%',
-    fontSize: 30,
-    marginTop: 35,
-    fontWeight: "bold",
-  },
-  subTitle: {
-    width: "80%",
-    // textAlign: 'center',
-    fontSize: "calc(18px + 1vw)",
-    marginTop: "25px",
-  },
+  
   textContainer: {
-    width: "80%",
+    // width: "80%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
@@ -178,7 +159,7 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-end",
-    width: "80%",
+    // width: "80%",
     margin: "25px auto",
   },
   animatedIcon: {

@@ -132,7 +132,7 @@ export default EmailForm;
 const styles = {
 
   form: {
-    width: '80%',
+    width: '100%',
     // margin: 30
   },
   button: {

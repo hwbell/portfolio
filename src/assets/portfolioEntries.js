@@ -40,7 +40,7 @@ const workProjects = [
     image: require('../assets/images/granicus.png'),
     description: 'Bringing software solutions to public sector clients across the world.',
     modalDescription: `As a member of the Web Design and Technical Services team at Granicus Inc, I was able to enhance and improve
-    software customizations for new and exisiting clients. I also particpation in the maintenance of websites and CMS systems to improve user experience and software reliability. I gained valuable technical experience at Granicus while working across various teams and departments to ensure customer success.`,
+    software customizations for new and exisiting clients. I also particpated in the maintenance of websites and CMS systems to improve user experience and software reliability. I gained valuable technical experience at Granicus while working across various teams and departments to ensure customer success.`,
     modalBG: '',
     tools: ['html5', 'css3', 'javascript', 'php', 'jira'],
     message: 'You can read more about Granicus and the work they do ',

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../App.css";
 
@@ -37,6 +37,8 @@ class ResumePage extends Component {
       showWarning: true,
       numPages: null,
       pageNumber: 1,
+      showResume: false,
+      buttonMessage: "See Resume",
     };
     this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
   }
@@ -48,16 +50,51 @@ class ResumePage extends Component {
       window.scrollTo(0, 0);
     }, 600);
 
-    setTimeout(() => {
-      this.setState({
-        showWarning: false,
-      });
-    }, 5000);
+    // setTimeout(() => {
+    //   this.setState({
+    //     showWarning: false,
+    //   });
+    // }, 5000);
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
   };
+
+  renderDocument() {
+    if (!this.state.showResume) {
+      return (
+        <img
+          src={require("../../assets/images/careerpath.png")}
+          alt="career path picture"
+          style={{ width: "100%", borderRadius: "30px" }}
+        />
+      );
+    } else {
+      return (
+        <PdfViewer
+          height={"90vh"}
+          width={"100%"}
+          url={
+            "https://s3.amazonaws.com/hb-portfolio-assets/Harold+Bell+Resume.pdf"
+          }
+        />
+      );
+    }
+  }
+
+  toggleDocumentToShow() {
+    let newMessage;
+    if (this.state.buttonMessage == "See Resume") {
+      newMessage = "See Career Path";
+    } else {
+      newMessage = "See Resume";
+    }
+    this.setState({
+      showResume: !this.state.showResume,
+      buttonMessage: newMessage,
+    });
+  }
 
   render() {
     return (
@@ -68,17 +105,15 @@ class ResumePage extends Component {
           description={`Below you can see my career path from science to software. I'm constantly working to add to my skillset and expand my knowledge base.`}
         />
 
+        <div className="left-all-row" style={{ width: "100%", margin: '20px 0'}}>
+          <Button color="outline-primary" onClick={() => {this.toggleDocumentToShow()}}>{this.state.buttonMessage}</Button>
+        </div>
+
         {/* <Fade style={styles.warning} in={this.state.showWarning}>
           If you don't see a pdf below, please try refreshing the page!
         </Fade> */}
 
-        <PdfViewer
-          height={"90vh"}
-          width={"100%"}
-          url={
-            "https://s3.amazonaws.com/hb-portfolio-assets/Harold+Bell+Resume.pdf"
-          }
-        />
+        {this.renderDocument()}
       </Container>
     );
   }
@@ -89,7 +124,7 @@ export default ResumePage;
 const styles = {
   main: {
     // paddingTop: 50,
-    paddingBottom: 80,
+    paddingBottom: 100,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

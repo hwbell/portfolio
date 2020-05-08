@@ -119,7 +119,7 @@ class PortfolioPage extends Component {
           title={"My Portfolio"}
           subtitle={"Take a look at some projects I've worked on and created."}
           description={
-            "Below you can see many examples of my programming and development project over the past few years. Many of the web apps you see below were built to gain experience and exposure to different toolsets. "
+            "Below you can see many examples of my programming and development projects over the past few years. Browse some of my work experience and personal projects. Many of the web apps you see below were built to gain experience and exposure to different toolsets. "
           }
           style={{
             width: "100%",

@@ -50,7 +50,7 @@ const styles = {
   main: {
     marginTop: '3vh',
     width: '100%',
-    maxWidth: `800px`
+    padding: 0
   },
   
 }
