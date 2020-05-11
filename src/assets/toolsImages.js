@@ -17,6 +17,8 @@ const toolsImages = {
   php: require('./icons/php.png'),
   jira: require('./icons/jira.png'),
   matlab: require('./icons/matlab.jpeg'),
+  dna: require('./icons/dna.png'),
+  microscope: require('./icons/microscope.png'),
 }
 
 export {

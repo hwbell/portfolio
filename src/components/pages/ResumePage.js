@@ -9,6 +9,7 @@ import posed, { PoseGroup } from "react-pose";
 // components
 import PdfViewer from "../elements/PdfViewer";
 import PageTitle from "../elements/PageTitle";
+import CareerPath from '../elements/CareerPath/CareerPath';
 
 const Container = posed.div({
   enter: { staggerChildren: 50 },
@@ -64,11 +65,12 @@ class ResumePage extends Component {
   renderDocument() {
     if (!this.state.showResume) {
       return (
-        <img
-          src={require("../../assets/images/careerpath.png")}
-          alt="career path picture"
-          style={{ width: "100%", borderRadius: "30px" }}
-        />
+        <CareerPath />
+        // <img
+        //   src={require("../../assets/images/careerpath.png")}
+        //   alt="career path picture"
+        //   style={{ width: "100%", borderRadius: "30px" }}
+        // />
       );
     } else {
       return (
@@ -105,15 +107,16 @@ class ResumePage extends Component {
           description={`Below you can see my career path from science to software. I'm constantly working to add to my skillset and expand my knowledge base.`}
         />
 
-        <div className="left-all-row" style={{ width: "100%", margin: '20px 0'}}>
-          <Button color="outline-primary" onClick={() => {this.toggleDocumentToShow()}}>{this.state.buttonMessage}</Button>
+        <div className="left-all-row" style={{ width: "100%", margin: '20px 0' }}>
+          <Button color="outline-primary" onClick={() => { this.toggleDocumentToShow() }}>{this.state.buttonMessage}</Button>
         </div>
 
         {/* <Fade style={styles.warning} in={this.state.showWarning}>
           If you don't see a pdf below, please try refreshing the page!
         </Fade> */}
-
-        {this.renderDocument()}
+        <div className="left-all-row" style={{ width: "100%", margin: '20px 0' }}>
+          {this.renderDocument()}
+        </div>
       </Container>
     );
   }

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CareerNode Component renders correctly 1`] = `
+<div
+  className="career-node"
+  style={
+    Object {
+      "image": Object {
+        "width": "100px",
+      },
+      "toolImage": Object {
+        "height": "35px",
+      },
+    }
+  }
+>
+  <img
+    alt="image for Brandeis University"
+  />
+  <div
+    className="tool-image"
+    id="BrandeisUniversity-tool0"
+  >
+    <a
+      alt="link to matlab"
+      href="https://www.google.com/search?q=matlab"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        src="matlab.jpeg"
+      />
+    </a>
+  </div>
+  <div
+    className="tool-image"
+    id="BrandeisUniversity-tool1"
+  >
+    <a
+      alt="link to dna"
+      href="https://www.google.com/search?q=dna"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+      />
+    </a>
+  </div>
+  <div
+    className="tool-image"
+    id="BrandeisUniversity-tool2"
+  >
+    <a
+      alt="link to microscope"
+      href="https://www.google.com/search?q=microscope"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+      />
+    </a>
+  </div>
+</div>
+`;
