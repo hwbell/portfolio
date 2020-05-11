@@ -27,7 +27,7 @@ describe('CareerPath Component', () => {
 
   })
 
-  // tests
+  // testscareer-path-container
   it('renders without crashing', async () => {
     wrapper.update();
   });

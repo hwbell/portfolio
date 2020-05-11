@@ -15,7 +15,7 @@ class CareerPath extends React.Component {
 
   renderNodes() {
     return (
-      <div className="career-nodes-container center-all-row">
+      <div className="career-nodes-container center-all-row row">
         {CareerPathText.map((obj) => {
           return (
             <CareerNode {...obj}/>
@@ -27,7 +27,7 @@ class CareerPath extends React.Component {
 
   render() {
     return (
-      <div id="career-path-containers" style={styles.main}>
+      <div id="career-path-container" style={styles.main}>
         {CareerPathText && this.renderNodes()}
       </div>
     );

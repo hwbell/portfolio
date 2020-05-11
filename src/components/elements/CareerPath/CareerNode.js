@@ -16,7 +16,12 @@ class CareerNode extends React.Component {
       imageId = `${this.props.job.split(" ").join("")}-tool${i}`;
 
       return (
-        <div id={imageId} className="tool-image col" key={i} style={styles.toolHolder}>
+        <div
+          id={imageId}
+          className="tool-image col"
+          key={i}
+          style={styles.toolHolder}
+        >
           <a
             target="_blank"
             href={`https://www.google.com/search?q=${tool}`}
@@ -41,15 +46,21 @@ class CareerNode extends React.Component {
 
   render() {
     console.log(this.props.logo);
+    const lineStyle = {
+      height: "100px",
+      borderLeft: "4px solid black",
+    };
     return (
-      <div className="career-node" style={styles.main}>
-        <img
-          src={this.props.logo}
-          alt={`image for ${this.props.job}`}
-          style={styles.logo}
-        />
+      <div className="career-node-holder col">
+        <div className="career-node center-all-col">
+          <p>{this.props.job}</p>
 
-        {/* <div className="left-all-row row">{this.renderTools()}</div> */}
+          {/* <div className="left-all-row row">{this.renderTools()}</div> */}
+        </div>
+        <div style={lineStyle}></div>
+        <div className="left-all-row">
+          <div className="year-block">{this.props.year}</div>
+        </div>
       </div>
     );
   }
@@ -57,16 +68,16 @@ class CareerNode extends React.Component {
 
 const styles = {
   toolHolder: {
-    maxWidth: '50px',
-    backgroundColor: 'white'
+    maxWidth: "50px",
+    backgroundColor: "white",
   },
   toolImage: {
     height: "35px",
-    width: "35px"
+    width: "35px",
   },
   logo: {
-    borderRadius: '10px',
-    width: "100px",
+    borderRadius: "10px",
+    height: "100px",
   },
 };
 

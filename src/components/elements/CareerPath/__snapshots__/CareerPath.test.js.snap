@@ -6,341 +6,118 @@ exports[`CareerPath Component renders correctly 1`] = `
   style={Object {}}
 >
   <div
-    className="career-nodes-container"
+    className="career-nodes-container center-all-row row"
   >
     <div
-      className="career-node"
-      style={
-        Object {
-          "image": Object {
-            "width": "100px",
-          },
-          "toolImage": Object {
-            "height": "35px",
-          },
-        }
-      }
+      className="career-node-holder col"
     >
-      <img
-        alt="image for Brandeis University"
+      <div
+        className="career-node center-all-col"
+      >
+        <p>
+          Research Associate at Brandeis University
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "borderLeft": "4px solid black",
+            "height": "100px",
+          }
+        }
       />
       <div
-        className="tool-image"
-        id="BrandeisUniversity-tool0"
+        className="left-all-row"
       >
-        <a
-          alt="link to matlab"
-          href="https://www.google.com/search?q=matlab"
-          target="_blank"
+        <div
+          className="year-block"
         >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="matlab.jpeg"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="BrandeisUniversity-tool1"
-      >
-        <a
-          alt="link to dna"
-          href="https://www.google.com/search?q=dna"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="BrandeisUniversity-tool2"
-      >
-        <a
-          alt="link to microscope"
-          href="https://www.google.com/search?q=microscope"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          />
-        </a>
+          2010
+        </div>
       </div>
     </div>
     <div
-      className="career-node"
-      style={
-        Object {
-          "image": Object {
-            "width": "100px",
-          },
-          "toolImage": Object {
-            "height": "35px",
-          },
-        }
-      }
+      className="career-node-holder col"
     >
-      <img
-        alt="image for University of colorado"
+      <div
+        className="career-node center-all-col"
+      >
+        <p>
+          Research Associate at University of Colorado
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "borderLeft": "4px solid black",
+            "height": "100px",
+          }
+        }
       />
       <div
-        className="tool-image"
-        id="Universityofcolorado-tool0"
+        className="left-all-row"
       >
-        <a
-          alt="link to matlab"
-          href="https://www.google.com/search?q=matlab"
-          target="_blank"
+        <div
+          className="year-block"
         >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="matlab.jpeg"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="Universityofcolorado-tool1"
-      >
-        <a
-          alt="link to dna"
-          href="https://www.google.com/search?q=dna"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="Universityofcolorado-tool2"
-      >
-        <a
-          alt="link to microscope"
-          href="https://www.google.com/search?q=microscope"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          />
-        </a>
+          2017
+        </div>
       </div>
     </div>
     <div
-      className="career-node"
-      style={
-        Object {
-          "image": Object {
-            "width": "100px",
-          },
-          "toolImage": Object {
-            "height": "35px",
-          },
-        }
-      }
+      className="career-node-holder col"
     >
-      <img
-        alt="image for Granicus Inc."
+      <div
+        className="career-node center-all-col"
+      >
+        <p>
+          Web Designer / Developer at Granicus Inc.
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "borderLeft": "4px solid black",
+            "height": "100px",
+          }
+        }
       />
       <div
-        className="tool-image"
-        id="GranicusInc.-tool0"
+        className="left-all-row"
       >
-        <a
-          alt="link to html5"
-          href="https://www.google.com/search?q=html5"
-          target="_blank"
+        <div
+          className="year-block"
         >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="html5.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="GranicusInc.-tool1"
-      >
-        <a
-          alt="link to css3"
-          href="https://www.google.com/search?q=css3"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="css3.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="GranicusInc.-tool2"
-      >
-        <a
-          alt="link to javasript"
-          href="https://www.google.com/search?q=javasript"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="GranicusInc.-tool3"
-      >
-        <a
-          alt="link to php"
-          href="https://www.google.com/search?q=php"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="php.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="GranicusInc.-tool4"
-      >
-        <a
-          alt="link to jira"
-          href="https://www.google.com/search?q=jira"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="jira.png"
-          />
-        </a>
+          2019
+        </div>
       </div>
     </div>
     <div
-      className="career-node"
-      style={
-        Object {
-          "image": Object {
-            "width": "100px",
-          },
-          "toolImage": Object {
-            "height": "35px",
-          },
-        }
-      }
+      className="career-node-holder col"
     >
-      <img
-        alt="image for The Next Step"
+      <div
+        className="career-node center-all-col"
+      >
+        <p>
+          The Next Step
+        </p>
+      </div>
+      <div
+        style={
+          Object {
+            "borderLeft": "4px solid black",
+            "height": "100px",
+          }
+        }
       />
       <div
-        className="tool-image"
-        id="TheNextStep-tool0"
+        className="left-all-row"
       >
-        <a
-          alt="link to html5"
-          href="https://www.google.com/search?q=html5"
-          target="_blank"
+        <div
+          className="year-block"
         >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="html5.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="TheNextStep-tool1"
-      >
-        <a
-          alt="link to css3"
-          href="https://www.google.com/search?q=css3"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="css3.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="TheNextStep-tool2"
-      >
-        <a
-          alt="link to javascript"
-          href="https://www.google.com/search?q=javascript"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="javascript.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="TheNextStep-tool3"
-      >
-        <a
-          alt="link to reactjs"
-          href="https://www.google.com/search?q=reactjs"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="react.png"
-          />
-        </a>
-      </div>
-      <div
-        className="tool-image"
-        id="TheNextStep-tool4"
-      >
-        <a
-          alt="link to nodejs"
-          href="https://www.google.com/search?q=nodejs"
-          target="_blank"
-        >
-          <img
-            alt="no image"
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            src="nodejs.png"
-          />
-        </a>
+          2020
+        </div>
       </div>
     </div>
   </div>
