@@ -39,7 +39,7 @@ class ResumePage extends Component {
       numPages: null,
       pageNumber: 1,
       showResume: false,
-      buttonMessage: "See Resume",
+      buttonMessage: "See my Resume",
     };
     this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
   }
@@ -87,10 +87,10 @@ class ResumePage extends Component {
 
   toggleDocumentToShow() {
     let newMessage;
-    if (this.state.buttonMessage == "See Resume") {
-      newMessage = "See Career Path";
+    if (this.state.buttonMessage == "See my Resume") {
+      newMessage = "See my Career Path";
     } else {
-      newMessage = "See Resume";
+      newMessage = "See my Resume";
     }
     this.setState({
       showResume: !this.state.showResume,
@@ -104,11 +104,11 @@ class ResumePage extends Component {
         <PageTitle
           title={"My Career Path and Resume"}
           subtitle={"Check out my skills and experience"}
-          description={`Below you can see my career path from science to software. I'm constantly working to add to my skillset and expand my knowledge base.`}
+          description={`Below you can see my career path from science to software, as well as my current Resume. Just click the button below to switch between the two.`}
         />
 
         <div className="left-all-row" style={{ width: "100%", margin: '20px 0' }}>
-          <Button color="outline-primary" onClick={() => { this.toggleDocumentToShow() }}>{this.state.buttonMessage}</Button>
+          <Button color="primary" onClick={() => { this.toggleDocumentToShow() }}>{this.state.buttonMessage}</Button>
         </div>
 
         {/* <Fade style={styles.warning} in={this.state.showWarning}>

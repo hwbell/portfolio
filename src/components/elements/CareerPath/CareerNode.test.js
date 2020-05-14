@@ -44,7 +44,7 @@ describe('CareerNode Component', () => {
   });
 
   it('contains the correct elements for different data', () => {
-    console.log(wrapper)
+    // console.log(wrapper)
 
     expect(wrapper.find('.career-node').length).toEqual(1);
 

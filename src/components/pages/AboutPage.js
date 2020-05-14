@@ -8,6 +8,7 @@ import { Button } from "reactstrap";
 // image
 import ProfilePic from "../../assets/images/profile-pic.jpg";
 import PageTitle from "../elements/PageTitle";
+import SocialIcons from "../elements/SocialIcons";
 
 // components
 const Container = posed.div({
@@ -38,7 +39,7 @@ const Hr = posed.hr({
 // for the list display - each is a list, with the var name as the title
 const languages = {
   title: "Languages",
-  skills: ["HTML5", "CSS", "Javascript", "PHP", "Python", "MATLAB"]
+  skills: ["HTML5", "CSS", "Javascript", "PHP", "MATLAB"]
 };
 const tools = {
   title: "Tools",
@@ -87,7 +88,7 @@ class AboutPage extends Component {
   renderskills() {
     return (
       <Div className="" style={styles.skillsContainer}>
-        {[languages, frameworks, tools].map((skill, i)=> {
+        {[languages, frameworks, tools].map((skill, i) => {
           return (
             <Div key={i} style={styles.list}>
               <P style={styles.skillTitle}>{skill.title}</P>
@@ -105,58 +106,58 @@ class AboutPage extends Component {
     );
   }
 
-  renderIcons() {
-    return (
-      <div style={styles.iconContainer}>
-        <div className="" style={styles.animatedIcon}>
-          <i
-            className="fas fa-flask pour flip-on-start"
-            style={styles.icon}
-          ></i>
-        </div>
-        <div className="" style={styles.animatedIcon}>
-          <i
-            className="fas fa-microscope flip-on-start grow-blue"
-            style={styles.icon}
-          ></i>
-        </div>
-        {/* <div className="" style={styles.animatedIcon}>
-              <i className="fa fa-atom flip-on-start rotate" style={styles.icon}></i>
-            </div> */}
-        <div className="" style={styles.animatedIcon}>
-          <i
-            className="fa fa-dna flip-on-start flip-vertical-left"
-            style={styles.icon}
-          ></i>
-        </div>
-        <div className="" style={styles.animatedIcon}>
-          <i
-            className="fas fa-chart-bar flip-on-start rotate-quarter"
-            style={styles.icon}
-          ></i>
-        </div>
-        <div className="" style={styles.animatedIcon}>
-          <i
-            className="fas fa-laptop-code shake"
-            style={styles.icon}
-          ></i>
-        </div>
-      </div>
-    );
-  }
+  // renderIcons() {
+  //   return (
+  //     <div style={styles.iconContainer}>
+  //       <div className="" style={styles.animatedIcon}>
+  //         <i
+  //           className="fas fa-flask pour flip-on-start"
+  //           style={styles.icon}
+  //         ></i>
+  //       </div>
+  //       <div className="" style={styles.animatedIcon}>
+  //         <i
+  //           className="fas fa-microscope flip-on-start grow-blue"
+  //           style={styles.icon}
+  //         ></i>
+  //       </div>
+  //       {/* <div className="" style={styles.animatedIcon}>
+  //             <i className="fa fa-atom flip-on-start rotate" style={styles.icon}></i>
+  //           </div> */}
+  //       <div className="" style={styles.animatedIcon}>
+  //         <i
+  //           className="fa fa-dna flip-on-start flip-vertical-left"
+  //           style={styles.icon}
+  //         ></i>
+  //       </div>
+  //       <div className="" style={styles.animatedIcon}>
+  //         <i
+  //           className="fas fa-chart-bar flip-on-start rotate-quarter"
+  //           style={styles.icon}
+  //         ></i>
+  //       </div>
+  //       <div className="" style={styles.animatedIcon}>
+  //         <i
+  //           className="fas fa-laptop-code shake"
+  //           style={styles.icon}
+  //         ></i>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   render() {
     return (
       <Container className="" style={styles.main}>
-        <PageTitle title={"About Me"} subtitle={"Nice to meet you!"}/>
+        <PageTitle title={"About Me"} subtitle={"Nice to meet you!"} />
 
         <Div className="row">
-          <div className="col col-md-6 col-lg-4" style={{textAlign: 'left'}}>
+          <div className="col col-xl-6" style={{ textAlign: 'left' }}>
             <Img src={ProfilePic} style={styles.image} />
-            {this.renderIcons()}
+            <SocialIcons />
           </div>
 
-          <P className="col col-md-6 col-lg-8" style={styles.paragraph}>
+          <P className="col col-xl-6" style={styles.paragraph}>
             In the past, I have been a research biologist in the fields of{" "}
             <a
               target="#blank"
@@ -190,17 +191,12 @@ class AboutPage extends Component {
             problems in creative ways. More recently, I have shifted my focus to
             programming and web development. I hope to bring a unique
             perspective to the software industry, with a focus on productivity
-            and detail-oriented design and user experience. <br/><br/>
+            and detail-oriented design and user experience. <br /><br />
             Programming and development is something I truly enjoy, and I try to bring this approach to everything I work on. Building something complex or solving a difficult problem is always a fun challenge that I look forward to.
           </P>
         </Div>
 
-        {/* <P className="text-center" style={styles.subTitle}>
-          Nice to meet you!
-        </P> */}
-
         <Div className="left-all-col">
-          {/* the animation icons */}
 
           <P style={styles.paragraph}>
             I was first introduced to the world of programming through cellular
@@ -259,7 +255,7 @@ const styles = {
     justifyContent: "flex-start",
     alignItems: "center"
   },
-  
+
   skillsContainer: {
     width: "90%",
     display: "flex",
@@ -290,9 +286,11 @@ const styles = {
   },
   image: {
     padding: "20px",
-    borderRadius: 30,
-    maxWidth: "350px",
-    maxHeight: "350px",
+    borderRadius: 300,
+    // width: '100%',
+    // height: '100%',
+    maxWidth: "500px",
+    maxHeight: "500px",
 
     // margin: "0px auto"
   },
@@ -308,6 +306,6 @@ const styles = {
     margin: 8
   },
   icon: {
-    fontSize: 40
+    fontSize: 34
   }
 };

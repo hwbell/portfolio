@@ -16,9 +16,9 @@ class CareerPath extends React.Component {
   renderNodes() {
     return (
       <div className="career-nodes-container center-all-row row">
-        {CareerPathText.map((obj) => {
+        {CareerPathText.map((obj, i) => {
           return (
-            <CareerNode {...obj}/>
+            <CareerNode {...obj} index={i} key={i}/>
           )
         })}
       </div>

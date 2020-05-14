@@ -2,9 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CareerPath from './CareerPath';
 import CareerNode from './CareerNode';
+// react router context
+// import { MemoryRouter } from 'react-router-dom';
 
 import { shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+
+let mockRenderNodes = jest.fn();
 
 // react router context
 // import { MemoryRouter } from 'react-router-dom';
@@ -27,7 +31,7 @@ describe('CareerPath Component', () => {
 
   })
 
-  // testscareer-path-container
+  // tests
   it('renders without crashing', async () => {
     wrapper.update();
   });
@@ -40,12 +44,18 @@ describe('CareerPath Component', () => {
   });
 
   it('contains the correct elements for different data', () => {
-    console.log(wrapper)
-
     expect(wrapper.find('#career-path-container').length).toEqual(1);
     expect(wrapper.find('.career-nodes-container').length).toEqual(1);
 
-  })
+  });
+
+  // it('calls click event', () => {
+  //   const FakeFun = jest.spyOn(ComponentName.prototype, 'deleteData');
+  //   const component = shallow((<ComponentName />));
+  //   button.find('button').simulate('click');
+  //   component.update();
+  //   expect(FakeFun).toHaveBeenCalled();
+  // });
 
   // it('should render all buttons with info from provided props.buttons', () => {
   //   expect(wrapper.find('Link').at(0).props().to).toBe(someProps.buttons[0].link)

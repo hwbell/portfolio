@@ -10,6 +10,7 @@ import posed from "react-pose";
 // elements
 import PortfolioCard from "../elements/PortfolioCard";
 import PageTitle from "../elements/PageTitle";
+import { Button } from "reactstrap";
 
 // portfolio entries data for each card
 import {
@@ -76,8 +77,8 @@ class PortfolioPage extends Component {
     ];
 
     return (
-      <Div style={styles.topIconHolder} className="center-all-col" >
-        <Div className="right-all-row" style={{width: '90%'}}>
+      <Div style={styles.topIconHolder} className="center-all-col">
+        <Div className="right-all-row" style={{ width: "100%" }}>
           {icons.map((icon, i) => {
             return (
               <Div className="center-top-all-col" style={{ margin: "0 15px" }}>
@@ -93,6 +94,36 @@ class PortfolioPage extends Component {
           })}
         </Div>
       </Div>
+    );
+  }
+
+  renderScrollButtons() {
+    const buttons = [
+      {
+        text: "Work Projects",
+        target: "#work-projects",
+      },
+      {
+        text: "Web Apps",
+        target: "#web-apps",
+      },
+      {
+        text: "Data Visualization",
+        target: "#data-visualization",
+      },
+    ];
+    return (
+      <div id="work-projects" className="right-all-row" style={{ width: "100%", margin: "0" }}>
+        {buttons.map((thisButton, i) => {
+          return (
+            <a href={thisButton.target} key={i}>
+              <Button color="primary" style={{ margin: "0 4px" }}>
+                {thisButton.text}
+              </Button>
+            </a>  
+          );
+        })}
+      </div>
     );
   }
 
@@ -114,7 +145,7 @@ class PortfolioPage extends Component {
 
   render() {
     return (
-      <Container style={styles.main}>
+      <Container style={styles.main} className="portfolio-container">
         <PageTitle
           title={"My Portfolio"}
           subtitle={"Take a look at some projects I've worked on and created."}
@@ -131,7 +162,9 @@ class PortfolioPage extends Component {
           {(matches) => (matches ? this.renderTopIcons() : null)}
         </Media>
 
-        <P className="" style={styles.appTitle}>
+        {this.renderScrollButtons()}
+
+        <P style={styles.appTitle}>
           Work Projects
         </P>
 
@@ -140,8 +173,8 @@ class PortfolioPage extends Component {
           {this.displayApps(workProjects)}
         </div>
 
-        <Hr style={{width: '100%'}}/>
-        <P className="" style={styles.appTitle}>
+        <Hr style={{ width: "100%" }} id="web-apps"/>
+        <P style={styles.appTitle}>
           Web apps I've built
         </P>
 
@@ -151,8 +184,8 @@ class PortfolioPage extends Component {
           {this.displayApps(codePens)}
         </div>
 
-        <Hr style={{width: '100%'}}/>
-        <P className="" style={styles.appTitle}>
+        <Hr style={{ width: "100%" }} id="data-visualization"/>
+        <P style={styles.appTitle}>
           Data Visualization
         </P>
 
@@ -188,6 +221,7 @@ export default PortfolioPage;
 const styles = {
   main: {
     marginBottom: "10vh",
+    position: "relative",
   },
   cardsContainer: {
     // width: '70%',
@@ -200,9 +234,9 @@ const styles = {
     margin: 0,
   },
   topIconHolder: {
-    margin: "10px 0",
+    // margin: "10px 0",
     position: "absolute",
-    top: 0,
+    top: -10,
     left: 0,
     width: "100%",
   },
@@ -212,7 +246,7 @@ const styles = {
   },
   appTitle: {
     // width: '80%',
-    margin: '20px 0',
+    margin: "20px 0",
     fontFamily: "Quicksand",
     fontSize: 28,
     // margin: "15px 20px",

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../../App.css";
 
 import EmailForm from "../elements/EmailForm";
+import SocialIcons from "../elements/SocialIcons";
 
 import posed, { PoseGroup } from "react-pose";
 import PageTitle from '../elements/PageTitle';
@@ -55,73 +56,9 @@ class ContactPage extends Component {
        
         <EmailForm />
 
-        <Div style={styles.iconContainer}>
-          <div className="animatedIcon" style={styles.animatedIcon}>
-            <a
-              href="https://github.com/hwbell"
-              target="_blank"
-              className=""
-              style={styles.link}
-            >
-              <i
-                className="fab fa-github blink blink-grey"
-                style={styles.icon}
-              ></i>
-            </a>
-          </div>
-          <div className="animatedIcon" style={styles.animatedIcon}>
-            <a
-              href="https://codepen.io/hbellatcodepen/"
-              target="_blank"
-              className=""
-              style={styles.link}
-            >
-              <i
-                className="fab fa-codepen blink blink-orange"
-                style={styles.icon}
-              ></i>
-            </a>
-          </div>
-          <div className="animatedIcon" style={styles.animatedIcon}>
-            <a
-              href="https://www.linkedin.com/in/harold-bell-291926180/"
-              target="_blank"
-              className=""
-              style={styles.link}
-            >
-              <i
-                className="fab fa-linkedin blink blink-blue"
-                style={styles.icon}
-              ></i>
-            </a>
-          </div>
-          <div className="animatedIcon" style={styles.animatedIcon}>
-            <a
-              href="https://www.facebook.com/profile.php?id=100010514613107"
-              target="_blank"
-              className=""
-              style={styles.link}
-            >
-              <i
-                className="fab fa-facebook-square blink blink-blue"
-                style={styles.icon}
-              ></i>
-            </a>
-          </div>
-          <div className="animatedIcon" style={styles.animatedIcon}>
-            <a
-              href="https://www.instagram.com/harrywbell/"
-              target="_blank"
-              className=""
-              style={styles.link}
-            >
-              <i
-                className="fab fa-instagram blink blink-purple"
-                style={styles.icon}
-              ></i>
-            </a>
-          </div>
-        </Div>
+        <SocialIcons />
+
+        
 
         <Div style={styles.textContainer}>
           <P style={styles.footer}>(978) 810 2236</P>

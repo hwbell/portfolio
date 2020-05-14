@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolIcons Component renders correctly 1`] = `
+<div
+  className="tool-icons"
+>
+  <div
+    className="tool-image col"
+    id="ResearchAssociateatBrandeisUniversity-tool0"
+    style={
+      Object {
+        "backgroundColor": "white",
+        "maxWidth": "50px",
+      }
+    }
+  >
+    <a
+      alt="link to matlab"
+      href="https://www.google.com/search?q=matlab"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        src="matlab.jpeg"
+        style={
+          Object {
+            "height": "35px",
+            "width": "35px",
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="tool-image col"
+    id="ResearchAssociateatBrandeisUniversity-tool1"
+    style={
+      Object {
+        "backgroundColor": "white",
+        "maxWidth": "50px",
+      }
+    }
+  >
+    <a
+      alt="link to dna"
+      href="https://www.google.com/search?q=dna"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        src="dna.png"
+        style={
+          Object {
+            "height": "35px",
+            "width": "35px",
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="tool-image col"
+    id="ResearchAssociateatBrandeisUniversity-tool2"
+    style={
+      Object {
+        "backgroundColor": "white",
+        "maxWidth": "50px",
+      }
+    }
+  >
+    <a
+      alt="link to microscope"
+      href="https://www.google.com/search?q=microscope"
+      target="_blank"
+    >
+      <img
+        alt="no image"
+        src="microscope.png"
+        style={
+          Object {
+            "height": "35px",
+            "width": "35px",
+          }
+        }
+      />
+    </a>
+  </div>
+</div>
+`;

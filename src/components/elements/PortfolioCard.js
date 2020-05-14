@@ -134,7 +134,7 @@ class PortfolioCard extends React.Component {
           <p>{this.props.modalDescription}</p>
 
           <div style={{ alignSelf: "flex-start" }}>
-            App made with: <strong>{this.state.popoverMessage}</strong>
+            Tools & technologies employed: <strong>{this.state.popoverMessage}</strong>
           </div>
           <div className="row left-all-row" style={styles.toolsHolder}>
             {this.props.tools.map((tool, i) => {
@@ -183,7 +183,7 @@ const styles = {
   imageHolder: {
     height: "100%",
     padding: "25px",
-    minWidth: "350px",
+    minWidth: "300px",
     maxWidth: "450px",
   },
   image: {
@@ -193,9 +193,9 @@ const styles = {
   },
   textHolder: {
     textAlign: "left",
-    minWidth: "350px",
+    minWidth: "300px",
     maxWidth: "600px",
-    padding: "25px 0 0 25px",
+    padding: "20px",
   },
   toolsHolder: {
     padding: "10px",

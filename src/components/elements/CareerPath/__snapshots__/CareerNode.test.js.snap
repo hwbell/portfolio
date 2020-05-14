@@ -6,6 +6,7 @@ exports[`CareerNode Component renders correctly 1`] = `
 >
   <div
     className="career-node center-all-col"
+    onClick={[Function]}
   >
     <p>
       Research Associate at Brandeis University
@@ -19,14 +20,25 @@ exports[`CareerNode Component renders correctly 1`] = `
       }
     }
   />
-  <div
-    className="left-all-row"
-  >
+  <div>
     <div
       className="year-block"
+      style={
+        Object {
+          "backgroundColor": "undefined",
+        }
+      }
     >
       2010
     </div>
   </div>
+  <hr
+    style={
+      Object {
+        "borderTop": "4px solid undefined",
+        "width": "100%",
+      }
+    }
+  />
 </div>
 `;

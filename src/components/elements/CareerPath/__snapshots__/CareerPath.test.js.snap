@@ -13,6 +13,7 @@ exports[`CareerPath Component renders correctly 1`] = `
     >
       <div
         className="career-node center-all-col"
+        onClick={[Function]}
       >
         <p>
           Research Associate at Brandeis University
@@ -26,21 +27,33 @@ exports[`CareerPath Component renders correctly 1`] = `
           }
         }
       />
-      <div
-        className="left-all-row"
-      >
+      <div>
         <div
           className="year-block"
+          style={
+            Object {
+              "backgroundColor": "#9C27B0",
+            }
+          }
         >
           2010
         </div>
       </div>
+      <hr
+        style={
+          Object {
+            "borderTop": "4px solid #9C27B0",
+            "width": "100%",
+          }
+        }
+      />
     </div>
     <div
       className="career-node-holder col"
     >
       <div
         className="career-node center-all-col"
+        onClick={[Function]}
       >
         <p>
           Research Associate at University of Colorado
@@ -54,21 +67,33 @@ exports[`CareerPath Component renders correctly 1`] = `
           }
         }
       />
-      <div
-        className="left-all-row"
-      >
+      <div>
         <div
           className="year-block"
+          style={
+            Object {
+              "backgroundColor": "#303F9F",
+            }
+          }
         >
           2017
         </div>
       </div>
+      <hr
+        style={
+          Object {
+            "borderTop": "4px solid #303F9F",
+            "width": "100%",
+          }
+        }
+      />
     </div>
     <div
       className="career-node-holder col"
     >
       <div
         className="career-node center-all-col"
+        onClick={[Function]}
       >
         <p>
           Web Designer / Developer at Granicus Inc.
@@ -82,21 +107,33 @@ exports[`CareerPath Component renders correctly 1`] = `
           }
         }
       />
-      <div
-        className="left-all-row"
-      >
+      <div>
         <div
           className="year-block"
+          style={
+            Object {
+              "backgroundColor": "#03A9F4",
+            }
+          }
         >
           2019
         </div>
       </div>
+      <hr
+        style={
+          Object {
+            "borderTop": "4px solid #03A9F4",
+            "width": "100%",
+          }
+        }
+      />
     </div>
     <div
       className="career-node-holder col"
     >
       <div
         className="career-node center-all-col"
+        onClick={[Function]}
       >
         <p>
           The Next Step
@@ -110,15 +147,26 @@ exports[`CareerPath Component renders correctly 1`] = `
           }
         }
       />
-      <div
-        className="left-all-row"
-      >
+      <div>
         <div
           className="year-block"
+          style={
+            Object {
+              "backgroundColor": "#4CAF50",
+            }
+          }
         >
           2020
         </div>
       </div>
+      <hr
+        style={
+          Object {
+            "borderTop": "4px solid #4CAF50",
+            "width": "100%",
+          }
+        }
+      />
     </div>
   </div>
 </div>

@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialIcons Component renders correctly 1`] = `
+<div
+  className="social-icons"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "flex-end",
+      "margin": "25px auto",
+    }
+  }
+>
+  <div
+    className="animated-icon"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <a
+      className=""
+      href="https://github.com/hwbell"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      target="_blank"
+    >
+      <i
+        className="fab fa-github blink blink-grey"
+        style={
+          Object {
+            "fontSize": 40,
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="animated-icon"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <a
+      className=""
+      href="https://codepen.io/hbellatcodepen/"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      target="_blank"
+    >
+      <i
+        className="fab fa-codepen blink blink-orange"
+        style={
+          Object {
+            "fontSize": 40,
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="animated-icon"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <a
+      className=""
+      href="https://www.linkedin.com/in/harold-bell-291926180/"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      target="_blank"
+    >
+      <i
+        className="fab fa-linkedin blink blink-blue"
+        style={
+          Object {
+            "fontSize": 40,
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="animated-icon"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <a
+      className=""
+      href="https://www.facebook.com/profile.php?id=100010514613107"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      target="_blank"
+    >
+      <i
+        className="fab fa-facebook-square blink blink-blue"
+        style={
+          Object {
+            "fontSize": 40,
+          }
+        }
+      />
+    </a>
+  </div>
+  <div
+    className="animated-icon"
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <a
+      className=""
+      href="https://www.instagram.com/harrywbell/"
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      target="_blank"
+    >
+      <i
+        className="fab fa-instagram blink blink-purple"
+        style={
+          Object {
+            "fontSize": 40,
+          }
+        }
+      />
+    </a>
+  </div>
+</div>
+`;
