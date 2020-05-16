@@ -1,9 +1,16 @@
 import React from "react";
 
 import { toolsImages } from "../../../assets/toolsImages";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Fade,
+} from "reactstrap";
 
-let colors = ["#9C27B0", "#303F9F", "#03A9F4", "#4CAF50", "#FFEB3B", "#FF5722"];
+let colors = ["#85929E", "#5D6D7E", "#34495E", "black"];
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -15,6 +22,7 @@ class CareerNode extends React.Component {
 
     this.state = {
       modalOpen: false,
+      showOverlay: false,
     };
     this.renderTools = this.renderTools.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
@@ -44,12 +52,6 @@ class CareerNode extends React.Component {
             alt={`link to ${tool}`}
           >
             <img
-              // onMouseOver={() => {
-              //   this.togglePopover(tool);
-              // }}
-              // onMouseLeave={() => {
-              //   this.togglePopover();
-              // }}
               style={styles.toolImage}
               src={toolsImages[tool]}
               alt="no image"
@@ -60,32 +62,64 @@ class CareerNode extends React.Component {
     });
   }
 
+  showOverlay() {
+    this.setState({
+      showOverlay: true,
+    });
+  }
+
+  hideOverlay() {
+    this.setState({
+      showOverlay: false,
+    });
+  }
+
   render() {
     // console.log(this.props.logo);
     const lineStyle = {
-      height: "100px",
-      borderLeft: "4px solid black",
+      height: "40px",
+      borderLeft: "4px solid whitesmoke",
     };
 
     const yearBlockStyle = {
       backgroundColor: `${colors[this.props.index]}`,
     };
     const bottomLineStyle = {
-      borderTop: `4px solid ${colors[this.props.index]}`,
-      width: "100%",
+      borderTop: `10px solid ${colors[this.props.index]}`,
+      width: "120%",
+      marginLeft: "-10%"
     };
 
     return (
       <div className="career-node-holder col">
         <div
+          onMouseOver={() => {
+            this.showOverlay();
+          }}
+          onMouseLeave={() => {
+            this.hideOverlay();
+          }}
           className="career-node center-all-col"
           onClick={() => {
             this.toggleModal();
           }}
         >
-          <p>{this.props.job}</p>
+          {/* <p>{this.props.job}</p> */}
 
-          {/* <div className="left-all-row row">{this.renderTools()}</div> */}
+          <Fade
+            className="career-node-overlay center-all-col"
+            in={this.state.showOverlay}
+          >
+            <p>
+              <strong>{this.props.job}</strong>
+            </p>
+            <p style={{ margin: 0 }}>{this.props.company}</p>
+            <p style={{ margin: 0 }}>
+              <em>{this.props.years}</em>
+            </p>
+          </Fade>
+
+          <img style={styles.logo} src={this.props.logo} alt="no image" />
         </div>
         <div style={lineStyle}></div>
         <div>
@@ -113,10 +147,21 @@ class CareerNode extends React.Component {
               </ul>
             )}
 
-            <div style={{margin: '20px 0'}} className="left-all-row">{this.renderTools()}</div>
+            <div style={{ margin: "20px 0" }} className="left-all-row row">
+              {this.renderTools()}
+            </div>
 
             {this.props.modal.description && (
               <p>{this.props.modal.description}</p>
+            )}
+
+            {this.props.modal.testimonial && (
+              <div>
+                <p style={{ margin: 0 }}>
+                  <strong>{this.props.modal.testimonial.name}:</strong>
+                </p>
+                <p><em>"{this.props.modal.testimonial.text}"</em></p>
+              </div>
             )}
           </ModalBody>
           <ModalFooter>
@@ -142,11 +187,11 @@ const styles = {
   },
   toolImage: {
     height: "35px",
-    width: "35px",
+    // width: "35px",
   },
   logo: {
-    borderRadius: "10px",
-    height: "100px",
+    width: "70%",
+    borderRadius: "16px",
   },
 };
 

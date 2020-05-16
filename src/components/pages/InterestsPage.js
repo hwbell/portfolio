@@ -289,8 +289,8 @@ const styles = {
     borderRadius: 300,
     // width: '100%',
     // height: '100%',
-    maxWidth: "400px",
-    maxHeight: "400px",
+    maxWidth: "500px",
+    maxHeight: "500px",
 
     // margin: "0px auto"
   },

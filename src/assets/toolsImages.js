@@ -19,6 +19,12 @@ const toolsImages = {
   matlab: require('./icons/matlab.jpeg'),
   dna: require('./icons/dna.png'),
   microscope: require('./icons/microscope.png'),
+  googlecloud: require('./icons/googlecloud.png'),
+  azure: require('./icons/azure.png'),
+  aws: require('./icons/aws.png'),
+  angular: require('./icons/angular.png'),
+  database: require('./icons/database.png'),
+  research: require('./icons/research.png'),
 }
 
 export {

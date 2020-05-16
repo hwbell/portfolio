@@ -33,6 +33,11 @@ const links = [
     iconClass: 'fas fa-project-diagram'
   },
   {
+    text: 'Interests',
+    route: 'interests',
+    iconClass: 'far fa-lightbulb'
+  },
+  {
     text: 'Contact',
     route: 'contact',
     iconClass: 'fas fa-mobile-alt'

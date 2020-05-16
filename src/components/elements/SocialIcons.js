@@ -74,7 +74,7 @@ const styles = {
     margin: 8,
   },
   link: {
-    color: "black",
+    color: "whitesmoke",
   },
   icon: {
     fontSize: 40,

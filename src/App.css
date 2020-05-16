@@ -13,7 +13,8 @@ body {
   background-position: 0% 0%;
   background-attachment: fixed;
   background-color: white;
-  color: rgb(24, 24, 24);
+  /* color: rgb(24, 24, 24); */
+  color: white;
   font-family: Raleway, Quicksand;
   font-weight: 500;
   overflow-x: hidden;
@@ -26,7 +27,7 @@ body {
   width: 100%;
   height: 100%;
   /* background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.06)); */
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(0, 0, 0, 0.589);
 }
 .App {
   z-index: 10;
@@ -45,10 +46,13 @@ body {
 * > a {
   /* font-weight: bolder; */
   transition: all 0.3s ease;
-  color: rgb(0, 68, 255);
+  color: rgb(84, 129, 253);
 }
 * > a:hover {
   color: rgb(0, 53, 199);
+}
+*> ul {
+  padding-inline-start: 20px;
 }
 
 .space-all-row {
@@ -144,6 +148,41 @@ body {
   }
 }
 
+@keyframes bg-dna-2 {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(200px) scale(0.5);
+  }
+  50% {
+    transform: translateX(300px) scale(1);
+  }
+  75% {
+    transform: translateX(200px) scale(0.5);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes bg-comp-2 {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-200px) scale(0.5);
+  }
+  50% {
+    transform: translateX(-300px) scale(1);
+  }
+  75% {
+    transform: translateX(-200px) scale(0.5);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
 
 @keyframes bg-comp {
   30% {
@@ -209,18 +248,21 @@ body {
   }
 }
 
+
+
 /* On the HomePage */
 .animation-dna,
 .animation-comp {
   font-size: 55px;
-  animation-duration: 6s;
+  animation-duration: 1s;
+  animation-delay: 1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   animation-play-state: running;
 }
 .animation-dna {
-  color: rgb(44, 86, 202);  
-  animation-name: bg-dna;
+  color: rgb(44, 86, 202);
+  animation-name: bg-dna-2;
 }
 
 .animation-comp {
@@ -228,7 +270,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-name: bg-comp;
+  animation-name: bg-comp-2;
 }
 
 .home-button {
@@ -269,7 +311,7 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  /* color: rgb(231, 111, 42); */
+  /* color: rgb(231, 111, 42); */   
   /* font-weight: bolder; */
 }
 
@@ -333,7 +375,7 @@ a:active {
   font-size: 45px;
   margin: 0;
   padding: 0;
-  color: rgb(44, 86, 202);  
+  color: rgb(44, 86, 202);
 }
 .fa-envelope:hover {
   color: rgb(21, 57, 155);
@@ -614,10 +656,12 @@ a:active {
 }
 .nav {
   width: 100%;
-  box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);  
+  box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);
   /* margin: 10px; */
   padding: 10px 0px;
-  background-color: rgb(61, 61, 61);
+  /* background-color: rgb(61, 61, 61); */
+  background-color: rgba(0, 0, 0, 0.842);
+
   /* border-radius: 20px; */
 }
 .nav-item, .nav-icon, .nav-text {
@@ -629,13 +673,9 @@ a:active {
   /* box-shadow: -2px 2px 3px 2px rgba(24, 24, 24, 0.5);   */
   /* border-radius: 6px; */
   padding: 10px;
-  color: rgb(231, 231, 231);
+  color: whitesmoke;
   margin: 8px;
   margin-bottom: 0px;
-}
-.nav-item:hover {
-  color: silver;
-  transform: translateX(5px) translateY(-5px)
 }
 .nav-text {
   font-size: 12px;
@@ -647,9 +687,9 @@ a:active {
   font-size: 28px;
   /* color: rgb(231, 231, 231); */
 }
-/* .nav-icon:hover {
-  color: silver
-} */
+.nav-item:hover, .nav-icon:hover, .nav-text:hover {
+  color: rgb(255, 154, 1)
+}
 .dropdown {
   /* border-radius: 50px; */
   padding: 2px;
@@ -668,7 +708,7 @@ a:active {
   border-radius: 5px;
 }
 .dropdown-item:hover {
-  background-color: rgb(9, 1, 48);  
+  background-color: rgb(9, 1, 48);
 }
 .fa-compass {
   margin: 0;
@@ -680,15 +720,10 @@ a:active {
   background-color: none;
 }
 
-/* for the Nav Bar hovering */
-.nav-item:hover, .dropdown-item:hover {
-  text-decoration: none;
-  color: rgb(148, 148, 148);
-}
-
 
 .project-card {
-  background-color: white;
+  background-color: whitesmoke;
+  color: black;
   text-align: left;
   /* max-width: 950px; */
   margin: 10px 0px;
@@ -698,16 +733,16 @@ a:active {
   /* box-shadow: -2px 2px 3px 1px rgba(65, 94, 158, 0.2); */
 }
 .tool-image {
-  border: 2px solid white;  
+  border: 2px solid white;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 .tool-image:hover {
-  border: 2px solid rgb(66, 79, 158);  
-  background-color: rgb(66, 79, 158);  
+  border: 2px solid rgb(66, 79, 158);
+  background-color: rgb(66, 79, 158);
 }
 .react-calendar-heatmap {
-  margin: 10px;  
+  margin: 10px;
   max-height: 200px;
 }
 .react-calendar-heatmap text {
@@ -808,37 +843,48 @@ a:active {
   /* background: white; */
 }
 .career-node-holder {
+  position: relative;
   min-height: 200px;
   min-width: 200px;
 }
-.career-node {
-  min-height: 200px;
-  min-width: 200px;
+.career-node-overlay {
+  position: absolute;
+  font-size: 12pt;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.842);
+  height: 205px;
+  width: 205px;
   text-align: center;
   transition: all 0.3s ease;
   margin: 0;
-  padding: 35px;
-  font-size: 14pt;
-  /* height: 150px; */
-  /* width: 150px; */
-  background: -webkit-gradient(linear, left top, right bottom, from(rgb(255, 255, 255)), to(rgb(197, 197, 197)));
-  /* background-color: white; */
+  padding: 10px;
   border-radius: 100px;
-  /* border: 1px solid rgb(196, 196, 196); */
-  /* background-color: whitesmoke; */
+
+}
+.career-node {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin: 0;
+  font-size: 14pt;
+  background-color: white;
+  border-radius: 100px;
+  /* border: 2px solid rgba(255, 255, 255, 0.527); */
 
 }
 .career-node:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   /* color:white; */
-  font-weight: bolder;
+  /* font-weight: bolder; */
 }
 .year-block {
   font-size: 20px;
   padding: 8px;
   color: white;
   width: 100%;
+  border-radius: 4px 4px 0 0;
 }
 
 /* Reactstrap Modals */
@@ -854,6 +900,7 @@ body.modal-open {
   align-items: center;
 }
 .modal-content {
+  color: black;
   width: 80vw;
   max-width: 800px;
   padding: 20px;
@@ -865,3 +912,5 @@ body.modal-open {
 .modal-title {
   font-weight: bolder;
 }
+
+/*  */
