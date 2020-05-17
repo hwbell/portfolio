@@ -20,7 +20,7 @@ const icons = [
     linkTo: 'https://www.linkedin.com/in/harold-bell-291926180/'
   },
   {
-    class: 'fab fa-facebook-square blink blink-blue',
+    class: 'fab fa-facebook-square blink blink-dark-blue',
     linkTo: 'https://www.facebook.com/profile.php?id=100010514613107'
   },
   {

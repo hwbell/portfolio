@@ -149,6 +149,7 @@ class AboutPage extends Component {
   render() {
     return (
       <Container className="" style={styles.main}>
+
         <PageTitle title={"About Me"} subtitle={"Nice to meet you!"} />
 
         <Div className="row">
@@ -159,32 +160,32 @@ class AboutPage extends Component {
 
           <P className="col col-xl-6" style={styles.paragraph}>
             In the past, I have been a research biologist in the fields of{" "}
-            <a
+            <a style={{fontWeight: '600'}}
               target="#blank"
               href="https://en.wikipedia.org/wiki/Molecular_biology"
             >
               molecular
             </a>{" "}
             &&nbsp;
-            <a
+            <a style={{fontWeight: '600'}}
               target="#blank"
               href="https://en.wikipedia.org/wiki/Cell_biology"
             >
               cell biology
             </a>
             , &nbsp;
-            <a
+            <a style={{fontWeight: '600'}}
               target="#blank"
               href="https://en.wikipedia.org/wiki/Neuroscience"
             >
               neuroscience
             </a>
             , &nbsp;
-            <a target="#blank" href="https://en.wikipedia.org/wiki/Immunology">
+            <a style={{fontWeight: '600'}} target="#blank" href="https://en.wikipedia.org/wiki/Immunology">
               immunology
             </a>{" "}
             and&nbsp;
-            <a target="#blank" href="https://en.wikipedia.org/wiki/Stem_cell">
+            <a style={{fontWeight: '600'}} target="#blank" href="https://en.wikipedia.org/wiki/Stem_cell">
               stem cell biology
             </a>
             . I've always enjoyed being an investigator of sorts and solving
@@ -245,15 +246,8 @@ export default AboutPage;
 
 const styles = {
   main: {
-    paddingTop: "0",
-    paddingBottom: 80,
-    // width: "90%",
-    // maxWidth: '700px',
-    margin: "auto auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    alignItems: "center"
+    padding: "10vh 0",
+    position: "relative",
   },
 
   skillsContainer: {

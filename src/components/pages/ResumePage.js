@@ -107,7 +107,7 @@ class ResumePage extends Component {
           description={`Below you can see my career path from science to software, as well as my current Resume. Just click the button below to switch between the two.`}
         />
 
-        <p>The path below highlights what I see as the major points in my career. I've done other things along the way, but the path from science to software is the major theme in my professional journey. Click on any node for more information!</p>
+        <p style={{fontSize: '14pt'}}>The path below highlights the major points in my career. I've done other things along the way, but the path from science to software is the major theme in my professional journey. Click on any node for more information!</p>
 
         <div className="left-all-row" style={{ width: "100%", margin: '20px 0' }}>
           <Button color="primary" onClick={() => { this.toggleDocumentToShow() }}>{this.state.buttonMessage}</Button>
@@ -128,12 +128,8 @@ export default ResumePage;
 
 const styles = {
   main: {
-    // paddingTop: 50,
-    paddingBottom: 100,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
+    padding: "10vh 0",
+    position: "relative",
   },
 
   warning: {

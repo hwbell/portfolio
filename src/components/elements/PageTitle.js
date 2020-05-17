@@ -35,11 +35,11 @@ class PageTitle extends React.Component {
 
   render() {
     return (
-      <div className="subtitle-container" style={styles.main}>
+      <div className="subtitle-container" style={styles.main} id={this.props.id||""}>
         <Div>
           <P style={styles.title}>{this.props.title}</P>
         </Div>
-        <Hr style={{ width: "100%" }} />
+        <Hr style={styles.lineStyle} />
 
         {this.props.subtitle && (
           <P style={styles.subtitle}>{this.props.subtitle}</P>
@@ -67,9 +67,13 @@ const styles = {
   },
   subtitle: {
     fontSize: 28,
-    // margin: 25
-    // fontWeight: ''
   },
+  description: {
+    fontSize: '14pt'
+  },
+  lineStyle: {
+    width: "100%", borderColor: "grey"
+  }
 };
 
 export default PageTitle;

@@ -10,7 +10,12 @@ import {
   Fade,
 } from "reactstrap";
 
-let colors = ["#85929E", "#5D6D7E", "#34495E", "black"];
+// color: rgb(47, 137, 255);
+  // color: rgb(36, 76, 206);
+  // color: rgb(46, 30, 189);
+  // color: rgb(26, 8, 66);
+let colors = ["rgb(47, 107, 255)", "rgb(36, 76, 206)", "rgb(36, 56, 176)", "rgb(36, 30, 149)"];
+
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -87,6 +92,7 @@ class CareerNode extends React.Component {
     const bottomLineStyle = {
       borderTop: `10px solid ${colors[this.props.index]}`,
       width: "120%",
+      marginTop: "0",
       marginLeft: "-10%"
     };
 

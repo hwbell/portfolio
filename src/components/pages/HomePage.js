@@ -82,22 +82,12 @@ class HomePage extends Component {
   }
 
   render() {
-    let containerStyle = {
-      // maxWidth: '350px',
-      // minWidth: '220px',
-      // minHeight: '68vh',
-      // width: '100%',
-      paddingTop: "10vh",
-      paddingBottom: 80,
-      // color: this.state.textColor,
-
-      fontWeight: this.state.fontWeight
-    };
+    
 
     return (
       <Container
-        className="home-page-container home-page-content"
-        style={containerStyle}
+        className="center-all-col"
+        style={styles.main}
       >
         {/* This ReactCSSTransitionGroup is the backgrounds toggle */}
         {/* <ReactCSSTransitionGroup
@@ -151,7 +141,7 @@ class HomePage extends Component {
 
           <Div>
             <NavLink className="left-all-col" to="about">
-              <Button className="home-button">let's go!</Button>
+              <Button className="home-button">tell me more ></Button>
             </NavLink>
           </Div>
         </Div>
@@ -163,6 +153,11 @@ class HomePage extends Component {
 export default HomePage;
 
 const styles = {
+  main: {
+    padding: "10vh 0",
+    height: '100vh',
+    position: "relative",
+  },
   contentholder: {
     margin: "20px"
   },

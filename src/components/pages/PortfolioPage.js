@@ -113,7 +113,7 @@ class PortfolioPage extends Component {
       },
     ];
     return (
-      <div id="work-projects" className="right-all-row" style={{ width: "100%", margin: "0" }}>
+      <div className="right-all-row" style={{ width: "100%", margin: "0" }}>
         {buttons.map((thisButton, i) => {
           return (
             <a href={thisButton.target} key={i}>
@@ -147,6 +147,7 @@ class PortfolioPage extends Component {
     return (
       <Container style={styles.main} className="portfolio-container">
         <PageTitle
+          id={"work-projects"}
           title={"My Portfolio"}
           subtitle={"Take a look at some projects I've worked on and created."}
           description={
@@ -158,9 +159,9 @@ class PortfolioPage extends Component {
           }}
         />
 
-        <Media query="(min-width: 499px)">
+        {/* <Media query="(min-width: 499px)">
           {(matches) => (matches ? this.renderTopIcons() : null)}
-        </Media>
+        </Media> */}
 
         {this.renderScrollButtons()}
 
@@ -220,7 +221,7 @@ export default PortfolioPage;
 
 const styles = {
   main: {
-    marginBottom: "10vh",
+    padding: "10vh 0",
     position: "relative",
   },
   cardsContainer: {

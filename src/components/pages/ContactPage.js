@@ -51,18 +51,16 @@ class ContactPage extends Component {
 
         <PageTitle title={"Contact Me"} subtitle={"Get in touch with me to discuss anything at all."} description={`Feel free to contact me with any questions, or maybe a game of chess. 
             Send me a message, or just give me a call. 
-            I’m open to discussing any and all ideas for new projects!`}/>
-        
-       
+            I’m open to discussing any and all ideas for new projects!`} />
+
+
         <EmailForm />
 
         <SocialIcons />
 
-        
-
         <Div style={styles.textContainer}>
           <P style={styles.footer}>(978) 810 2236</P>
-          <P style={styles.footer}>harold.william.bell@gmail.com</P>
+          <P style={styles.footer}><em>harold.william.bell@gmail.com</em></P>
         </Div>
       </Container>
     );
@@ -73,14 +71,10 @@ export default ContactPage;
 
 const styles = {
   main: {
-    // paddingTop: 50,
-    paddingBottom: 80,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "flex-start",
+    padding: "10vh 0",
+    position: "relative",
   },
-  
+
   textContainer: {
     // width: "80%",
     display: "flex",

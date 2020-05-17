@@ -245,17 +245,9 @@ export default AboutPage;
 
 const styles = {
   main: {
-    paddingTop: "0",
-    paddingBottom: 80,
-    // width: "90%",
-    // maxWidth: '700px',
-    margin: "auto auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    alignItems: "center"
+    padding: "10vh 0",
+    position: "relative",
   },
-
   skillsContainer: {
     width: "90%",
     display: "flex",

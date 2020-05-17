@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-margin-top: 400px;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   background-attachment: fixed;
   background-color: white;
   /* color: rgb(24, 24, 24); */
-  color: white;
+  color: whitesmoke;
   font-family: Raleway, Quicksand;
   font-weight: 500;
   overflow-x: hidden;
@@ -26,8 +27,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.06)); */
-  background: rgba(0, 0, 0, 0.589);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.603));
 }
 .App {
   z-index: 10;
@@ -37,6 +37,9 @@ body {
   margin: auto auto;
   /* background-color: rgba(255, 255, 255, 0.335); */
 }
+.page {
+  padding-top: 80px;
+}
 .shadow-card {
   box-shadow: -2px 2px 3px 1px rgba(24, 24, 24, 0.2);
 }
@@ -44,12 +47,11 @@ body {
 
 
 * > a {
-  /* font-weight: bolder; */
   transition: all 0.3s ease;
-  color: rgb(84, 129, 253);
+  /* color: rgb(152, 179, 255); */
 }
 * > a:hover {
-  color: rgb(0, 53, 199);
+  /* color: rgb(0, 53, 199); */
 }
 *> ul {
   padding-inline-start: 20px;
@@ -98,6 +100,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+}
+.right-all-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 .left-all-row {
@@ -291,7 +299,7 @@ body {
   /* width: 100%  */
 }
 
-hr {
+/* hr {
   border: 0;
   margin: 0 auto 8px auto;
   clear: both;
@@ -299,7 +307,7 @@ hr {
   width: 80%;
   background-color: rgba(160, 159, 159, 0.383);
   height: 1px;
-}
+} */
 
 
 p {
@@ -360,7 +368,7 @@ a:active {
   -webkit-transform: translateX(8px);
   -ms-transform: translateX(8px);
   transform: translateX(8px);
-  color: rgba(140, 20, 161, 0.85);
+  color: rgb(235, 135, 69);
   /* margin-left: 30px; */
 }
 /* for the individual tools hovering on modals */
@@ -408,7 +416,7 @@ a:active {
 
 /* icons on the contact page (social icons) */
 .blink-grey:hover {
-  color: rgb(145, 146, 146);
+  color: rgb(100, 100, 100);
 }
 .blink-orange:hover {
   color: rgb(235, 135, 69);
@@ -418,6 +426,9 @@ a:active {
 }
 .blink-blue:hover {
   color: rgb(61, 171, 245);
+}
+.blink-dark-blue:hover {
+  color: rgb(41, 93, 172);
 }
 .blink-purple:hover {
   color: rgb(199, 69, 250);
@@ -657,11 +668,7 @@ a:active {
 .nav {
   width: 100%;
   box-shadow: -3px 3px 4px 2px rgba(24, 24, 24, 0.5);
-  /* margin: 10px; */
-  padding: 10px 0px;
-  /* background-color: rgb(61, 61, 61); */
-  background-color: rgba(0, 0, 0, 0.842);
-
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.988));
   /* border-radius: 20px; */
 }
 .nav-item, .nav-icon, .nav-text {
@@ -678,41 +685,32 @@ a:active {
   margin-bottom: 0px;
 }
 .nav-text {
-  font-size: 12px;
-  font-weight: bolder;
+  font-size: 12pt;
+  /* font-weight: bolder; */
   margin: 0;
+}
+.nav-text-dropdown:hover {
+  color: black;
 
 }
-.nav-icon {
-  font-size: 28px;
-  /* color: rgb(231, 231, 231); */
-}
-.nav-item:hover, .nav-icon:hover, .nav-text:hover {
+/* .nav-icon { */
+  /* font-size: 28px; */
+/* } */
+.nav-text:hover {
   color: rgb(255, 154, 1)
 }
 .dropdown {
-  /* border-radius: 50px; */
   padding: 2px;
   align-self: flex-end
 }
 .dropdown-menu {
+  background-color: black;
+}
+.dropdown-menu, .dropdown-item {
+  color: white;
   transition: all 0.3s ease;
-  margin: 10px;
-  border-radius: 5px;
-}
-.dropdown-item {
-  transition: all 0.3s ease;
-  padding: 4px 0px;
-  width: 80%;
-  margin: auto auto;
-  border-radius: 5px;
-}
-.dropdown-item:hover {
-  background-color: rgb(9, 1, 48);
-}
-.fa-compass {
-  margin: 0;
-  padding: 2px;
+  /* margin: 10px; */
+  /* border-radius: 5px; */
 }
 .dropdown-item:hover,
 .dropdown-item:focus:active,
@@ -885,6 +883,15 @@ a:active {
   color: white;
   width: 100%;
   border-radius: 4px 4px 0 0;
+}
+/* the below isn't real css, just for using color picker here. */
+.career-node-colors {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgb(47, 137, 255)), to(rgb(26, 8, 66)));
+  color: rgb(47, 137, 255);
+  color: rgb(36, 76, 206);
+  color: rgb(46, 30, 189);
+  color: rgb(36, 30, 149)
+
 }
 
 /* Reactstrap Modals */
