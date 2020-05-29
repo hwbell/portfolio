@@ -13,7 +13,7 @@ const CareerPathText = [
         'Managed development of experimental methods and data analysis.',
         'Managed daily operations of research laboratory.',
       ],
-      description: `At Brandeis University, I was an integral part of a team of researchers dissecting the cellular and genetic mechanisms of neuronal communication and memory storage. During my time in Dr. Pial Sengupta's laboratory, I was a leading member of the 'Thermotaxis' group, which studied temperature sensation in individual neurons as well as networks. I developed many analysis tools with the technical computing software MATLAB to help the team analyze data more efficiently and accurately. I also managed the day to day operations of the lab.`
+      description: `At Brandeis University, I was an integral part of a team of researchers dissecting the cellular and genetic mechanisms of neuronal communication and memory storage. During my time in Dr. Piali Sengupta's laboratory, I was a leading member of the 'Thermotaxis' group, which studied temperature sensation in individual neurons as well as networks. I developed many analysis tools with the technical computing software MATLAB to help the team analyze data more efficiently and accurately. I also managed the day to day operations of the lab.`
     }
   },
   {
