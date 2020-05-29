@@ -31,10 +31,11 @@
     "react-scripts": "3.4.1",
     "react-test-renderer": "^16.13.1",
     "react-transition-group": "^2.5.2",
-    "reactstrap": "^7.1.0"
+    "reactstrap": "^7.1.0",
+    "serve": "^11.3.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "dev": "env-cmd -f ./dev.env react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
