@@ -37,45 +37,62 @@ class EmailForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    const self = this;
+    try {
+      e.preventDefault();
 
-    self.setState({
-      emailSent: false,
-      sendingEmail: true,
-      buttonClass: 'sent-button',
-      icon: 'fa-spinner fa-spin'
-    });
-
-    fetch('https://harold-bell-portfolio-server.herokuapp.com/email', {
-      method: 'POST',
-      body: JSON.stringify(self.state.messageBody),
-      headers: {
-        "Content-type": "application/json"
-      }
-    })
-      .then(res => res.json())
-      .then((json) => {
-        console.log(json);
-        setTimeout(() => {
-          self.setState({
-            emailSent: true,
-            sendingEmail: false,
-            icon: 'fa-check',
-            buttonClass: 'send-button',
-          }, () => {
-            setTimeout(() => {
-              self.setState({
-                emailSent: false,
-                icon: 'fa-envelope'
-              })
-            }, 1000)
-          });
-        }, 1000);
-      })
-      .catch((error) => {
-        console.error(error);
+      this.setState({
+        emailSent: false,
+        sendingEmail: true,
+        buttonClass: 'sent-button',
+        icon: 'fa-spinner fa-spin'
       });
+
+      console.log(this.state.messageBody);
+
+      fetch(process.env.REACT_APP_EMAIL_ROUTER, {
+        method: 'POST',
+        body: JSON.stringify(this.state.messageBody),
+        headers: {
+          "Content-type": "application/json"
+        }
+      })
+        .then(res => res.json())
+        .then((json) => {
+          console.log(json);
+          setTimeout(() => {
+            this.setState({
+              emailSent: true,
+              sendingEmail: false,
+              icon: 'fa-check',
+              buttonClass: 'send-button',
+            }, () => {
+              setTimeout(() => {
+                this.setState({
+                  emailSent: false,
+                  icon: 'fa-envelope'
+                })
+              }, 1000)
+            });
+          }, 1000);
+        })
+        .catch((error) => {
+          console.error(error);
+          this.setState({
+            sendingEmail: false,
+            icon: 'fa-envelope',
+            buttonClass: 'send-button'
+
+          })
+        });
+    } catch (e) {
+      console.log(e)
+      this.setState({
+        sendingEmail: false,
+        icon: 'fa-envelope',
+        buttonClass: 'send-button'
+
+      })
+    }
   }
 
   handleChange(type, value) {
