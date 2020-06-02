@@ -383,19 +383,14 @@ a:active {
   font-size: 45px;
   margin: 0;
   padding: 0;
-  color: rgb(44, 86, 202);
+  color: rgb(78, 125, 255);
 }
 .fa-envelope:hover {
-  color: rgb(21, 57, 155);
+  color: rgb(44, 100, 255);
 }
 .send-button {
   margin: 0;
   padding: 0;
-}
-.send-button:hover {
-  -webkit-transform: translateX(-10px);
-  -ms-transform: translateX(-10px);
-  transform: translateX(-10px);
 }
 /* for the send email button when sending email  */
 .sent-button {

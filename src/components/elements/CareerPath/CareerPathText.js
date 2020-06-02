@@ -18,7 +18,7 @@ const CareerPathText = [
   },
   {
     year: "2017",
-    years: "2017 - 1019",
+    years: "2017 - 2019",
     job: "Research Associate",
     company: "University of Colorado",
     tools: [ "dna", "matlab", "microscope", "research", "database"],
