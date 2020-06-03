@@ -21,7 +21,7 @@ const Div = posed.div({
 
 
 const baseState = {
-  buttonMessage: "send!",
+  buttonMessage: "send message",
   serverMessage: "",
   messageBody: {},
   sendingEmail: false,
@@ -71,6 +71,7 @@ class EmailForm extends React.Component {
       this.setState(sendingState);
 
       console.log(this.state.messageBody);
+      console.log(this.state.REACT_APP_EMAIL_ROUTER);
 
       fetch(process.env.REACT_APP_EMAIL_ROUTER, {
         method: "POST",
@@ -147,6 +148,7 @@ class EmailForm extends React.Component {
                 }
               />
             </FormGroup>
+
 
             <Div className="left-all-row">
               <div><Button
