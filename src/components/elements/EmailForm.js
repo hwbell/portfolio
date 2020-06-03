@@ -71,7 +71,7 @@ class EmailForm extends React.Component {
       this.setState(sendingState);
 
       console.log(this.state.messageBody);
-      console.log(this.state.REACT_APP_EMAIL_ROUTER);
+      console.log(process.env.REACT_APP_EMAIL_ROUTER);
 
       fetch(process.env.REACT_APP_EMAIL_ROUTER, {
         method: "POST",
@@ -92,10 +92,16 @@ class EmailForm extends React.Component {
         .catch((error) => {
           console.error(error);
           this.setState(failState);
+          setTimeout( () => {
+            this.setState(baseState)
+          }, 2500)
         });
     } catch (e) {
       console.log(e);
       this.setState(failState);
+      setTimeout( () => {
+        this.setState(baseState)
+      }, 2500)
     }
 
   }
