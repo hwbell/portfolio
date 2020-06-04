@@ -64,6 +64,20 @@ const workProjects = [
 
 const webApps = [
   {
+    name: 'Vuejs Dashboard',
+    repoName:'dash-calculator',
+    link: 'https://vue-dashboard-app.herokuapp.com/',
+    gitLink: 'https://github.com/hwbell/dash-calculator',
+    image: require('../assets/images/vue-dashboard.png'),
+    description: 'A dashboard app that makes it easy to check the news, do simple calculations, and time conversions.',
+    modalDescription: `Over the last few months, I realized how many times a day I need to make simple conversions that require 
+    a calculator, and often a time converter to quickly generate unix timestamps from regular time, and vice versa. I'd been meaning to build 
+    something new with Vuejs, and this was a great app to build while reintroducing myself to the framework. The news you see makes use of newsapi.org's 
+    free api, which is incredibly useful. The news searches are routed through a node.js server to proxy the requests.`,
+    modalBG: '',
+    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'vuejs', 'nodejs', 'expressjs', 'git', 'heroku']
+  },
+  {
     name: 'PubMed Portal',
     repoName:'pub-med-app',
     link: 'https://pub-med-app.herokuapp.com/',
@@ -173,19 +187,19 @@ const webApps = [
     modalBG: '',
     tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
   },
-  {
-    name: 'News Now',
-    repoName: 'news-now',
-    link: 'https://news-now-hb.herokuapp.com/',
-    image: require('../assets/images/news-now.jpg'),
-    gitLink: 'https://github.com/hwbell/news-now',
-    description: 'Get the news from around the world, searching over 30,000 sources.',
-    modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
-      from thousands of sources from across the world. The api is great for this reason - you get news from
-      sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
-    modalBG: '',
-    tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
-  },
+  // {
+  //   name: 'News Now',
+  //   repoName: 'news-now',
+  //   link: 'https://news-now-hb.herokuapp.com/',
+  //   image: require('../assets/images/news-now.jpg'),
+  //   gitLink: 'https://github.com/hwbell/news-now',
+  //   description: 'Get the news from around the world, searching over 30,000 sources.',
+  //   modalDescription: `I made use of newsapi.org's free api to build a news app that gathers articles
+  //     from thousands of sources from across the world. The api is great for this reason - you get news from
+  //     sources you wouldn't normally come across in the US. Search for anything you'd like to read about.`,
+  //   modalBG: '',
+  //   tools: ['html5', 'css3', 'bootstrap', 'javascript', 'reactjs', 'nodejs', 'git', 'heroku']
+  // },
 ]
 
 // codepens have embedded pen html5 taken from the site's embed tool
