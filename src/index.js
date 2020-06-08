@@ -10,13 +10,11 @@ const fetch = require('node-fetch');
 const apps = [
   'https://conways-game-of-life-hb.herokuapp.com/',
   'https://stark-waters-61663.herokuapp.com/',
-  'https://react-recipe-box.herokuapp.com/',
   'https://harold-bell-portfolio-server.herokuapp.com/',
   'https://lit-ridge-56288.herokuapp.com/',
   'https://agile-plateau-65674.herokuapp.com/',
   'https://lit-falls-35438.herokuapp.com/',
   'https://stox-fox.herokuapp.com/',
-  'https://news-now-hb.herokuapp.com/',
   'https://wiki-bubbles.herokuapp.com/',
   'https://hb-weather-server.herokuapp.com/',
   'https://hb-world-weather-map.herokuapp.com/',
@@ -24,7 +22,10 @@ const apps = [
   'https://market-monitor-hb.herokuapp.com/',
   'https://hb-library-app.herokuapp.com/',
   'https://pub-med-server.herokuapp.com/',
-  'https://pub-med-app.herokuapp.com/'
+  'https://pub-med-app.herokuapp.com/',
+  'https://vue-dashboard-app.herokuapp.com/',
+  'https://newsapi-server.herokuapp.com/'
+
 ]
 
 // wake 'em up! should take like 7-10 sec, and will do so 
